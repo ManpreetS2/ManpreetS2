@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Manpreet Singh - Computer Science x Finance</title>
+  <desc id="desc">Dark navy profile banner for Manpreet Singh with grid and data-line accents. Visible text: MANPREET SINGH; COMPUTER SCIENCE x FINANCE; SOFTWARE, AUTOMATION, DATA, DECISION SYSTEMS.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="45%" stop-color="#0B1526"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#60A5FA" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#93C5FD" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#93C5FD" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3A5F" stroke-width="1" opacity="0.35"/>
+    </pattern>
+    <radialGradient id="vignette" cx="40%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#grid)"/>
+  <rect width="1200" height="360" fill="url(#glow)"/>
+  <rect width="1200" height="360" fill="url(#vignette)"/>
+
+  <rect x="20" y="20" width="1160" height="320" rx="16" fill="none" stroke="#1E3A5F" stroke-opacity="0.7" stroke-width="1.5"/>
+  <rect x="28" y="28" width="1144" height="304" rx="12" fill="none" stroke="#2563EB" stroke-opacity="0.18" stroke-width="1"/>
+
+  <path d="M80 278 C170 268, 210 230, 290 238 S410 300, 490 270 S610 210, 690 230 S810 290, 900 255 S1020 200, 1120 225"
+        fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="490" cy="270" r="4.5" fill="#60A5FA"/>
+  <circle cx="690" cy="230" r="4.5" fill="#93C5FD"/>
+  <circle cx="900" cy="255" r="4.5" fill="#60A5FA"/>
+  <circle cx="1120" cy="225" r="4.5" fill="#93C5FD"/>
+
+  <rect x="64" y="96" width="5" height="118" rx="2" fill="#3B82F6" opacity="0.95"/>
+
+  <text x="88" y="132" fill="#F8FAFC" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="1.5">MANPREET SINGH</text>
+  <text x="88" y="176" fill="#93C5FD" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="1.2">COMPUTER SCIENCE × FINANCE</text>
+  <text x="88" y="214" fill="#94A3B8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="1.8">SOFTWARE • AUTOMATION • DATA • DECISION SYSTEMS</text>
+</svg>
