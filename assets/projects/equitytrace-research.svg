@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+<title id="title">EquityTrace point-in-time financial research illustration</title><desc id="desc">Schematic showing SEC filings becoming point-in-time factors and a portfolio research process. Not an equity performance graph.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b22"/><stop offset="1" stop-color="#12313b"/></linearGradient><pattern id="g" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#29565c" stroke-opacity=".31"/></pattern></defs>
+<rect width="960" height="540" rx="24" fill="url(#bg)"/><rect width="960" height="540" rx="24" fill="url(#g)"/>
+<rect x="54" y="53" width="192" height="37" rx="18" fill="#1b514e" stroke="#438d78"/><text x="75" y="78" fill="#99f6d3" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="2">FINANCIAL RESEARCH</text>
+<text x="54" y="201" fill="#f1f9f7" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="800">EquityTrace</text>
+<text x="56" y="244" fill="#add4ca" font-family="Arial,Helvetica,sans-serif" font-size="25">Evidence before conclusions.</text>
+<path d="M56 299H450" stroke="#36d3b0" stroke-width="3"/>
+<text x="56" y="340" fill="#c0e1d7" font-family="Arial,Helvetica,sans-serif" font-size="19">SEC filings  →  Available-at facts</text><text x="56" y="374" fill="#c0e1d7" font-family="Arial,Helvetica,sans-serif" font-size="19">Factors  →  Reproducible backtests</text>
+<text x="56" y="473" fill="#739e99" font-family="Arial,Helvetica,sans-serif" font-size="16">SCHEMATIC ILLUSTRATION • NOT MARKET PERFORMANCE</text>
+<rect x="569" y="102" width="306" height="337" rx="19" fill="#14343a" stroke="#427b75" stroke-width="2"/>
+<rect x="589" y="130" width="266" height="57" rx="9" fill="#1f5151"/><text x="608" y="151" fill="#8ac8b4" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="1">SOURCE</text><text x="608" y="173" fill="#f2faf7" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700">SEC / XBRL</text>
+<path d="M724 194V230" stroke="#54deb4" stroke-width="3"/><path d="M716 222L724 232L732 222" stroke="#54deb4" stroke-width="3" fill="none"/>
+<rect x="589" y="238" width="266" height="66" rx="9" fill="#245453"/><text x="608" y="261" fill="#8ac8b4" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="1">CONSTRAINT</text><text x="608" y="288" fill="#f2faf7" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700">available_at ≤ as_of</text>
+<path d="M724 309V342" stroke="#54deb4" stroke-width="3"/><path d="M716 334L724 344L732 334" stroke="#54deb4" stroke-width="3" fill="none"/>
+<rect x="589" y="348" width="266" height="64" rx="9" fill="#28695e"/><text x="608" y="369" fill="#a1efc8" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="1">OUTPUT</text><text x="608" y="394" fill="#f2faf7" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700">Auditable research</text>
+</svg>
