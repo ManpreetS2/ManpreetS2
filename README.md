@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg" alt="Manpreet Singh — software engineering, AI systems and fintech" width="100%">
+  <img src="assets/header.webp" alt="Manpreet Singh — software engineering, AI systems and fintech" width="100%">
 
   **Computer Science @ De Anza College · Incoming San José State University, Spring 2027**
 
@@ -43,7 +43,7 @@ CareerPilot turns a resume into a grounded candidate profile, finds relevant job
   <sub>FastAPI · PostgreSQL · React · Docker</sub>
 </td>
 <td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/R.E.A.C.T"><img src="assets/projects/react-research.svg" alt="R.E.A.C.T. lunar-controller concept illustration, not experimental results" width="100%"></a>
+  <a href="https://github.com/ManpreetS2/R.E.A.C.T"><img src="assets/projects/react-research.webp" alt="R.E.A.C.T. concept illustration (generated artwork, not experimental results)" width="100%"></a>
   <h3><a href="https://github.com/ManpreetS2/R.E.A.C.T">R.E.A.C.T.</a></h3>
   <p>Testing how numerical reward feedback influences language-model controller revisions in physics simulators.</p>
   <sub>Python · LunarLander · Experimentation · Research prototype</sub>
@@ -51,13 +51,13 @@ CareerPilot turns a resume into a grounded candidate profile, finds relevant job
 </tr>
 <tr>
 <td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/EquityTrace"><img src="assets/projects/equitytrace-research.svg" alt="EquityTrace data-flow concept illustration, not a live investment dashboard" width="100%"></a>
+  <a href="https://github.com/ManpreetS2/EquityTrace"><img src="assets/projects/equitytrace-research.webp" alt="EquityTrace concept illustration (generated artwork, not a product screenshot)" width="100%"></a>
   <h3><a href="https://github.com/ManpreetS2/EquityTrace">EquityTrace</a></h3>
   <p>Point-in-time stock research built on SEC filings, auditable financial factors, and historical portfolio backtesting.</p>
   <sub>Python · SEC XBRL · DuckDB</sub>
 </td>
 <td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization"><img src="assets/projects/minecraft-agents.svg" alt="Minecraft AI Civilization agent-world concept illustration, not gameplay footage" width="100%"></a>
+  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization"><img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization concept illustration (generated artwork, not gameplay footage)" width="100%"></a>
   <h3><a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">Minecraft AI Civilization</a></h3>
   <p>A developing multi-agent simulation with persistent memory, planning, and actions inside a shared Minecraft world.</p>
   <sub>TypeScript · Mineflayer · SQLite · In development</sub>
