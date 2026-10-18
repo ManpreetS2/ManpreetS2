@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" fill="none" role="img" aria-label="Technical toolkit">
+  <defs><style>
+    .mono { font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: ui-sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .draw { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: draw 1.2s cubic-bezier(.6,0,.2,1) forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    /* Opacity-only rise: transform on text nodes inside img SVGs often never completes. */
+    .rise { opacity: 0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity:0; } to { opacity:1; } }
+    .lift { opacity: 0; animation: lift .75s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes lift { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+    .fade { opacity: 0; animation: fade .6s ease forwards; }
+    @keyframes fade { to { opacity: 1; } }
+    .pulse { animation: pulse 2.8s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+    .travel { stroke-dasharray: 5 9; animation: travel 18s linear infinite; }
+    @keyframes travel { to { stroke-dashoffset: -280; } }
+    .caret { animation: blink 1.05s steps(1,end) infinite; }
+    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.2s} .a3{animation-delay:.35s}
+    .a4{animation-delay:.5s} .a5{animation-delay:.65s} .a6{animation-delay:.8s}
+    .a7{animation-delay:.95s} .d1{animation-delay:.6s} .d2{animation-delay:1.1s} .d3{animation-delay:1.6s}
+    @media (prefers-reduced-motion: reduce) {
+      .draw,.rise,.lift,.fade,.pulse,.travel,.caret { animation: none !important; }
+      .draw { stroke-dashoffset: 0; }
+      .rise,.lift,.fade { opacity: 1; transform: none; }
+      .pulse { opacity: 1; }
+      .caret { opacity: 1; }
+    }
+</style></defs>
+  <line x1="168" y1="8" x2="168" y2="156" stroke="#334866" stroke-width="1" opacity=".7"/>
+  <text class="mono rise a1" x="48" y="32" fill="#7B879C" font-size="12" letter-spacing="2.2">LANGUAGES</text><text class="mono rise a1" x="188" y="32" fill="#E8EEF8" font-size="15">Python · TypeScript · Java · JavaScript · SQL</text><text class="mono rise a2" x="48" y="68" fill="#7B879C" font-size="12" letter-spacing="2.2">FRAMEWORKS</text><text class="mono rise a2" x="188" y="68" fill="#E8EEF8" font-size="15">FastAPI · React · Node.js · JavaFX</text><text class="mono rise a3" x="48" y="104" fill="#7B879C" font-size="12" letter-spacing="2.2">DATA</text><text class="mono rise a3" x="188" y="104" fill="#E8EEF8" font-size="15">PostgreSQL · SQLite · DuckDB · SQLAlchemy</text><text class="mono rise a4" x="48" y="140" fill="#7B879C" font-size="12" letter-spacing="2.2">TOOLING</text><text class="mono rise a4" x="188" y="140" fill="#E8EEF8" font-size="15">Git · Docker · GitHub Actions · pytest · Vitest · Playwright · JUnit</text>
+</svg>
+<!-- mode:dark -->
