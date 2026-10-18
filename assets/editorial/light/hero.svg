@@ -1,17 +1,17 @@
 <svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
   <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
-    .draw { stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
-    @keyframes draw { to { stroke-dashoffset:0; } }
-    .rise { opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+    .draw { stroke-dasharray:1000; stroke-dashoffset:0; }
+    .rise,.fade { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:1000; } to { stroke-dashoffset:0; } }
     @keyframes rise { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
-    .fade { opacity:0; animation:fade .7s ease forwards; }
-    @keyframes fade { to { opacity:1; } }
+    @keyframes fade { from { opacity:0; } to { opacity:1; } }
     .a1{animation-delay:.2s} .a2{animation-delay:.5s} .a3{animation-delay:.9s}
     .a4{animation-delay:1.2s} .a5{animation-delay:1.4s} .a6{animation-delay:1.7s}
-    @media (prefers-reduced-motion: reduce) {
-      .draw,.rise,.fade { animation:none; }
-      .draw{stroke-dashoffset:0} .rise,.fade{opacity:1}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
+      .rise { animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+      .fade { animation:fade .7s ease forwards; }
     }
 </style>
 

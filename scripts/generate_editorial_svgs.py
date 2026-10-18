@@ -138,22 +138,25 @@ HERO_COLORS = {
 
 
 def hero_css(draw_len: int = 1000) -> str:
-    """Sharann-matched stagger. Resting animated text is opacity:0; final
-    visible state under prefers-reduced-motion: reduce. Hardcoded fills.
+    """Sharann timings/easing, GitHub-safe visibility.
+
+    Resting CSS = completed visible state (rules drawn, text opaque).
+    Animations run only under prefers-reduced-motion: no-preference, so
+    reduced-motion / unsupported CSS never leave the hero blank.
     """
     return f"""
     .mono {{ font-family:{MONO}; }}
-    .draw {{ stroke-dasharray:{draw_len}; stroke-dashoffset:{draw_len}; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }}
-    @keyframes draw {{ to {{ stroke-dashoffset:0; }} }}
-    .rise {{ opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }}
+    .draw {{ stroke-dasharray:{draw_len}; stroke-dashoffset:0; }}
+    .rise,.fade {{ opacity:1; }}
+    @keyframes draw {{ from {{ stroke-dashoffset:{draw_len}; }} to {{ stroke-dashoffset:0; }} }}
     @keyframes rise {{ from {{ opacity:0; transform:translateY(12px); }} to {{ opacity:1; transform:translateY(0); }} }}
-    .fade {{ opacity:0; animation:fade .7s ease forwards; }}
-    @keyframes fade {{ to {{ opacity:1; }} }}
+    @keyframes fade {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
     .a1{{animation-delay:.2s}} .a2{{animation-delay:.5s}} .a3{{animation-delay:.9s}}
     .a4{{animation-delay:1.2s}} .a5{{animation-delay:1.4s}} .a6{{animation-delay:1.7s}}
-    @media (prefers-reduced-motion: reduce) {{
-      .draw,.rise,.fade {{ animation:none; }}
-      .draw{{stroke-dashoffset:0}} .rise,.fade{{opacity:1}}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:draw 1.4s cubic-bezier(.6,0,.2,1) both; }}
+      .rise {{ animation:rise .9s cubic-bezier(.2,.7,.2,1) both; }}
+      .fade {{ animation:fade .7s ease both; }}
     }}
 """
 
