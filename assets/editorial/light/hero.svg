@@ -1,113 +1,48 @@
-<svg viewBox="0 0 1000 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
-  <defs>
-    <style>
+<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
+  <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
-    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-    
-    .draw { stroke-dasharray:1000; stroke-dashoffset:0; }
-    .rise,.fade,.pop,.row { opacity:1; }
-    .flow { stroke-dasharray:3 9; opacity:.35; }
-    .pulse { opacity:1; }
-    .caret { opacity:1; }
-    @keyframes draw { from { stroke-dashoffset:1000; } to { stroke-dashoffset:0; } }
-    @keyframes rise { from { opacity:0; } to { opacity:1; } }
-    @keyframes fade { from { opacity:0; } to { opacity:1; } }
-    @keyframes pop { from { opacity:0; } to { opacity:1; } }
-    @keyframes march { to { stroke-dashoffset:-12; } }
-    @keyframes pulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    .a1{animation-delay:.08s}.a2{animation-delay:.2s}.a3{animation-delay:.35s}
-    .a4{animation-delay:.5s}.a5{animation-delay:.65s}.a6{animation-delay:.8s}
-    .w1{animation-delay:.15s}.w2{animation-delay:.28s}.w3{animation-delay:.4s}
-    .w4{animation-delay:.52s}.w5{animation-delay:.64s}.w6{animation-delay:.76s}
-    .p0{animation-delay:.1s}.p1{animation-delay:.45s}.p2{animation-delay:.55s}
-    .p3{animation-delay:.65s}.p4{animation-delay:.75s}.p5{animation-delay:.85s}
-    .p6{animation-delay:.95s}.p7{animation-delay:1.05s}.p8{animation-delay:1.15s}
-    .r1{animation-delay:.05s}.r2{animation-delay:.12s}.r3{animation-delay:.19s}
-    .r4{animation-delay:.26s}.r5{animation-delay:.33s}
-    @media (prefers-reduced-motion:no-preference) {
-      .draw { animation:draw 1.2s cubic-bezier(.6,0,.2,1) both; }
-      .rise { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
-      .fade { animation:fade .55s ease both; }
-      .pop { animation:pop .65s cubic-bezier(.2,.7,.2,1) both; }
-      .row { animation:rise .5s cubic-bezier(.2,.7,.2,1) both; }
-      .flow { animation:march 1.4s linear infinite; }
-      .pulse { animation:pulse 2.6s ease-in-out infinite; }
-      .caret { animation:blink 1.05s steps(1,end) infinite; }
+    .draw { stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
+    @keyframes draw { to { stroke-dashoffset:0; } }
+    .rise { opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+    @keyframes rise { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    .fade { opacity:0; animation:fade .7s ease forwards; }
+    @keyframes fade { to { opacity:1; } }
+    .a1{animation-delay:.2s} .a2{animation-delay:.5s} .a3{animation-delay:.9s}
+    .a4{animation-delay:1.2s} .a5{animation-delay:1.4s} .a6{animation-delay:1.7s}
+    @media (prefers-reduced-motion: reduce) {
+      .draw,.rise,.fade { animation:none; }
+      .draw{stroke-dashoffset:0} .rise,.fade{opacity:1}
     }
-
 </style>
-  </defs>
-  <line class="draw a1" x1="48" y1="56" x2="952" y2="56" stroke="#B8C2D4" stroke-width="1"/>
-  <g class="fade a1 mono">
-    <text x="48" y="40" fill="#4E596E" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
-    <text x="952" y="40" fill="#4E596E" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
-  </g>
-  <g class="fade a2 mono"><text x="48" y="108" fill="#0B8F8A" font-size="14" letter-spacing="4">HELLO, I'M</text></g>
-  <g class="rise a3">
-    <text class="sans" x="46" y="178" fill="#0F1729" font-size="64" font-weight="700" letter-spacing="-2.2">Manpreet Singh</text>
-    <rect class="caret" x="528" y="134" width="3" height="46" rx="1" fill="#0B8F8A"/>
-  </g>
-  <g class="fade a4 mono">
-    <text x="48" y="216" fill="#4E596E" font-size="16">Software · AI systems · Fintech tooling</text>
-  </g>
-  <g class="fade a5 mono">
-    <text x="48" y="262" fill="#6E7890" font-size="12" letter-spacing="1">focus  ▸</text>
-    <text x="120" y="262" fill="#0F1729" font-size="12">evidence-backed products · reliable workflows · human control</text>
-  </g>
-  <g class="fade a5 mono">
-    <text x="48" y="288" fill="#6E7890" font-size="12" letter-spacing="1">open to software engineering · solutions engineering · internships</text>
+
+  <line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="#B8C2D4" stroke-width="1"/>
+  <g class="fade a1">
+    <text class="mono" fill="#4E596E" x="48" y="44" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
+    <text class="mono" fill="#4E596E" x="952" y="44" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
   </g>
 
-  <!-- interest diagram (animated line art) -->
-  <g aria-hidden="true">
-    <line class="draw w1" x1="720" y1="120" x2="820" y2="170" stroke="#B8C2D4" stroke-width="1"/>
-    <line class="draw w2" x1="920" y1="120" x2="820" y2="170" stroke="#B8C2D4" stroke-width="1"/>
-    <line class="draw w3" x1="820" y1="200" x2="760" y2="260" stroke="#B8C2D4" stroke-width="1"/>
-    <line class="draw w4" x1="820" y1="200" x2="880" y2="260" stroke="#B8C2D4" stroke-width="1"/>
-    <line class="draw w5" x1="820" y1="200" x2="820" y2="300" stroke="#0B8F8A" stroke-width="1.2"/>
-    <line class="flow" x1="720" y1="120" x2="820" y2="170" stroke="#0B8F8A"/>
-    <line class="flow" x1="920" y1="120" x2="820" y2="170" stroke="#5F4F8F"/>
-    <line class="flow" x1="820" y1="200" x2="760" y2="260" stroke="#B85040"/>
-    <line class="flow" x1="820" y1="200" x2="880" y2="260" stroke="#0B8F8A"/>
-    <line class="flow" x1="820" y1="200" x2="820" y2="300" stroke="#5F4F8F"/>
-    <g class="pop p1">
-      <rect x="668" y="96" width="104" height="36" rx="2" fill="#F0F4FA" stroke="#0B8F8A" stroke-opacity=".55"/>
-      <text class="mono" x="715" y="118" fill="#0F1729" font-size="11" text-anchor="middle">EVIDENCE</text>
-    </g>
-    <g class="pop p2">
-      <rect x="868" y="96" width="104" height="36" rx="2" fill="#F0F4FA" stroke="#5F4F8F" stroke-opacity=".55"/>
-      <text class="mono" x="920" y="118" fill="#0F1729" font-size="11" text-anchor="middle">MODELS</text>
-    </g>
-    <g class="pop p0">
-      <rect x="770" y="160" width="100" height="44" rx="2" fill="#E4EAF5" stroke="#B8C2D4"/>
-      <text class="mono" x="820" y="180" fill="#0F1729" font-size="11" text-anchor="middle">SYSTEMS</text>
-      <text class="mono" x="820" y="196" fill="#4E596E" font-size="9" text-anchor="middle">compose · verify</text>
-    </g>
-    <g class="pop p3">
-      <rect x="708" y="250" width="104" height="36" rx="2" fill="#F0F4FA" stroke="#B85040" stroke-opacity=".5"/>
-      <text class="mono" x="760" y="272" fill="#0F1729" font-size="11" text-anchor="middle">PRODUCTS</text>
-    </g>
-    <g class="pop p4">
-      <rect x="828" y="250" width="104" height="36" rx="2" fill="#F0F4FA" stroke="#0B8F8A" stroke-opacity=".5"/>
-      <text class="mono" x="880" y="272" fill="#0F1729" font-size="11" text-anchor="middle">FINTECH</text>
-    </g>
-    <g class="pop p5">
-      <rect x="758" y="300" width="124" height="36" rx="2" fill="#F0F4FA" stroke="#5F4F8F"/>
-      <text class="mono" x="820" y="322" fill="#5F4F8F" font-size="11" text-anchor="middle">HUMAN CONTROL</text>
-    </g>
+  <g class="rise a2">
+    <text fill="#0F1729" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Manpreet Singh</text>
+  </g>
+  <g class="fade a3">
+    <text fill="#4E596E" class="mono" x="48" y="214" font-size="19">Software Engineering · AI Systems · Fintech</text>
   </g>
 
-  <line class="draw a6" x1="48" y1="356" x2="952" y2="356" stroke="#B8C2D4" stroke-width="1"/>
-  <g class="fade a6 mono">
-    <text x="48" y="388" fill="#0B8F8A" font-size="11" letter-spacing="2.5">FULL-STACK SYSTEMS</text>
-    <text x="250" y="388" fill="#B8C2D4" font-size="11">·</text>
-    <text x="272" y="388" fill="#5F4F8F" font-size="11" letter-spacing="2.5">EXPLAINABLE AI</text>
-    <text x="458" y="388" fill="#B8C2D4" font-size="11">·</text>
-    <text x="480" y="388" fill="#B85040" font-size="11" letter-spacing="2.5">FINTECH RESEARCH</text>
-    <text x="952" y="388" fill="#4E596E" font-size="11" letter-spacing="2" text-anchor="end">DE ANZA → SJSU / 2027</text>
+  <g class="fade a4">
+    <text fill="#6E7890" class="mono" x="48" y="274" font-size="12.5" letter-spacing="1">focus  ▸</text>
+    <text fill="#0B8F8A" class="mono" x="128" y="274" font-size="12.5" letter-spacing="1">software engineering · AI systems · fintech tooling</text>
   </g>
-  <g class="fade a6 mono">
-    <text x="48" y="420" fill="#6E7890" font-size="11" letter-spacing="2">github.com/ManpreetS2</text>
+  <g class="fade a5">
+    <text fill="#6E7890" class="mono" x="48" y="300" font-size="12.5" letter-spacing="1">open to software engineering and technical internships</text>
+  </g>
+
+  <line class="draw a5" x1="48" y1="342" x2="952" y2="342" stroke="#B8C2D4" stroke-width="1"/>
+  <g class="fade a6">
+    <text fill="#0B8F8A" class="mono" x="48" y="374" font-size="11.5" letter-spacing="3">SOFTWARE ENGINEERING</text>
+    <text fill="#5F4F8F" class="mono" x="318" y="374" font-size="11.5">·</text>
+    <text fill="#5F4F8F" class="mono" x="348" y="374" font-size="11.5" letter-spacing="3">AI SYSTEMS</text>
+    <text fill="#B85040" class="mono" x="508" y="374" font-size="11.5">·</text>
+    <text fill="#B85040" class="mono" x="538" y="374" font-size="11.5" letter-spacing="3">FINTECH</text>
+    <text fill="#4E596E" class="mono" x="952" y="374" font-size="11.5" letter-spacing="3" text-anchor="end">DE ANZA → SJSU / 2027</text>
   </g>
 </svg>

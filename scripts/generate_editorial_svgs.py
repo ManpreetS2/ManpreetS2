@@ -109,86 +109,67 @@ def write(path: Path, content: str) -> None:
     print(f"wrote {path.relative_to(ROOT)}")
 
 
-# ─── DESKTOP (1000-wide, Sharann geometry) ───────────────────────────────────
+# ─── HERO (1000×400 — measured Sharann geometry; original identity/color) ─────
+
+def hero_css() -> str:
+    """Animation timings/easing matched to Sharann header-v1.svg.
+    Resting state for animated text is opacity:0 (same as reference); final
+    visible state is forced under prefers-reduced-motion: reduce so nothing
+    stays blank when motion is off. Hardcoded fills (not CSS variables) keep
+    colors stable under GitHub camo.
+    """
+    return f"""
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }}
+    @keyframes draw {{ to {{ stroke-dashoffset:0; }} }}
+    .rise {{ opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }}
+    @keyframes rise {{ from {{ opacity:0; transform:translateY(12px); }} to {{ opacity:1; transform:translateY(0); }} }}
+    .fade {{ opacity:0; animation:fade .7s ease forwards; }}
+    @keyframes fade {{ to {{ opacity:1; }} }}
+    .a1{{animation-delay:.2s}} .a2{{animation-delay:.5s}} .a3{{animation-delay:.9s}}
+    .a4{{animation-delay:1.2s}} .a5{{animation-delay:1.4s}} .a6{{animation-delay:1.7s}}
+    @media (prefers-reduced-motion: reduce) {{
+      .draw,.rise,.fade {{ animation:none; }}
+      .draw{{stroke-dashoffset:0}} .rise,.fade{{opacity:1}}
+    }}
+"""
+
 
 def hero_desktop(c: dict) -> str:
-    # Distinctive animated graphic: evidence → systems → control pipeline
-    # representing full-stack, AI, and fintech interests (right plane).
-    return f'''<svg viewBox="0 0 1000 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
-  <defs>
-    <style>{css(c, 1000)}</style>
-  </defs>
-  <line class="draw a1" x1="48" y1="56" x2="952" y2="56" stroke="{c['rule']}" stroke-width="1"/>
-  <g class="fade a1 mono">
-    <text x="48" y="40" fill="{c['muted']}" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
-    <text x="952" y="40" fill="{c['muted']}" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
-  </g>
-  <g class="fade a2 mono"><text x="48" y="108" fill="{c['cyan']}" font-size="14" letter-spacing="4">HELLO, I'M</text></g>
-  <g class="rise a3">
-    <text class="sans" x="46" y="178" fill="{c['ink']}" font-size="64" font-weight="700" letter-spacing="-2.2">Manpreet Singh</text>
-    <rect class="caret" x="528" y="134" width="3" height="46" rx="1" fill="{c['cyan']}"/>
-  </g>
-  <g class="fade a4 mono">
-    <text x="48" y="216" fill="{c['muted']}" font-size="16">Software · AI systems · Fintech tooling</text>
-  </g>
-  <g class="fade a5 mono">
-    <text x="48" y="262" fill="{c['dim']}" font-size="12" letter-spacing="1">focus  ▸</text>
-    <text x="120" y="262" fill="{c['ink']}" font-size="12">evidence-backed products · reliable workflows · human control</text>
-  </g>
-  <g class="fade a5 mono">
-    <text x="48" y="288" fill="{c['dim']}" font-size="12" letter-spacing="1">open to software engineering · solutions engineering · internships</text>
+    # Geometry locked to Sharann header-v1: viewBox 1000×400, margins 48/952,
+    # rules at y=58 and y=342, name at y=176 size 72 mono. No side diagram.
+    return f'''<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
+  <style>{hero_css()}</style>
+
+  <line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="{c['rule']}" stroke-width="1"/>
+  <g class="fade a1">
+    <text class="mono" fill="{c['muted']}" x="48" y="44" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
+    <text class="mono" fill="{c['muted']}" x="952" y="44" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
   </g>
 
-  <!-- interest diagram (animated line art) -->
-  <g aria-hidden="true">
-    <line class="draw w1" x1="720" y1="120" x2="820" y2="170" stroke="{c['rule']}" stroke-width="1"/>
-    <line class="draw w2" x1="920" y1="120" x2="820" y2="170" stroke="{c['rule']}" stroke-width="1"/>
-    <line class="draw w3" x1="820" y1="200" x2="760" y2="260" stroke="{c['rule']}" stroke-width="1"/>
-    <line class="draw w4" x1="820" y1="200" x2="880" y2="260" stroke="{c['rule']}" stroke-width="1"/>
-    <line class="draw w5" x1="820" y1="200" x2="820" y2="300" stroke="{c['cyan']}" stroke-width="1.2"/>
-    <line class="flow" x1="720" y1="120" x2="820" y2="170" stroke="{c['cyan']}"/>
-    <line class="flow" x1="920" y1="120" x2="820" y2="170" stroke="{c['lavender']}"/>
-    <line class="flow" x1="820" y1="200" x2="760" y2="260" stroke="{c['coral']}"/>
-    <line class="flow" x1="820" y1="200" x2="880" y2="260" stroke="{c['cyan']}"/>
-    <line class="flow" x1="820" y1="200" x2="820" y2="300" stroke="{c['lavender']}"/>
-    <g class="pop p1">
-      <rect x="668" y="96" width="104" height="36" rx="2" fill="{c['node']}" stroke="{c['cyan']}" stroke-opacity=".55"/>
-      <text class="mono" x="715" y="118" fill="{c['ink']}" font-size="11" text-anchor="middle">EVIDENCE</text>
-    </g>
-    <g class="pop p2">
-      <rect x="868" y="96" width="104" height="36" rx="2" fill="{c['node']}" stroke="{c['lavender']}" stroke-opacity=".55"/>
-      <text class="mono" x="920" y="118" fill="{c['ink']}" font-size="11" text-anchor="middle">MODELS</text>
-    </g>
-    <g class="pop p0">
-      <rect x="770" y="160" width="100" height="44" rx="2" fill="{c['soft']}" stroke="{c['rule']}"/>
-      <text class="mono" x="820" y="180" fill="{c['ink']}" font-size="11" text-anchor="middle">SYSTEMS</text>
-      <text class="mono" x="820" y="196" fill="{c['muted']}" font-size="9" text-anchor="middle">compose · verify</text>
-    </g>
-    <g class="pop p3">
-      <rect x="708" y="250" width="104" height="36" rx="2" fill="{c['node']}" stroke="{c['coral']}" stroke-opacity=".5"/>
-      <text class="mono" x="760" y="272" fill="{c['ink']}" font-size="11" text-anchor="middle">PRODUCTS</text>
-    </g>
-    <g class="pop p4">
-      <rect x="828" y="250" width="104" height="36" rx="2" fill="{c['node']}" stroke="{c['cyan']}" stroke-opacity=".5"/>
-      <text class="mono" x="880" y="272" fill="{c['ink']}" font-size="11" text-anchor="middle">FINTECH</text>
-    </g>
-    <g class="pop p5">
-      <rect x="758" y="300" width="124" height="36" rx="2" fill="{c['node']}" stroke="{c['lavender']}"/>
-      <text class="mono" x="820" y="322" fill="{c['lavender']}" font-size="11" text-anchor="middle">HUMAN CONTROL</text>
-    </g>
+  <g class="rise a2">
+    <text fill="{c['ink']}" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Manpreet Singh</text>
+  </g>
+  <g class="fade a3">
+    <text fill="{c['muted']}" class="mono" x="48" y="214" font-size="19">Software Engineering · AI Systems · Fintech</text>
   </g>
 
-  <line class="draw a6" x1="48" y1="356" x2="952" y2="356" stroke="{c['rule']}" stroke-width="1"/>
-  <g class="fade a6 mono">
-    <text x="48" y="388" fill="{c['cyan']}" font-size="11" letter-spacing="2.5">FULL-STACK SYSTEMS</text>
-    <text x="250" y="388" fill="{c['rule']}" font-size="11">·</text>
-    <text x="272" y="388" fill="{c['lavender']}" font-size="11" letter-spacing="2.5">EXPLAINABLE AI</text>
-    <text x="458" y="388" fill="{c['rule']}" font-size="11">·</text>
-    <text x="480" y="388" fill="{c['coral']}" font-size="11" letter-spacing="2.5">FINTECH RESEARCH</text>
-    <text x="952" y="388" fill="{c['muted']}" font-size="11" letter-spacing="2" text-anchor="end">DE ANZA → SJSU / 2027</text>
+  <g class="fade a4">
+    <text fill="{c['dim']}" class="mono" x="48" y="274" font-size="12.5" letter-spacing="1">focus  ▸</text>
+    <text fill="{c['cyan']}" class="mono" x="128" y="274" font-size="12.5" letter-spacing="1">software engineering · AI systems · fintech tooling</text>
   </g>
-  <g class="fade a6 mono">
-    <text x="48" y="420" fill="{c['dim']}" font-size="11" letter-spacing="2">github.com/ManpreetS2</text>
+  <g class="fade a5">
+    <text fill="{c['dim']}" class="mono" x="48" y="300" font-size="12.5" letter-spacing="1">open to software engineering and technical internships</text>
+  </g>
+
+  <line class="draw a5" x1="48" y1="342" x2="952" y2="342" stroke="{c['rule']}" stroke-width="1"/>
+  <g class="fade a6">
+    <text fill="{c['cyan']}" class="mono" x="48" y="374" font-size="11.5" letter-spacing="3">SOFTWARE ENGINEERING</text>
+    <text fill="{c['lavender']}" class="mono" x="318" y="374" font-size="11.5">·</text>
+    <text fill="{c['lavender']}" class="mono" x="348" y="374" font-size="11.5" letter-spacing="3">AI SYSTEMS</text>
+    <text fill="{c['coral']}" class="mono" x="508" y="374" font-size="11.5">·</text>
+    <text fill="{c['coral']}" class="mono" x="538" y="374" font-size="11.5" letter-spacing="3">FINTECH</text>
+    <text fill="{c['muted']}" class="mono" x="952" y="374" font-size="11.5" letter-spacing="3" text-anchor="end">DE ANZA → SJSU / 2027</text>
   </g>
 </svg>'''
 
@@ -475,33 +456,8 @@ def footer(c: dict) -> str:
 # ─── MOBILE (390-wide, larger type, stacked) ─────────────────────────────────
 
 def hero_mobile(c: dict) -> str:
-    return f'''<svg viewBox="0 0 390 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh">
-  <defs><style>{css(c, 340)}</style></defs>
-  <line class="draw a1" x1="20" y1="40" x2="370" y2="40" stroke="{c['rule']}"/>
-  <text class="mono fade a1" x="20" y="28" fill="{c['muted']}" font-size="11" letter-spacing="2">MS / PORTFOLIO</text>
-  <text class="mono fade a2" x="20" y="78" fill="{c['cyan']}" font-size="13" letter-spacing="3">HELLO, I'M</text>
-  <text class="sans rise a3" x="18" y="130" fill="{c['ink']}" font-size="36" font-weight="700" letter-spacing="-1.2">Manpreet</text>
-  <text class="sans rise a3" x="18" y="176" fill="{c['ink']}" font-size="36" font-weight="700" letter-spacing="-1.2">Singh</text>
-  <text class="mono fade a4" x="20" y="210" fill="{c['muted']}" font-size="14">Software · AI · Fintech</text>
-  <text class="mono fade a5" x="20" y="244" fill="{c['ink']}" font-size="13">evidence-backed products</text>
-  <text class="mono fade a5" x="20" y="266" fill="{c['ink']}" font-size="13">reliable workflows</text>
-  <text class="mono fade a5" x="20" y="288" fill="{c['ink']}" font-size="13">human-in-the-loop systems</text>
-  <!-- compact interest diagram -->
-  <line class="draw w1" x1="60" y1="330" x2="195" y2="360" stroke="{c['rule']}"/>
-  <line class="draw w2" x1="330" y1="330" x2="195" y2="360" stroke="{c['rule']}"/>
-  <line class="draw w3" x1="195" y1="380" x2="195" y2="420" stroke="{c['cyan']}"/>
-  <g class="pop p1"><rect x="20" y="310" width="80" height="28" rx="2" fill="{c['node']}" stroke="{c['cyan']}" stroke-opacity=".5"/>
-    <text class="mono" x="60" y="328" fill="{c['ink']}" font-size="10" text-anchor="middle">EVIDENCE</text></g>
-  <g class="pop p2"><rect x="290" y="310" width="80" height="28" rx="2" fill="{c['node']}" stroke="{c['lavender']}" stroke-opacity=".5"/>
-    <text class="mono" x="330" y="328" fill="{c['ink']}" font-size="10" text-anchor="middle">MODELS</text></g>
-  <g class="pop p0"><rect x="145" y="348" width="100" height="32" rx="2" fill="{c['soft']}" stroke="{c['rule']}"/>
-    <text class="mono" x="195" y="368" fill="{c['ink']}" font-size="11" text-anchor="middle">SYSTEMS</text></g>
-  <g class="pop p5"><rect x="130" y="420" width="130" height="28" rx="2" fill="{c['node']}" stroke="{c['lavender']}"/>
-    <text class="mono" x="195" y="438" fill="{c['lavender']}" font-size="10" text-anchor="middle">HUMAN CONTROL</text></g>
-  <line class="draw a6" x1="20" y1="468" x2="370" y2="468" stroke="{c['rule']}"/>
-  <text class="mono fade a6" x="20" y="492" fill="{c['cyan']}" font-size="11" letter-spacing="1">FULL-STACK · AI · FINTECH</text>
-  <text class="mono fade a6" x="20" y="512" fill="{c['dim']}" font-size="11">De Anza → SJSU / 2027 · open to internships</text>
-</svg>'''
+    # Reference has no separate mobile hero — same 1000×400 composition scales.
+    return hero_desktop(c)
 
 
 def whoami_mobile(c: dict) -> str:
