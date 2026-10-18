@@ -125,3 +125,82 @@ Sequence: top rule + meta → name rise → subtitle → focus → open-to + bot
 | Color | Near-monochrome | Cyan / lavender / coral accents on same hierarchy |
 | Files | CSS variables + dark overrides | Hardcoded light/dark fills (camo-safe) |
 | Mobile asset | Same SVG scaled | Same 1000×400 composition (scaled at 390px) |
+
+---
+
+# Sharann WHOAMI — Reference Analysis
+
+Source inspected (2026-10-18):
+- Light: `assets/whoami.svg`
+- Dark: `assets/dark/whoami.svg`
+- Section header: `assets/s01.svg` / `assets/dark/s01.svg`
+
+Personal bio text is **not** reused. Measured composition only.
+
+## Canvas
+
+| Property | Value |
+|----------|--------|
+| `viewBox` | `0 0 1000 236` |
+| Aspect ratio | ≈ 4.24 : 1 |
+| Content left | **48** |
+| Content right | **952** |
+| Label column | **x=48** |
+| Value column | **x=154** |
+
+No background fill, cards, icons, or diagrams.
+
+## Vertical rhythm (y positions)
+
+| Element | y | Size | Fill role |
+|---------|---|------|-----------|
+| Intro line 1 | **32** | 16 | bone (primary) |
+| Intro line 2 | **60** | 16 | bone |
+| Intro line 3 | **88** | 15 | muted |
+| Dividing rule | **116** | 1px, opacity **0.5** | rule, `48→952` |
+| FOCUS label / value | **148** | 11 / 15 | muted / bone |
+| STATUS label / value | **182** | 11 / 15 | muted / **accent** |
+| CLUBS label / value | **216** | 11 / 15 | muted / bone |
+
+### Measured gaps
+
+| From → To | Δy |
+|-----------|-----|
+| Line1 → Line2 | 28 |
+| Line2 → Line3 | 28 |
+| Line3 → rule | 28 |
+| Rule → FOCUS | 32 |
+| FOCUS → STATUS | 34 |
+| STATUS → CLUBS | 34 |
+| Last baseline → canvas bottom | 20 |
+
+Labels use `letter-spacing="2.5"`. Values are plain mono at 15px. Structure: **3 short intros → one fine rule → 3 metadata rows**.
+
+## Section header (s01)
+
+| Property | Value |
+|----------|--------|
+| `viewBox` | `0 0 1000 92` |
+| Ghost numeral `01` | x=48, y=68, size **52** |
+| Title `WHOAMI` | x=128, y=58, size **14**, tracking **6** |
+| Path hint | x=952, y=58, size **11**, tracking **2**, end-anchored |
+| Draw rule | y=**53**, x1=**248** → x2=**831** |
+
+## Animation (whoami body)
+
+| Class | Resting (ref) | Motion | Duration | Easing |
+|-------|---------------|--------|----------|--------|
+| `.rise` | `opacity: 0` | → 1 + `translateY(8px→0)` | **0.7s** | `cubic-bezier(.2,.7,.2,1)` |
+
+Delays: `.a1` 0.1s · `.a2` 0.2s · `.a3` 0.35s · `.a4` 0.5s · `.a5` 0.65s · `.a6` 0.8s.
+
+`prefers-reduced-motion: reduce` → `animation: none; opacity: 1`.
+
+## Principles to match (ours)
+
+1. Same **48 / 952** margins as the approved hero.
+2. Same **HERO_COLORS** and mono stack so the block continues the hero.
+3. Same fail-safe motion pattern as the hero (resting = visible; animate under `no-preference`), with whoami-scale rise (0.7s / 8px) and compact delays.
+4. Three intros + hairline rule + FOCUS / STATUS / EDUCATION rows (EDUCATION replaces reference CLUBS).
+5. Dedicated **390-wide** mobile composition (not a scaled desktop SVG).
+6. Copy must not repeat locked hero phrases.

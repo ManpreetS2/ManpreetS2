@@ -212,19 +212,68 @@ def section(num: str, label: str, hint: str, c: dict) -> str:
 </svg>'''
 
 
-def whoami(c: dict) -> str:
-    return f'''<svg viewBox="0 0 1000 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
-  <defs><style>{css(c)}</style></defs>
-  <text class="mono rise a1" x="48" y="36" fill="{c['ink']}" font-size="16">Computer Science @ De Anza College · Incoming San José State University, Spring 2027.</text>
-  <text class="mono rise a2" x="48" y="66" fill="{c['ink']}" font-size="16">I build practical software, AI-powered tools, and systems designed around reliability.</text>
-  <text class="mono rise a3" x="48" y="96" fill="{c['muted']}" font-size="15">Prefer products where claims stay grounded in evidence and humans keep final control.</text>
-  <line class="fade a4" x1="48" y1="126" x2="952" y2="126" stroke="{c['rule']}" stroke-width="1" opacity=".7"/>
-  <text class="mono rise a4" x="48" y="160" fill="{c['dim']}" font-size="11" letter-spacing="2.5">FOCUS</text>
-  <text class="mono rise a4" x="148" y="160" fill="{c['ink']}" font-size="15">Full-stack systems · Explainable AI tooling · Fintech research · Local-first apps</text>
-  <text class="mono rise a5" x="48" y="194" fill="{c['dim']}" font-size="11" letter-spacing="2.5">STATUS</text>
-  <text class="mono rise a5" x="148" y="194" fill="{c['cyan']}" font-size="15">Open to software engineering, solutions engineering, and technical internships</text>
-  <text class="mono rise a6" x="48" y="228" fill="{c['dim']}" font-size="11" letter-spacing="2.5">EDU</text>
-  <text class="mono rise a6" x="148" y="228" fill="{c['ink']}" font-size="15">De Anza College → San José State University / Spring 2027</text>
+def whoami_css() -> str:
+    """Whoami motion: Sharann whoami rise (0.7s / 8px) + hero fail-safe visibility.
+    Resting = final visible; animate only under prefers-reduced-motion: no-preference.
+    """
+    return f"""
+    .mono {{ font-family:{MONO}; }}
+    .rise {{ opacity:1; }}
+    @keyframes rise {{ from {{ opacity:0; transform:translateY(8px); }} to {{ opacity:1; transform:translateY(0); }} }}
+    .a1{{animation-delay:.1s}} .a2{{animation-delay:.2s}} .a3{{animation-delay:.35s}}
+    .a4{{animation-delay:.5s}} .a5{{animation-delay:.65s}} .a6{{animation-delay:.8s}}
+    @media (prefers-reduced-motion: no-preference) {{
+      .rise {{ animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }}
+    }}
+"""
+
+
+def whoami_section(mode: str = "dark") -> str:
+    """01 — WHOAMI header using locked hero colors (section 01 only)."""
+    h = HERO_COLORS[mode]
+    ghost = "#2A3D5C" if mode == "dark" else "#C5CEE0"
+    return f'''<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
+  <style>
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:760; stroke-dashoffset:0; }}
+    .f {{ opacity:1; }}
+    @keyframes d {{ from {{ stroke-dashoffset:760; }} to {{ stroke-dashoffset:0; }} }}
+    @keyframes f {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s both; }}
+      .f {{ animation:f .8s ease .1s both; }}
+    }}
+  </style>
+  <g class="f mono">
+    <text x="48" y="68" font-size="52" fill="{ghost}">01</text>
+    <text x="128" y="58" font-size="14" fill="{h['cyan']}" letter-spacing="6">WHOAMI</text>
+    <text x="952" y="58" font-size="11" fill="{h['muted']}" letter-spacing="2" text-anchor="end">~/01-whoami</text>
+  </g>
+  <line class="draw" x1="248" y1="53" x2="831" y2="53" stroke="{h['rule']}" stroke-width="1"/>
+</svg>'''
+
+
+def whoami(c: dict, mode: str = "dark") -> str:
+    # Geometry locked to Sharann whoami (1000×236). Colors from HERO_COLORS.
+    # Copy deliberately avoids locked hero phrases.
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh — CS at De Anza, incoming SJSU Spring 2027">
+  <style>{whoami_css()}</style>
+
+  <text class="mono rise a1" x="48" y="32" font-size="16" fill="{h['ink']}">CS student at De Anza College, incoming San José State University, Spring 2027.</text>
+  <text class="mono rise a2" x="48" y="60" font-size="16" fill="{h['ink']}">building software, AI-assisted products, and fintech research tools end to end.</text>
+  <text class="mono rise a3" x="48" y="88" font-size="15" fill="{h['muted']}">drawn to work where the data path stays inspectable and the interface stays honest.</text>
+
+  <line class="rise a4" x1="48" y1="116" x2="952" y2="116" stroke="{h['rule']}" stroke-width="1" opacity=".5"/>
+
+  <text class="mono rise a4" x="48" y="148" font-size="11" fill="{h['muted']}" letter-spacing="2.5">FOCUS</text>
+  <text class="mono rise a4" x="154" y="148" font-size="15" fill="{h['ink']}">Product systems · Applied ML tooling · Markets &amp; research software</text>
+
+  <text class="mono rise a5" x="48" y="182" font-size="11" fill="{h['muted']}" letter-spacing="2.5">STATUS</text>
+  <text class="mono rise a5" x="154" y="182" font-size="15" fill="{h['cyan']}">looking for teams that ship careful, inspectable software</text>
+
+  <text class="mono rise a6" x="48" y="216" font-size="11" fill="{h['muted']}" letter-spacing="2.5">EDUCATION</text>
+  <text class="mono rise a6" x="154" y="216" font-size="15" fill="{h['ink']}">Computer Science — De Anza College, then San José State University (Spring 2027)</text>
 </svg>'''
 
 
@@ -527,21 +576,54 @@ def hero_mobile(c: dict, mode: str = "dark") -> str:
 </svg>'''
 
 
-def whoami_mobile(c: dict) -> str:
-    return f'''<svg viewBox="0 0 390 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet">
-  <defs><style>{css(c)}</style></defs>
-  <text class="mono rise a1" x="20" y="28" fill="{c['ink']}" font-size="14">CS @ De Anza College</text>
-  <text class="mono rise a1" x="20" y="50" fill="{c['ink']}" font-size="14">Incoming SJSU, Spring 2027</text>
-  <text class="mono rise a2" x="20" y="86" fill="{c['muted']}" font-size="13">Practical software, AI tools,</text>
-  <text class="mono rise a2" x="20" y="106" fill="{c['muted']}" font-size="13">and reliable systems.</text>
-  <text class="mono rise a3" x="20" y="136" fill="{c['dim']}" font-size="13">Evidence first. Humans in control.</text>
-  <line x1="20" y1="160" x2="370" y2="160" stroke="{c['rule']}"/>
-  <text class="mono rise a4" x="20" y="190" fill="{c['dim']}" font-size="11" letter-spacing="2">FOCUS</text>
-  <text class="mono rise a4" x="20" y="212" fill="{c['ink']}" font-size="13">Full-stack · Explainable AI</text>
-  <text class="mono rise a4" x="20" y="232" fill="{c['ink']}" font-size="13">Fintech research · Local-first</text>
-  <text class="mono rise a5" x="20" y="262" fill="{c['dim']}" font-size="11" letter-spacing="2">STATUS</text>
-  <text class="mono rise a5" x="20" y="284" fill="{c['cyan']}" font-size="13">Open to SE / solutions / internships</text>
-  <text class="mono rise a6" x="20" y="310" fill="{c['dim']}" font-size="12">EDU · De Anza → SJSU / 2027</text>
+def whoami_section_mobile(mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    ghost = "#2A3D5C" if mode == "dark" else "#C5CEE0"
+    return f'''<svg viewBox="0 0 390 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
+  <style>
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:300; stroke-dashoffset:0; }}
+    .f {{ opacity:1; }}
+    @keyframes d {{ from {{ stroke-dashoffset:300; }} to {{ stroke-dashoffset:0; }} }}
+    @keyframes f {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:d 1.1s cubic-bezier(.6,0,.2,1) .15s both; }}
+      .f {{ animation:f .7s ease .1s both; }}
+    }}
+  </style>
+  <g class="f mono">
+    <text x="20" y="52" font-size="36" fill="{ghost}">01</text>
+    <text x="78" y="42" font-size="13" fill="{h['cyan']}" letter-spacing="3">WHOAMI</text>
+    <text x="370" y="42" font-size="10" fill="{h['muted']}" text-anchor="end">~/01</text>
+  </g>
+  <line class="draw" x1="78" y1="54" x2="300" y2="54" stroke="{h['rule']}" stroke-width="1"/>
+</svg>'''
+
+
+def whoami_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
+  <style>{whoami_css()}</style>
+
+  <text class="mono rise a1" x="20" y="28" font-size="14" fill="{h['ink']}">CS student at De Anza College,</text>
+  <text class="mono rise a1" x="20" y="48" font-size="14" fill="{h['ink']}">incoming SJSU, Spring 2027.</text>
+  <text class="mono rise a2" x="20" y="80" font-size="13" fill="{h['ink']}">building software, AI-assisted</text>
+  <text class="mono rise a2" x="20" y="100" font-size="13" fill="{h['ink']}">products, and fintech research tools.</text>
+  <text class="mono rise a3" x="20" y="132" font-size="13" fill="{h['muted']}">inspectable data paths.</text>
+  <text class="mono rise a3" x="20" y="152" font-size="13" fill="{h['muted']}">honest interfaces.</text>
+
+  <line class="rise a4" x1="20" y1="176" x2="370" y2="176" stroke="{h['rule']}" stroke-width="1" opacity=".5"/>
+
+  <text class="mono rise a4" x="20" y="208" font-size="11" fill="{h['muted']}" letter-spacing="2.5">FOCUS</text>
+  <text class="mono rise a4" x="20" y="230" font-size="13" fill="{h['ink']}">Product systems · Applied ML</text>
+  <text class="mono rise a4" x="20" y="250" font-size="13" fill="{h['ink']}">Markets &amp; research software</text>
+
+  <text class="mono rise a5" x="20" y="286" font-size="11" fill="{h['muted']}" letter-spacing="2.5">STATUS</text>
+  <text class="mono rise a5" x="20" y="308" font-size="13" fill="{h['cyan']}">looking for teams that ship</text>
+  <text class="mono rise a5" x="20" y="328" font-size="13" fill="{h['cyan']}">careful, inspectable software</text>
+
+  <text class="mono rise a6" x="20" y="364" font-size="11" fill="{h['muted']}" letter-spacing="2.5">EDUCATION</text>
+  <text class="mono rise a6" x="20" y="386" font-size="13" fill="{h['ink']}">CS — De Anza, then SJSU (2027)</text>
 </svg>'''
 
 
@@ -684,7 +766,7 @@ def main() -> None:
     for mode, c in PALETTE.items():
         d = OUT[("desktop", mode)]
         write(d / "hero.svg", hero_desktop(c, mode))
-        write(d / "whoami.svg", whoami(c))
+        write(d / "whoami.svg", whoami(c, mode))
         write(d / "system-map.svg", system_map(c))
         write(d / "flagship-meta.svg", flagship_meta(c))
         write(d / "flagship-frame.svg", flagship_frame(c))
@@ -693,11 +775,14 @@ def main() -> None:
         write(d / "toolkit.svg", toolkit(c))
         write(d / "footer.svg", footer(c))
         for name, num, label, hint in sections:
-            write(d / f"{name}.svg", section(num, label, hint, c))
+            if name == "s01":
+                write(d / "s01.svg", whoami_section(mode))
+            else:
+                write(d / f"{name}.svg", section(num, label, hint, c))
 
         m = OUT[("mobile", mode)]
         write(m / "hero.svg", hero_mobile(c, mode))
-        write(m / "whoami.svg", whoami_mobile(c))
+        write(m / "whoami.svg", whoami_mobile(c, mode))
         write(m / "system-map.svg", system_map_mobile(c))
         write(m / "flagship-meta.svg", flagship_meta_mobile(c))
         write(m / "flagship-frame.svg", flagship_frame_mobile(c))
@@ -706,7 +791,10 @@ def main() -> None:
         write(m / "toolkit.svg", toolkit_mobile(c))
         write(m / "footer.svg", footer_mobile(c))
         for name, num, label, hint in sections:
-            write(m / f"{name}.svg", section_mobile(num, label, hint, c))
+            if name == "s01":
+                write(m / "s01.svg", whoami_section_mobile(mode))
+            else:
+                write(m / f"{name}.svg", section_mobile(num, label, hint, c))
 
 
 if __name__ == "__main__":
