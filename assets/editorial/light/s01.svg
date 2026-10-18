@@ -11,7 +11,7 @@
     }
   </style>
   <g class="f mono">
-    <text x="48" y="68" font-size="52" fill="#C5CEE0">01</text>
+    <text x="48" y="68" font-size="52" fill="#A8B4C6">01</text>
     <text x="128" y="58" font-size="14" fill="#0B8F8A" letter-spacing="6">WHOAMI</text>
     <text x="952" y="58" font-size="11" fill="#3D4A5F" letter-spacing="2" text-anchor="end">~/01-whoami</text>
   </g>

@@ -231,7 +231,8 @@ def whoami_css() -> str:
 def whoami_section(mode: str = "dark") -> str:
     """01 — WHOAMI header using locked hero colors (section 01 only)."""
     h = HERO_COLORS[mode]
-    ghost = "#2A3D5C" if mode == "dark" else "#C5CEE0"
+    # Ghost numeral: visible like Sharann’s bright 01, but still secondary.
+    ghost = "#7A8FA8" if mode == "dark" else "#A8B4C6"
     return f'''<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
   <style>
     .mono {{ font-family:{MONO}; }}
