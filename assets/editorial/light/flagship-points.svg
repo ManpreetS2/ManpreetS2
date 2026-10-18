@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1000 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
+<svg viewBox="0 0 1000 282" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
   <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
     .draw { stroke-dasharray:904; stroke-dashoffset:0; }
@@ -18,16 +18,13 @@
 </style>
   <text class="mono fade a1" x="48" y="18" fill="#5A6578" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
   <g class="row r1 mono">
-    <text x="48" y="40" fill="#0B8F8A" font-size="13" letter-spacing="2.5">01 / FIT</text>
-    <text x="220" y="40" fill="#0F1729" font-size="15">Explainable job matching grounded in resume evidence</text>
-    <line x1="48" y1="58" x2="952" y2="58" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+    <text x="48" y="36" fill="#0B8F8A" font-size="12" letter-spacing="2.5">01 / FIT</text><text x="48" y="58" fill="#0F1729" font-size="15">Explainable job matching grounded in actual resume and job-posting evidence.</text>
+    <line x1="48" y1="80" x2="952" y2="80" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
   </g><g class="row r2 mono">
-    <text x="48" y="92" fill="#5F4F8F" font-size="13" letter-spacing="2.5">02 / WORKFLOW</text>
-    <text x="220" y="92" fill="#0F1729" font-size="15">Discover, analyze, prepare, and track applications</text>
-    <line x1="48" y1="110" x2="952" y2="110" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+    <text x="48" y="108" fill="#5F4F8F" font-size="12" letter-spacing="2.5">02 / WORKFLOW</text><text x="48" y="130" fill="#0F1729" font-size="15">Discover, analyze, prepare, and track applications in one workspace.</text>
+    <line x1="48" y1="152" x2="952" y2="152" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
   </g><g class="row r3 mono">
-    <text x="48" y="144" fill="#B85040" font-size="13" letter-spacing="2.5">03 / EXTENSION</text>
-    <text x="220" y="144" fill="#0F1729" font-size="15">Human-controlled browser assistance, never automatic submission</text>
-    <line x1="48" y1="162" x2="952" y2="162" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+    <text x="48" y="180" fill="#B85040" font-size="12" letter-spacing="2.5">03 / EXTENSION</text><text x="48" y="202" fill="#0F1729" font-size="15">Human-controlled Chrome assistance for supported job applications.</text><text x="48" y="224" fill="#0F1729" font-size="15">Never automatic submission.</text>
+    <line x1="48" y1="246" x2="952" y2="246" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
   </g>
 </svg>

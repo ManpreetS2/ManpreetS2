@@ -1,69 +1,21 @@
-<svg viewBox="0 0 1000 580" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects directory">
-  <defs><style>
+<svg viewBox="0 0 1000 622" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects directory">
+  <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
-    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-    
-    .draw { stroke-dasharray:1000; stroke-dashoffset:0; }
-    .rise,.fade,.pop,.row { opacity:1; }
-    .flow { stroke-dasharray:3 9; opacity:.35; }
-    .pulse { opacity:1; }
-    .caret { opacity:1; }
-    @keyframes draw { from { stroke-dashoffset:1000; } to { stroke-dashoffset:0; } }
-    @keyframes rise { from { opacity:0; } to { opacity:1; } }
+    .draw { stroke-dasharray:904; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:904; } to { stroke-dashoffset:0; } }
+    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
     @keyframes fade { from { opacity:0; } to { opacity:1; } }
-    @keyframes pop { from { opacity:0; } to { opacity:1; } }
-    @keyframes march { to { stroke-dashoffset:-12; } }
-    @keyframes pulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
-    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
-    .a1{animation-delay:.08s}.a2{animation-delay:.2s}.a3{animation-delay:.35s}
-    .a4{animation-delay:.5s}.a5{animation-delay:.65s}.a6{animation-delay:.8s}
-    .w1{animation-delay:.15s}.w2{animation-delay:.28s}.w3{animation-delay:.4s}
-    .w4{animation-delay:.52s}.w5{animation-delay:.64s}.w6{animation-delay:.76s}
-    .p0{animation-delay:.1s}.p1{animation-delay:.45s}.p2{animation-delay:.55s}
-    .p3{animation-delay:.65s}.p4{animation-delay:.75s}.p5{animation-delay:.85s}
-    .p6{animation-delay:.95s}.p7{animation-delay:1.05s}.p8{animation-delay:1.15s}
-    .r1{animation-delay:.05s}.r2{animation-delay:.12s}.r3{animation-delay:.19s}
-    .r4{animation-delay:.26s}.r5{animation-delay:.33s}
-    @media (prefers-reduced-motion:no-preference) {
-      .draw { animation:draw 1.2s cubic-bezier(.6,0,.2,1) both; }
-      .rise { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
-      .fade { animation:fade .55s ease both; }
-      .pop { animation:pop .65s cubic-bezier(.2,.7,.2,1) both; }
-      .row { animation:rise .5s cubic-bezier(.2,.7,.2,1) both; }
-      .flow { animation:march 1.4s linear infinite; }
-      .pulse { animation:pulse 2.6s ease-in-out infinite; }
-      .caret { animation:blink 1.05s steps(1,end) infinite; }
+    .a1{animation-delay:.1s} .a2{animation-delay:.25s} .a3{animation-delay:.4s}
+    .a4{animation-delay:.55s} .a5{animation-delay:.7s} .a6{animation-delay:.85s}
+    .r1{animation-delay:.2s} .r2{animation-delay:.35s} .r3{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.3s cubic-bezier(.6,0,.2,1) both; }
+      .rise { animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
+      .fade { animation:fade .65s ease both; }
+      .row { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
     }
-
-</style></defs>
-  <g class="row r1 mono">
-    <text x="48" y="44" fill="#0F1729" font-size="17" font-weight="700" letter-spacing=".6">01 / INTEGRATIONLAB</text>
-    <text x="952" y="44" fill="#6E7890" font-size="10" letter-spacing="1.5" text-anchor="end">PRODUCT SCREENSHOT</text>
-    <text x="48" y="72" fill="#4E596E" font-size="13">Self-hosted console for diagnosing API and webhook failures</text>
-    <text x="48" y="92" fill="#4E596E" font-size="13">with stored evidence, signed webhooks, and retry handling.</text>
-    <text x="48" y="116" fill="#0B8F8A" font-size="11" letter-spacing=".4">FASTAPI · POSTGRESQL · REACT · DOCKER</text>
-    <line x1="48" y1="134" x2="952" y2="134" stroke="#B8C2D4" stroke-width="1"/>
-  </g><g class="row r2 mono">
-    <text x="48" y="174" fill="#0F1729" font-size="17" font-weight="700" letter-spacing=".6">02 / R.E.A.C.T.</text>
-    <text x="952" y="174" fill="#6E7890" font-size="10" letter-spacing="1.5" text-anchor="end">CONCEPT ART</text>
-    <text x="48" y="202" fill="#4E596E" font-size="13">Research prototype: does numerical reward feedback change</text>
-    <text x="48" y="222" fill="#4E596E" font-size="13">language-model controller revisions in a physics simulator?</text>
-    <text x="48" y="246" fill="#5F4F8F" font-size="11" letter-spacing=".4">PYTHON · LUNARLANDER · RESEARCH PROTOTYPE</text>
-    <line x1="48" y1="264" x2="952" y2="264" stroke="#B8C2D4" stroke-width="1"/>
-  </g><g class="row r3 mono">
-    <text x="48" y="304" fill="#0F1729" font-size="17" font-weight="700" letter-spacing=".6">03 / EQUITYTRACE</text>
-    <text x="952" y="304" fill="#6E7890" font-size="10" letter-spacing="1.5" text-anchor="end">CONCEPT ART</text>
-    <text x="48" y="332" fill="#4E596E" font-size="13">Point-in-time stock research from SEC filings, auditable</text>
-    <text x="48" y="352" fill="#4E596E" font-size="13">financial factors, and transparent portfolio backtesting.</text>
-    <text x="48" y="376" fill="#0B8F8A" font-size="11" letter-spacing=".4">PYTHON · SEC XBRL · DUCKDB</text>
-    <line x1="48" y1="394" x2="952" y2="394" stroke="#B8C2D4" stroke-width="1"/>
-  </g><g class="row r4 mono">
-    <text x="48" y="434" fill="#0F1729" font-size="17" font-weight="700" letter-spacing=".6">04 / MINECRAFT AI CIVILIZATION</text>
-    <text x="952" y="434" fill="#6E7890" font-size="10" letter-spacing="1.5" text-anchor="end">CONCEPT ART</text>
-    <text x="48" y="462" fill="#4E596E" font-size="13">Multi-agent simulation with persistent memory, planning,</text>
-    <text x="48" y="482" fill="#4E596E" font-size="13">and actions inside a shared Minecraft world — in development.</text>
-    <text x="48" y="506" fill="#5F4F8F" font-size="11" letter-spacing=".4">TYPESCRIPT · MINEFLAYER · SQLITE</text>
-    <line x1="48" y1="524" x2="952" y2="524" stroke="#B8C2D4" stroke-width="1"/>
-  </g>
-  <text class="mono fade a5" x="48" y="560" fill="#6E7890" font-size="12" letter-spacing="1.2">ALSO · StrikeCaller · PagePulse · Java Banking System · System Down Simulator</text>
+</style>
+  <g class="row r1 mono"><text x="48" y="38" fill="#0F1729" font-size="16" letter-spacing=".5">01 / INTEGRATIONLAB</text><text x="952" y="38" fill="#5A6578" font-size="10" letter-spacing="1.5" text-anchor="end">PRODUCT SCREENSHOT</text><text x="48" y="64" fill="#3D4A5F" font-size="14">Self-hosted console for understanding API and webhook failures</text><text x="48" y="86" fill="#3D4A5F" font-size="14">through recorded evidence, retry handling, and auditable observations.</text><text x="48" y="114" fill="#0B8F8A" font-size="12" letter-spacing=".3">FASTAPI · POSTGRESQL · REACT · DOCKER</text><line x1="48" y1="136" x2="952" y2="136" stroke="#B0BACC" stroke-width="1"/></g><g class="row r2 mono"><text x="48" y="176" fill="#0F1729" font-size="16" letter-spacing=".5">02 / R.E.A.C.T.</text><text x="952" y="176" fill="#5A6578" font-size="10" letter-spacing="1.5" text-anchor="end">ILLUSTRATIVE ART</text><text x="48" y="202" fill="#3D4A5F" font-size="14">Research infrastructure for comparing language-model controller</text><text x="48" y="224" fill="#3D4A5F" font-size="14">revisions with and without numerical reward feedback.</text><text x="48" y="252" fill="#5F4F8F" font-size="12" letter-spacing=".3">PYTHON · SIMULATION · RESEARCH PROTOTYPE</text><line x1="48" y1="274" x2="952" y2="274" stroke="#B0BACC" stroke-width="1"/></g><g class="row r3 mono"><text x="48" y="314" fill="#0F1729" font-size="16" letter-spacing=".5">03 / EQUITYTRACE</text><text x="952" y="314" fill="#5A6578" font-size="10" letter-spacing="1.5" text-anchor="end">ILLUSTRATIVE ART</text><text x="48" y="340" fill="#3D4A5F" font-size="14">Point-in-time financial research based on SEC filings,</text><text x="48" y="362" fill="#3D4A5F" font-size="14">transparent factors, and reproducible backtesting.</text><text x="48" y="390" fill="#0B8F8A" font-size="12" letter-spacing=".3">PYTHON · SEC XBRL · DUCKDB</text><line x1="48" y1="412" x2="952" y2="412" stroke="#B0BACC" stroke-width="1"/></g><g class="row r4 mono"><text x="48" y="452" fill="#0F1729" font-size="16" letter-spacing=".5">04 / MINECRAFT AI CIVILIZATION</text><text x="952" y="452" fill="#5A6578" font-size="10" letter-spacing="1.5" text-anchor="end">ILLUSTRATIVE ART · IN DEVELOPMENT</text><text x="48" y="478" fill="#3D4A5F" font-size="14">Multi-agent research prototype exploring persistent identities,</text><text x="48" y="500" fill="#3D4A5F" font-size="14">memories, planning, and real actions in a shared Minecraft world.</text><text x="48" y="522" fill="#3D4A5F" font-size="14">Complete autonomous multi-agent simulation still under development.</text><text x="48" y="550" fill="#B85040" font-size="12" letter-spacing=".3">TYPESCRIPT · MINEFLAYER · SQLITE</text><line x1="48" y1="572" x2="952" y2="572" stroke="#B0BACC" stroke-width="1"/></g>
+  <text class="mono fade a5" x="48" y="614" fill="#5A6578" font-size="12" letter-spacing="1.2">ALSO — StrikeCaller · PagePulse · Java Banking System · System Down Simulator</text>
 </svg>
