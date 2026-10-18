@@ -1,4 +1,4 @@
-<svg viewBox="0 0 390 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
+<svg viewBox="0 0 390 492" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
   <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
     .rise { opacity:1; }
@@ -10,23 +10,27 @@
     }
 </style>
 
-  <text class="mono rise a1" x="20" y="28" font-size="14" fill="#F4F7FC">CS student at De Anza College,</text>
-  <text class="mono rise a1" x="20" y="48" font-size="14" fill="#F4F7FC">incoming SJSU, Spring 2027.</text>
-  <text class="mono rise a2" x="20" y="80" font-size="13" fill="#F4F7FC">building software, AI-assisted</text>
-  <text class="mono rise a2" x="20" y="100" font-size="13" fill="#F4F7FC">products, and fintech research tools.</text>
-  <text class="mono rise a3" x="20" y="132" font-size="13" fill="#C5CEDC">inspectable data paths.</text>
-  <text class="mono rise a3" x="20" y="152" font-size="13" fill="#C5CEDC">honest interfaces.</text>
+  <text class="mono rise a1" x="20" y="28" font-size="14" fill="#F4F7FC">Building end-to-end software,</text>
+  <text class="mono rise a1" x="20" y="48" font-size="14" fill="#F4F7FC">from backend systems to</text>
+  <text class="mono rise a1" x="20" y="68" font-size="14" fill="#F4F7FC">user-facing products.</text>
+  <text class="mono rise a2" x="20" y="100" font-size="13" fill="#F4F7FC">My projects span career tools,</text>
+  <text class="mono rise a2" x="20" y="120" font-size="13" fill="#F4F7FC">AI experimentation, and</text>
+  <text class="mono rise a2" x="20" y="140" font-size="13" fill="#F4F7FC">financial research.</text>
+  <text class="mono rise a3" x="20" y="172" font-size="13" fill="#EDF1F8">I care about clear interfaces,</text>
+  <text class="mono rise a3" x="20" y="192" font-size="13" fill="#EDF1F8">reliable systems, and results</text>
+  <text class="mono rise a3" x="20" y="212" font-size="13" fill="#EDF1F8">I can explain.</text>
 
-  <line class="rise a4" x1="20" y1="176" x2="370" y2="176" stroke="#5A7190" stroke-width="1" opacity=".5"/>
+  <line class="rise a4" x1="20" y1="236" x2="370" y2="236" stroke="#5A7190" stroke-width="1" opacity=".5"/>
 
-  <text class="mono rise a4" x="20" y="208" font-size="11" fill="#C5CEDC" letter-spacing="2.5">FOCUS</text>
-  <text class="mono rise a4" x="20" y="230" font-size="13" fill="#F4F7FC">Product systems · Applied ML</text>
-  <text class="mono rise a4" x="20" y="250" font-size="13" fill="#F4F7FC">Markets &amp; research software</text>
+  <text class="mono rise a4" x="20" y="268" font-size="11" fill="#C5CEDC" letter-spacing="2.5">FOCUS</text>
+  <text class="mono rise a4" x="20" y="290" font-size="13" fill="#F4F7FC">Full-stack engineering · Applied AI</text>
+  <text class="mono rise a4" x="20" y="310" font-size="13" fill="#F4F7FC">Quantitative research</text>
 
-  <text class="mono rise a5" x="20" y="286" font-size="11" fill="#C5CEDC" letter-spacing="2.5">STATUS</text>
-  <text class="mono rise a5" x="20" y="308" font-size="13" fill="#3DDBD9">looking for teams that ship</text>
-  <text class="mono rise a5" x="20" y="328" font-size="13" fill="#3DDBD9">careful, inspectable software</text>
+  <text class="mono rise a5" x="20" y="346" font-size="11" fill="#C5CEDC" letter-spacing="2.5">STATUS</text>
+  <text class="mono rise a5" x="20" y="368" font-size="13" fill="#3DDBD9">Seeking software engineering and</text>
+  <text class="mono rise a5" x="20" y="388" font-size="13" fill="#3DDBD9">solutions engineering internships</text>
 
-  <text class="mono rise a6" x="20" y="364" font-size="11" fill="#C5CEDC" letter-spacing="2.5">EDUCATION</text>
-  <text class="mono rise a6" x="20" y="386" font-size="13" fill="#F4F7FC">CS — De Anza, then SJSU (2027)</text>
+  <text class="mono rise a6" x="20" y="424" font-size="11" fill="#C5CEDC" letter-spacing="2.5">EDUCATION</text>
+  <text class="mono rise a6" x="20" y="446" font-size="13" fill="#F4F7FC">Computer Science · De Anza College</text>
+  <text class="mono rise a6" x="20" y="466" font-size="13" fill="#F4F7FC">→ SJSU (Spring 2027)</text>
 </svg>

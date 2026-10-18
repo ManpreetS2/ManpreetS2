@@ -34,7 +34,7 @@
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/whoami.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/whoami.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/whoami.svg"/>
-  <img src="assets/editorial/light/whoami.svg" alt="CS student at De Anza College, incoming San José State University Spring 2027. Builds software, AI-assisted products, and fintech research tools. Focus: product systems, applied ML tooling, markets and research software." width="100%"/>
+  <img src="assets/editorial/light/whoami.svg" alt="Building end-to-end software, from backend systems to user-facing products. Projects span career tools, AI experimentation, and financial research. Focus: full-stack engineering, applied AI, quantitative research. Seeking software engineering and solutions engineering internships. Education: Computer Science, De Anza College → SJSU (Spring 2027)." width="100%"/>
 </picture>
 
 <picture>

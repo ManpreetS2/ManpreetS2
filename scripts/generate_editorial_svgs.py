@@ -231,8 +231,8 @@ def whoami_css() -> str:
 def whoami_section(mode: str = "dark") -> str:
     """01 — WHOAMI header using locked hero colors (section 01 only)."""
     h = HERO_COLORS[mode]
-    # Ghost numeral: visible like Sharann’s bright 01, but still secondary.
-    ghost = "#7A8FA8" if mode == "dark" else "#A8B4C6"
+    # Ghost numeral: slightly brighter for legibility, still secondary to title.
+    ghost = "#A8B8CC" if mode == "dark" else "#8A96AB"
     return f'''<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
   <style>
     .mono {{ font-family:{MONO}; }}
@@ -256,25 +256,26 @@ def whoami_section(mode: str = "dark") -> str:
 
 def whoami(c: dict, mode: str = "dark") -> str:
     # Geometry locked to Sharann whoami (1000×236). Colors from HERO_COLORS.
-    # Copy deliberately avoids locked hero phrases.
     h = HERO_COLORS[mode]
-    return f'''<svg viewBox="0 0 1000 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh — CS at De Anza, incoming SJSU Spring 2027">
+    # Line 3 uses subtitle (near-white in dark) for clearer contrast than muted.
+    line3 = h["subtitle"]
+    return f'''<svg viewBox="0 0 1000 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh — builds end-to-end software; CS at De Anza, incoming SJSU Spring 2027">
   <style>{whoami_css()}</style>
 
-  <text class="mono rise a1" x="48" y="32" font-size="16" fill="{h['ink']}">CS student at De Anza College, incoming San José State University, Spring 2027.</text>
-  <text class="mono rise a2" x="48" y="60" font-size="16" fill="{h['ink']}">building software, AI-assisted products, and fintech research tools end to end.</text>
-  <text class="mono rise a3" x="48" y="88" font-size="15" fill="{h['muted']}">drawn to work where the data path stays inspectable and the interface stays honest.</text>
+  <text class="mono rise a1" x="48" y="32" font-size="16" fill="{h['ink']}">Building end-to-end software, from backend systems to user-facing products.</text>
+  <text class="mono rise a2" x="48" y="60" font-size="16" fill="{h['ink']}">My projects span career tools, AI experimentation, and financial research.</text>
+  <text class="mono rise a3" x="48" y="88" font-size="15" fill="{line3}">I care about clear interfaces, reliable systems, and results I can explain.</text>
 
   <line class="rise a4" x1="48" y1="116" x2="952" y2="116" stroke="{h['rule']}" stroke-width="1" opacity=".5"/>
 
   <text class="mono rise a4" x="48" y="148" font-size="11" fill="{h['muted']}" letter-spacing="2.5">FOCUS</text>
-  <text class="mono rise a4" x="154" y="148" font-size="15" fill="{h['ink']}">Product systems · Applied ML tooling · Markets &amp; research software</text>
+  <text class="mono rise a4" x="154" y="148" font-size="15" fill="{h['ink']}">Full-stack engineering · Applied AI · Quantitative research</text>
 
   <text class="mono rise a5" x="48" y="182" font-size="11" fill="{h['muted']}" letter-spacing="2.5">STATUS</text>
-  <text class="mono rise a5" x="154" y="182" font-size="15" fill="{h['cyan']}">looking for teams that ship careful, inspectable software</text>
+  <text class="mono rise a5" x="154" y="182" font-size="15" fill="{h['cyan']}">Seeking software engineering and solutions engineering internships</text>
 
   <text class="mono rise a6" x="48" y="216" font-size="11" fill="{h['muted']}" letter-spacing="2.5">EDUCATION</text>
-  <text class="mono rise a6" x="154" y="216" font-size="15" fill="{h['ink']}">Computer Science — De Anza College, then San José State University (Spring 2027)</text>
+  <text class="mono rise a6" x="154" y="216" font-size="15" fill="{h['ink']}">Computer Science · De Anza College → SJSU (Spring 2027)</text>
 </svg>'''
 
 
@@ -579,7 +580,7 @@ def hero_mobile(c: dict, mode: str = "dark") -> str:
 
 def whoami_section_mobile(mode: str = "dark") -> str:
     h = HERO_COLORS[mode]
-    ghost = "#2A3D5C" if mode == "dark" else "#C5CEE0"
+    ghost = "#A8B8CC" if mode == "dark" else "#8A96AB"
     return f'''<svg viewBox="0 0 390 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
   <style>
     .mono {{ font-family:{MONO}; }}
@@ -603,28 +604,33 @@ def whoami_section_mobile(mode: str = "dark") -> str:
 
 def whoami_mobile(c: dict, mode: str = "dark") -> str:
     h = HERO_COLORS[mode]
-    return f'''<svg viewBox="0 0 390 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
+    line3 = h["subtitle"]
+    return f'''<svg viewBox="0 0 390 492" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh">
   <style>{whoami_css()}</style>
 
-  <text class="mono rise a1" x="20" y="28" font-size="14" fill="{h['ink']}">CS student at De Anza College,</text>
-  <text class="mono rise a1" x="20" y="48" font-size="14" fill="{h['ink']}">incoming SJSU, Spring 2027.</text>
-  <text class="mono rise a2" x="20" y="80" font-size="13" fill="{h['ink']}">building software, AI-assisted</text>
-  <text class="mono rise a2" x="20" y="100" font-size="13" fill="{h['ink']}">products, and fintech research tools.</text>
-  <text class="mono rise a3" x="20" y="132" font-size="13" fill="{h['muted']}">inspectable data paths.</text>
-  <text class="mono rise a3" x="20" y="152" font-size="13" fill="{h['muted']}">honest interfaces.</text>
+  <text class="mono rise a1" x="20" y="28" font-size="14" fill="{h['ink']}">Building end-to-end software,</text>
+  <text class="mono rise a1" x="20" y="48" font-size="14" fill="{h['ink']}">from backend systems to</text>
+  <text class="mono rise a1" x="20" y="68" font-size="14" fill="{h['ink']}">user-facing products.</text>
+  <text class="mono rise a2" x="20" y="100" font-size="13" fill="{h['ink']}">My projects span career tools,</text>
+  <text class="mono rise a2" x="20" y="120" font-size="13" fill="{h['ink']}">AI experimentation, and</text>
+  <text class="mono rise a2" x="20" y="140" font-size="13" fill="{h['ink']}">financial research.</text>
+  <text class="mono rise a3" x="20" y="172" font-size="13" fill="{line3}">I care about clear interfaces,</text>
+  <text class="mono rise a3" x="20" y="192" font-size="13" fill="{line3}">reliable systems, and results</text>
+  <text class="mono rise a3" x="20" y="212" font-size="13" fill="{line3}">I can explain.</text>
 
-  <line class="rise a4" x1="20" y1="176" x2="370" y2="176" stroke="{h['rule']}" stroke-width="1" opacity=".5"/>
+  <line class="rise a4" x1="20" y1="236" x2="370" y2="236" stroke="{h['rule']}" stroke-width="1" opacity=".5"/>
 
-  <text class="mono rise a4" x="20" y="208" font-size="11" fill="{h['muted']}" letter-spacing="2.5">FOCUS</text>
-  <text class="mono rise a4" x="20" y="230" font-size="13" fill="{h['ink']}">Product systems · Applied ML</text>
-  <text class="mono rise a4" x="20" y="250" font-size="13" fill="{h['ink']}">Markets &amp; research software</text>
+  <text class="mono rise a4" x="20" y="268" font-size="11" fill="{h['muted']}" letter-spacing="2.5">FOCUS</text>
+  <text class="mono rise a4" x="20" y="290" font-size="13" fill="{h['ink']}">Full-stack engineering · Applied AI</text>
+  <text class="mono rise a4" x="20" y="310" font-size="13" fill="{h['ink']}">Quantitative research</text>
 
-  <text class="mono rise a5" x="20" y="286" font-size="11" fill="{h['muted']}" letter-spacing="2.5">STATUS</text>
-  <text class="mono rise a5" x="20" y="308" font-size="13" fill="{h['cyan']}">looking for teams that ship</text>
-  <text class="mono rise a5" x="20" y="328" font-size="13" fill="{h['cyan']}">careful, inspectable software</text>
+  <text class="mono rise a5" x="20" y="346" font-size="11" fill="{h['muted']}" letter-spacing="2.5">STATUS</text>
+  <text class="mono rise a5" x="20" y="368" font-size="13" fill="{h['cyan']}">Seeking software engineering and</text>
+  <text class="mono rise a5" x="20" y="388" font-size="13" fill="{h['cyan']}">solutions engineering internships</text>
 
-  <text class="mono rise a6" x="20" y="364" font-size="11" fill="{h['muted']}" letter-spacing="2.5">EDUCATION</text>
-  <text class="mono rise a6" x="20" y="386" font-size="13" fill="{h['ink']}">CS — De Anza, then SJSU (2027)</text>
+  <text class="mono rise a6" x="20" y="424" font-size="11" fill="{h['muted']}" letter-spacing="2.5">EDUCATION</text>
+  <text class="mono rise a6" x="20" y="446" font-size="13" fill="{h['ink']}">Computer Science · De Anza College</text>
+  <text class="mono rise a6" x="20" y="466" font-size="13" fill="{h['ink']}">→ SJSU (Spring 2027)</text>
 </svg>'''
 
 
