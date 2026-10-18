@@ -1,6 +1,7 @@
 <!--
   Editorial profile README — animated SVG portfolio.
-  Light/dark via <picture> (reliable on GitHub). Animations live inside SVGs.
+  Light/dark via <picture>. Animations fail-safe: resting SVG state is always visible.
+  Dense copy uses Markdown for mobile readability; SVGs carry brand, sections, and motion.
 -->
 
 <div align="center">
@@ -23,10 +24,13 @@
   <img src="assets/editorial/light/s01.svg" alt="01 — WHOAMI" width="100%"/>
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/whoami.svg"/>
-  <img src="assets/editorial/light/whoami.svg" alt="About Manpreet Singh" width="100%"/>
-</picture>
+**Computer Science @ De Anza College · Incoming San José State University, Spring 2027**
+
+I build practical software, AI-powered tools, and systems designed around reliability — preferring products where claims stay grounded in evidence and humans keep final control.
+
+`FOCUS` · Full-stack systems · Explainable AI tooling · Fintech research · Local-first apps  
+`STATUS` · Open to software engineering, solutions engineering, and technical internships  
+`EDU` · De Anza College → San José State University / Spring 2027
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s02.svg"/>
@@ -48,8 +52,12 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/featured-points.svg"/>
-  <img src="assets/editorial/light/featured-points.svg" alt="CareerPilot capabilities — profile, match, workflow, extension" width="100%"/>
+  <img src="assets/editorial/light/featured-points.svg" alt="CareerPilot highlights — Fit, workflow, extension" width="100%"/>
 </picture>
+
+**01 / FIT** — Explainable, evidence-based Fit scoring grounded in resume and posting text  
+**02 / WORKFLOW** — Complete job-search loop: discover → analyze → prepare → track  
+**03 / EXTENSION** — Human-controlled Chrome extension that assists fills and never submits
 
 <p>
   <a href="https://github.com/ManpreetS2/CareerPilot"><strong>Explore CareerPilot →</strong></a>
@@ -59,54 +67,63 @@
   <a href="https://github.com/ManpreetS2/CareerPilot/actions/workflows/ci.yml">CI</a>
 </p>
 
-<sub>Local/self-hostable · no public hosted demo · Chrome extension assists fills but never submits applications</sub>
+<sub>Local/self-hostable · no public hosted demo · source-visible, not open source</sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s03.svg"/>
   <img src="assets/editorial/light/s03.svg" alt="03 — SELECTED PROJECTS" width="100%"/>
 </picture>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/IntegrationLab">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-dark.png"/>
-      <img src="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-light.png" alt="IntegrationLab local console — actual product screenshot" width="100%"/>
-    </picture>
-  </a>
-  <h3><a href="https://github.com/ManpreetS2/IntegrationLab">IntegrationLab</a></h3>
-  <p>Self-hosted console for diagnosing API and webhook failures with stored evidence, signed webhook processing, and retry handling.</p>
-  <sub>FastAPI · PostgreSQL · React · Docker</sub>
-</td>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/R.E.A.C.T">
-    <img src="assets/projects/react-research.webp" alt="R.E.A.C.T. concept illustration (generated artwork, not experimental results)" width="100%"/>
-  </a>
-  <h3><a href="https://github.com/ManpreetS2/R.E.A.C.T">R.E.A.C.T.</a></h3>
-  <p>Research prototype testing whether numerical reward feedback changes language-model controller revisions in a physics simulator.</p>
-  <sub>Python · LunarLander · Experimentation · Research prototype</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/EquityTrace">
-    <img src="assets/projects/equitytrace-research.webp" alt="EquityTrace concept illustration (generated artwork, not a product screenshot)" width="100%"/>
-  </a>
-  <h3><a href="https://github.com/ManpreetS2/EquityTrace">EquityTrace</a></h3>
-  <p>Point-in-time stock research from SEC filings, auditable financial factors, and transparent historical portfolio backtesting.</p>
-  <sub>Python · SEC XBRL · DuckDB</sub>
-</td>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">
-    <img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization concept illustration (generated artwork, not gameplay footage)" width="100%"/>
-  </a>
-  <h3><a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">Minecraft AI Civilization</a></h3>
-  <p>Multi-agent simulation with persistent memory, planning, and actions inside a shared Minecraft world — in active development.</p>
-  <sub>TypeScript · Mineflayer · SQLite · In development</sub>
-</td>
-</tr>
-</table>
+<a href="https://github.com/ManpreetS2/IntegrationLab">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-dark.png"/>
+    <img src="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-light.png" alt="IntegrationLab local console — actual product screenshot" width="100%"/>
+  </picture>
+</a>
+
+`01 / INTEGRATIONLAB` · FastAPI · PostgreSQL · React · Docker
+
+### [IntegrationLab](https://github.com/ManpreetS2/IntegrationLab)
+
+Self-hosted console for diagnosing API and webhook failures with stored evidence, signed webhook processing, and retry handling.
+
+---
+
+<a href="https://github.com/ManpreetS2/R.E.A.C.T">
+  <img src="assets/projects/react-research.webp" alt="R.E.A.C.T. concept illustration (generated artwork, not experimental results)" width="100%"/>
+</a>
+
+`02 / R.E.A.C.T.` · Python · LunarLander · Research prototype
+
+### [R.E.A.C.T.](https://github.com/ManpreetS2/R.E.A.C.T)
+
+Research prototype testing whether numerical reward feedback changes language-model controller revisions in a physics simulator.
+
+---
+
+<a href="https://github.com/ManpreetS2/EquityTrace">
+  <img src="assets/projects/equitytrace-research.webp" alt="EquityTrace concept illustration (generated artwork, not a product screenshot)" width="100%"/>
+</a>
+
+`03 / EQUITYTRACE` · Python · SEC XBRL · DuckDB
+
+### [EquityTrace](https://github.com/ManpreetS2/EquityTrace)
+
+Point-in-time stock research from SEC filings, auditable financial factors, and transparent historical portfolio backtesting.
+
+---
+
+<a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">
+  <img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization concept illustration (generated artwork, not gameplay footage)" width="100%"/>
+</a>
+
+`04 / MINECRAFT AI CIVILIZATION` · TypeScript · Mineflayer · SQLite · In development
+
+### [Minecraft AI Civilization](https://github.com/ManpreetS2/Minecraft-Ai-Civilization)
+
+Multi-agent simulation with persistent memory, planning, and actions inside a shared Minecraft world — in active development.
+
+---
 
 ### More things I've built
 
@@ -122,12 +139,17 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/toolkit.svg"/>
-  <img src="assets/editorial/light/toolkit.svg" alt="Technical toolkit" width="100%"/>
+  <img src="assets/editorial/light/toolkit.svg" alt="Toolkit accent" width="100%"/>
 </picture>
+
+**Languages** — Python · TypeScript · Java · JavaScript · SQL  
+**Frameworks** — FastAPI · React · Node.js · JavaFX  
+**Data** — PostgreSQL · SQLite · DuckDB · SQLAlchemy  
+**Tooling** — Git · Docker · GitHub Actions · pytest · Vitest · Playwright · JUnit
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/footer.svg"/>
-  <img src="assets/editorial/light/footer.svg" alt="Open to opportunities" width="100%"/>
+  <img src="assets/editorial/light/footer.svg" alt="Building systems you can trace — open to opportunities" width="100%"/>
 </picture>
 
 <div align="center">
@@ -135,5 +157,7 @@
     <a href="https://www.linkedin.com/in/manpreet-singh-1018b3299/">LinkedIn</a>
     ·
     <a href="mailto:manpreetsm2@gmail.com">Get in touch</a>
+    ·
+    <a href="https://github.com/ManpreetS2?tab=repositories">Repositories</a>
   </p>
 </div>
