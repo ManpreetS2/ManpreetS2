@@ -4,10 +4,8 @@
     .draw { stroke-dasharray:760; stroke-dashoffset:0; }
     .f { opacity:1; }
     @keyframes d { from { stroke-dashoffset:760; } to { stroke-dashoffset:0; } }
-    @keyframes f { from { opacity:0; } to { opacity:1; } }
     @media (prefers-reduced-motion: no-preference) {
-      .draw { animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s both; }
-      .f { animation:f .8s ease .1s both; }
+      .draw { animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s forwards; }
     }
   </style>
   <g class="f mono">

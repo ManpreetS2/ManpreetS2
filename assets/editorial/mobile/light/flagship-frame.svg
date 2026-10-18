@@ -4,16 +4,12 @@
     .draw { stroke-dasharray:350; stroke-dashoffset:0; }
     .rise,.fade,.row { opacity:1; }
     @keyframes draw { from { stroke-dashoffset:350; } to { stroke-dashoffset:0; } }
-    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes fade { from { opacity:0; } to { opacity:1; } }
-    .a1{animation-delay:.1s} .a2{animation-delay:.25s} .a3{animation-delay:.4s}
-    .a4{animation-delay:.55s} .a5{animation-delay:.7s} .a6{animation-delay:.85s}
-    .r1{animation-delay:.2s} .r2{animation-delay:.35s} .r3{animation-delay:.5s}
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
     @media (prefers-reduced-motion: no-preference) {
-      .draw { animation:draw 1.3s cubic-bezier(.6,0,.2,1) both; }
-      .rise { animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
-      .fade { animation:fade .65s ease both; }
-      .row { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
     }
 </style>
   <path class="fade a1" d="M20 24 V10 H32" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>

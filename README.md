@@ -148,60 +148,39 @@
   <img src="assets/editorial/light/projects.svg" alt="Selected projects: IntegrationLab, R.E.A.C.T., EquityTrace, Minecraft AI Civilization" width="100%"/>
 </picture>
 
-<p>
-  <a href="https://github.com/ManpreetS2/IntegrationLab">01 IntegrationLab</a>
-  ·
-  <a href="https://github.com/ManpreetS2/R.E.A.C.T">02 R.E.A.C.T.</a>
-  ·
-  <a href="https://github.com/ManpreetS2/EquityTrace">03 EquityTrace</a>
-  ·
-  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">04 Minecraft AI Civilization</a>
-</p>
-
-<!-- Real product screenshot for IntegrationLab; illustrative art clearly labeled -->
-<p>
-  <a href="https://github.com/ManpreetS2/IntegrationLab">
+<p align="center">
+  <a href="https://github.com/ManpreetS2/IntegrationLab" style="display:inline-block;text-decoration:none;border:0;margin:4px 4px;">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-dark.png"/>
-      <img src="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-light.png" alt="IntegrationLab — actual product screenshot of the self-hosted diagnostics console" width="100%"/>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-proj-01.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-proj-01.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-proj-01.svg"/>
+      <img src="assets/editorial/light/link-proj-01.svg" alt="01 IntegrationLab repository" height="28"/>
     </picture>
   </a>
-</p>
-
-<details>
-<summary>Illustrative concept art (not product screenshots) — R.E.A.C.T. · EquityTrace · Minecraft AI Civilization</summary>
-
-<p>
-  <a href="https://github.com/ManpreetS2/R.E.A.C.T">
-    <img src="assets/projects/react-research.webp" alt="R.E.A.C.T. illustrative concept art — not experimental results" width="100%"/>
+  <a href="https://github.com/ManpreetS2/R.E.A.C.T" style="display:inline-block;text-decoration:none;border:0;margin:4px 4px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-proj-02.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-proj-02.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-proj-02.svg"/>
+      <img src="assets/editorial/light/link-proj-02.svg" alt="02 R.E.A.C.T. repository" height="28"/>
+    </picture>
   </a>
-</p>
-
-<p>
-  <a href="https://github.com/ManpreetS2/EquityTrace">
-    <img src="assets/projects/equitytrace-research.webp" alt="EquityTrace illustrative concept art — not real portfolio performance" width="100%"/>
+  <a href="https://github.com/ManpreetS2/EquityTrace" style="display:inline-block;text-decoration:none;border:0;margin:4px 4px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-proj-03.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-proj-03.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-proj-03.svg"/>
+      <img src="assets/editorial/light/link-proj-03.svg" alt="03 EquityTrace repository" height="28"/>
+    </picture>
   </a>
-</p>
-
-<p>
-  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">
-    <img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization illustrative concept art — simulation still under development" width="100%"/>
+  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization" style="display:inline-block;text-decoration:none;border:0;margin:4px 4px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-proj-04.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-proj-04.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-proj-04.svg"/>
+      <img src="assets/editorial/light/link-proj-04.svg" alt="04 Minecraft AI Civilization repository" height="28"/>
+    </picture>
   </a>
-</p>
-
-</details>
-
-<p>
-  <sub>
-    Also:
-    <a href="https://github.com/ManpreetS2/StrikeCaller">StrikeCaller</a>
-    ·
-    <a href="https://github.com/ManpreetS2/PagePulse">PagePulse</a>
-    ·
-    <a href="https://github.com/ManpreetS2/JavaBankingSystem">Java Banking System</a>
-    ·
-    <a href="https://github.com/ManpreetS2/System-Down-Simulator">System Down Simulator</a>
-  </sub>
 </p>
 
 <!-- 04 — SYSTEM MAP -->

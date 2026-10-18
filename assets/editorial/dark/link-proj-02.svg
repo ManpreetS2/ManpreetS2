@@ -1,0 +1,6 @@
+<svg viewBox="0 0 150 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="02 R.E.A.C.T.">
+  <style>.mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }</style>
+  <rect x="0.5" y="0.5" width="149" height="33" stroke="#5A7190" fill="none"/>
+  <line x1="0" y1="33" x2="150" y2="33" stroke="#B8A9E8" stroke-width="1.5"/>
+  <text class="mono" x="75.0" y="22" fill="#F4F7FC" font-size="11" letter-spacing="1.8" text-anchor="middle">02 R.E.A.C.T.</text>
+</svg>
