@@ -10,7 +10,7 @@
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/hero.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/hero.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/hero.svg"/>
-  <img src="assets/editorial/light/hero.svg" alt="Manpreet Singh — software engineering, AI systems, and fintech" width="100%"/>
+  <img src="assets/editorial/light/hero.svg" alt="Manpreet Singh — Software Engineering · AI Systems · Fintech. Open to software engineering and solutions engineering internships. De Anza → SJSU / 2027." width="100%"/>
 </picture>
 
 <p>

@@ -1,7 +1,7 @@
-<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
+<svg viewBox="0 0 390 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
   <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
-    .draw { stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
+    .draw { stroke-dasharray:340; stroke-dashoffset:340; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
     @keyframes draw { to { stroke-dashoffset:0; } }
     .rise { opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
     @keyframes rise { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
@@ -15,34 +15,39 @@
     }
 </style>
 
-  <line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="#3A4F6C" stroke-width="1"/>
+  <line class="draw a1" x1="20" y1="44" x2="370" y2="44" stroke="#5A7190" stroke-width="1"/>
   <g class="fade a1">
-    <text class="mono" fill="#8A96AB" x="48" y="44" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
-    <text class="mono" fill="#8A96AB" x="952" y="44" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
+    <text class="mono" fill="#C5CEDC" x="20" y="30" font-size="11" letter-spacing="2">PORTFOLIO — Nº 001</text>
+    <text class="mono" fill="#C5CEDC" x="370" y="30" font-size="11" letter-spacing="2" text-anchor="end">BAY AREA</text>
   </g>
 
   <g class="rise a2">
-    <text fill="#E8EEF8" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Manpreet Singh</text>
+    <text fill="#F4F7FC" class="mono" x="18" y="118" font-size="40" letter-spacing="-1.5">Manpreet</text>
+    <text fill="#F4F7FC" class="mono" x="18" y="164" font-size="40" letter-spacing="-1.5">Singh</text>
   </g>
   <g class="fade a3">
-    <text fill="#8A96AB" class="mono" x="48" y="214" font-size="19">Software Engineering · AI Systems · Fintech</text>
+    <text fill="#EDF1F8" class="mono" x="20" y="206" font-size="15">Software Engineering</text>
+    <text fill="#EDF1F8" class="mono" x="20" y="228" font-size="15">AI Systems · Fintech</text>
   </g>
 
   <g class="fade a4">
-    <text fill="#6A768C" class="mono" x="48" y="274" font-size="12.5" letter-spacing="1">focus  ▸</text>
-    <text fill="#3DDBD9" class="mono" x="128" y="274" font-size="12.5" letter-spacing="1">software engineering · AI systems · fintech tooling</text>
+    <text fill="#A8B4C6" class="mono" x="20" y="270" font-size="12" letter-spacing="1">focus  ▸</text>
+    <text fill="#3DDBD9" class="mono" x="20" y="292" font-size="12">evidence-first products</text>
+    <text fill="#3DDBD9" class="mono" x="20" y="310" font-size="12">reliable backends</text>
+    <text fill="#3DDBD9" class="mono" x="20" y="328" font-size="12">reproducible research</text>
   </g>
   <g class="fade a5">
-    <text fill="#6A768C" class="mono" x="48" y="300" font-size="12.5" letter-spacing="1">open to software engineering and technical internships</text>
+    <text fill="#A8B4C6" class="mono" x="20" y="360" font-size="12">open to SE and solutions</text>
+    <text fill="#A8B4C6" class="mono" x="20" y="378" font-size="12">engineering internships</text>
   </g>
 
-  <line class="draw a5" x1="48" y1="342" x2="952" y2="342" stroke="#3A4F6C" stroke-width="1"/>
+  <line class="draw a5" x1="20" y1="400" x2="370" y2="400" stroke="#5A7190" stroke-width="1"/>
   <g class="fade a6">
-    <text fill="#3DDBD9" class="mono" x="48" y="374" font-size="11.5" letter-spacing="3">SOFTWARE ENGINEERING</text>
-    <text fill="#B8A9E8" class="mono" x="318" y="374" font-size="11.5">·</text>
-    <text fill="#B8A9E8" class="mono" x="348" y="374" font-size="11.5" letter-spacing="3">AI SYSTEMS</text>
-    <text fill="#E08A7A" class="mono" x="508" y="374" font-size="11.5">·</text>
-    <text fill="#E08A7A" class="mono" x="538" y="374" font-size="11.5" letter-spacing="3">FINTECH</text>
-    <text fill="#8A96AB" class="mono" x="952" y="374" font-size="11.5" letter-spacing="3" text-anchor="end">DE ANZA → SJSU / 2027</text>
+    <text fill="#3DDBD9" class="mono" x="20" y="428" font-size="12" letter-spacing="2">BUILD</text>
+    <text fill="#B8A9E8" class="mono" x="90" y="428" font-size="12">·</text>
+    <text fill="#B8A9E8" class="mono" x="110" y="428" font-size="12" letter-spacing="2">TEST</text>
+    <text fill="#E08A7A" class="mono" x="172" y="428" font-size="12">·</text>
+    <text fill="#E08A7A" class="mono" x="192" y="428" font-size="12" letter-spacing="2">SHIP</text>
+    <text fill="#C5CEDC" class="mono" x="20" y="450" font-size="11" letter-spacing="1.5">DE ANZA → SJSU / 2027</text>
   </g>
 </svg>

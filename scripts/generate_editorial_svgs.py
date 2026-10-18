@@ -111,16 +111,39 @@ def write(path: Path, content: str) -> None:
 
 # ─── HERO (1000×400 — measured Sharann geometry; original identity/color) ─────
 
-def hero_css() -> str:
-    """Animation timings/easing matched to Sharann header-v1.svg.
-    Resting state for animated text is opacity:0 (same as reference); final
-    visible state is forced under prefers-reduced-motion: reduce so nothing
-    stays blank when motion is off. Hardcoded fills (not CSS variables) keep
-    colors stable under GitHub camo.
+# Hero-only contrast (does not alter other section palettes).
+HERO_COLORS = {
+    "light": {
+        "ink": "#0F1729",
+        "subtitle": "#1A2438",
+        "muted": "#3D4A5F",
+        "dim": "#5A6578",
+        "rule": "#B0BACC",
+        "cyan": "#0B8F8A",
+        "lavender": "#5F4F8F",
+        "coral": "#B85040",
+    },
+    "dark": {
+        # Near-white subtitle/meta for Sharann-like clarity on midnight navy.
+        "ink": "#F4F7FC",
+        "subtitle": "#EDF1F8",
+        "muted": "#C5CEDC",
+        "dim": "#A8B4C6",
+        "rule": "#5A7190",
+        "cyan": "#3DDBD9",
+        "lavender": "#B8A9E8",
+        "coral": "#E08A7A",
+    },
+}
+
+
+def hero_css(draw_len: int = 1000) -> str:
+    """Sharann-matched stagger. Resting animated text is opacity:0; final
+    visible state under prefers-reduced-motion: reduce. Hardcoded fills.
     """
     return f"""
     .mono {{ font-family:{MONO}; }}
-    .draw {{ stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }}
+    .draw {{ stroke-dasharray:{draw_len}; stroke-dashoffset:{draw_len}; animation:draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }}
     @keyframes draw {{ to {{ stroke-dashoffset:0; }} }}
     .rise {{ opacity:0; animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards; }}
     @keyframes rise {{ from {{ opacity:0; transform:translateY(12px); }} to {{ opacity:1; transform:translateY(0); }} }}
@@ -135,41 +158,41 @@ def hero_css() -> str:
 """
 
 
-def hero_desktop(c: dict) -> str:
-    # Geometry locked to Sharann header-v1: viewBox 1000×400, margins 48/952,
-    # rules at y=58 and y=342, name at y=176 size 72 mono. No side diagram.
+def hero_desktop(c: dict, mode: str = "dark") -> str:
+    # Geometry locked to Sharann header-v1. Contrast from HERO_COLORS[mode].
+    h = HERO_COLORS[mode]
     return f'''<svg viewBox="0 0 1000 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
-  <style>{hero_css()}</style>
+  <style>{hero_css(1000)}</style>
 
-  <line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="{c['rule']}" stroke-width="1"/>
+  <line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="{h['rule']}" stroke-width="1"/>
   <g class="fade a1">
-    <text class="mono" fill="{c['muted']}" x="48" y="44" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
-    <text class="mono" fill="{c['muted']}" x="952" y="44" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
+    <text class="mono" fill="{h['muted']}" x="48" y="44" font-size="11" letter-spacing="3.5">PORTFOLIO — INDEX Nº 001</text>
+    <text class="mono" fill="{h['muted']}" x="952" y="44" font-size="11" letter-spacing="3.5" text-anchor="end">BAY AREA, CA</text>
   </g>
 
   <g class="rise a2">
-    <text fill="{c['ink']}" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Manpreet Singh</text>
+    <text fill="{h['ink']}" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Manpreet Singh</text>
   </g>
   <g class="fade a3">
-    <text fill="{c['muted']}" class="mono" x="48" y="214" font-size="19">Software Engineering · AI Systems · Fintech</text>
+    <text fill="{h['subtitle']}" class="mono" x="48" y="214" font-size="19">Software Engineering · AI Systems · Fintech</text>
   </g>
 
   <g class="fade a4">
-    <text fill="{c['dim']}" class="mono" x="48" y="274" font-size="12.5" letter-spacing="1">focus  ▸</text>
-    <text fill="{c['cyan']}" class="mono" x="128" y="274" font-size="12.5" letter-spacing="1">software engineering · AI systems · fintech tooling</text>
+    <text fill="{h['dim']}" class="mono" x="48" y="274" font-size="12.5" letter-spacing="1">focus  ▸</text>
+    <text fill="{h['cyan']}" class="mono" x="128" y="274" font-size="12.5" letter-spacing="1">evidence-first products · reliable backends · reproducible research</text>
   </g>
   <g class="fade a5">
-    <text fill="{c['dim']}" class="mono" x="48" y="300" font-size="12.5" letter-spacing="1">open to software engineering and technical internships</text>
+    <text fill="{h['dim']}" class="mono" x="48" y="300" font-size="12.5" letter-spacing="1">open to software engineering and solutions engineering internships</text>
   </g>
 
-  <line class="draw a5" x1="48" y1="342" x2="952" y2="342" stroke="{c['rule']}" stroke-width="1"/>
+  <line class="draw a5" x1="48" y1="342" x2="952" y2="342" stroke="{h['rule']}" stroke-width="1"/>
   <g class="fade a6">
-    <text fill="{c['cyan']}" class="mono" x="48" y="374" font-size="11.5" letter-spacing="3">SOFTWARE ENGINEERING</text>
-    <text fill="{c['lavender']}" class="mono" x="318" y="374" font-size="11.5">·</text>
-    <text fill="{c['lavender']}" class="mono" x="348" y="374" font-size="11.5" letter-spacing="3">AI SYSTEMS</text>
-    <text fill="{c['coral']}" class="mono" x="508" y="374" font-size="11.5">·</text>
-    <text fill="{c['coral']}" class="mono" x="538" y="374" font-size="11.5" letter-spacing="3">FINTECH</text>
-    <text fill="{c['muted']}" class="mono" x="952" y="374" font-size="11.5" letter-spacing="3" text-anchor="end">DE ANZA → SJSU / 2027</text>
+    <text fill="{h['cyan']}" class="mono" x="48" y="374" font-size="11.5" letter-spacing="3">BUILD</text>
+    <text fill="{h['lavender']}" class="mono" x="128" y="374" font-size="11.5">·</text>
+    <text fill="{h['lavender']}" class="mono" x="152" y="374" font-size="11.5" letter-spacing="3">TEST</text>
+    <text fill="{h['coral']}" class="mono" x="228" y="374" font-size="11.5">·</text>
+    <text fill="{h['coral']}" class="mono" x="252" y="374" font-size="11.5" letter-spacing="3">SHIP</text>
+    <text fill="{h['muted']}" class="mono" x="952" y="374" font-size="11.5" letter-spacing="3" text-anchor="end">DE ANZA → SJSU / 2027</text>
   </g>
 </svg>'''
 
@@ -455,9 +478,50 @@ def footer(c: dict) -> str:
 
 # ─── MOBILE (390-wide, larger type, stacked) ─────────────────────────────────
 
-def hero_mobile(c: dict) -> str:
-    # Reference has no separate mobile hero — same 1000×400 composition scales.
-    return hero_desktop(c)
+def hero_mobile(c: dict, mode: str = "dark") -> str:
+    """Narrow (~390) composition — not a scaled desktop SVG.
+    Same editorial language/animation; larger type; simplified secondary meta.
+    """
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — software engineering, AI systems, fintech">
+  <style>{hero_css(340)}</style>
+
+  <line class="draw a1" x1="20" y1="44" x2="370" y2="44" stroke="{h['rule']}" stroke-width="1"/>
+  <g class="fade a1">
+    <text class="mono" fill="{h['muted']}" x="20" y="30" font-size="11" letter-spacing="2">PORTFOLIO — Nº 001</text>
+    <text class="mono" fill="{h['muted']}" x="370" y="30" font-size="11" letter-spacing="2" text-anchor="end">BAY AREA</text>
+  </g>
+
+  <g class="rise a2">
+    <text fill="{h['ink']}" class="mono" x="18" y="118" font-size="40" letter-spacing="-1.5">Manpreet</text>
+    <text fill="{h['ink']}" class="mono" x="18" y="164" font-size="40" letter-spacing="-1.5">Singh</text>
+  </g>
+  <g class="fade a3">
+    <text fill="{h['subtitle']}" class="mono" x="20" y="206" font-size="15">Software Engineering</text>
+    <text fill="{h['subtitle']}" class="mono" x="20" y="228" font-size="15">AI Systems · Fintech</text>
+  </g>
+
+  <g class="fade a4">
+    <text fill="{h['dim']}" class="mono" x="20" y="270" font-size="12" letter-spacing="1">focus  ▸</text>
+    <text fill="{h['cyan']}" class="mono" x="20" y="292" font-size="12">evidence-first products</text>
+    <text fill="{h['cyan']}" class="mono" x="20" y="310" font-size="12">reliable backends</text>
+    <text fill="{h['cyan']}" class="mono" x="20" y="328" font-size="12">reproducible research</text>
+  </g>
+  <g class="fade a5">
+    <text fill="{h['dim']}" class="mono" x="20" y="360" font-size="12">open to SE and solutions</text>
+    <text fill="{h['dim']}" class="mono" x="20" y="378" font-size="12">engineering internships</text>
+  </g>
+
+  <line class="draw a5" x1="20" y1="400" x2="370" y2="400" stroke="{h['rule']}" stroke-width="1"/>
+  <g class="fade a6">
+    <text fill="{h['cyan']}" class="mono" x="20" y="428" font-size="12" letter-spacing="2">BUILD</text>
+    <text fill="{h['lavender']}" class="mono" x="90" y="428" font-size="12">·</text>
+    <text fill="{h['lavender']}" class="mono" x="110" y="428" font-size="12" letter-spacing="2">TEST</text>
+    <text fill="{h['coral']}" class="mono" x="172" y="428" font-size="12">·</text>
+    <text fill="{h['coral']}" class="mono" x="192" y="428" font-size="12" letter-spacing="2">SHIP</text>
+    <text fill="{h['muted']}" class="mono" x="20" y="450" font-size="11" letter-spacing="1.5">DE ANZA → SJSU / 2027</text>
+  </g>
+</svg>'''
 
 
 def whoami_mobile(c: dict) -> str:
@@ -616,7 +680,7 @@ def main() -> None:
 
     for mode, c in PALETTE.items():
         d = OUT[("desktop", mode)]
-        write(d / "hero.svg", hero_desktop(c))
+        write(d / "hero.svg", hero_desktop(c, mode))
         write(d / "whoami.svg", whoami(c))
         write(d / "system-map.svg", system_map(c))
         write(d / "flagship-meta.svg", flagship_meta(c))
@@ -629,7 +693,7 @@ def main() -> None:
             write(d / f"{name}.svg", section(num, label, hint, c))
 
         m = OUT[("mobile", mode)]
-        write(m / "hero.svg", hero_mobile(c))
+        write(m / "hero.svg", hero_mobile(c, mode))
         write(m / "whoami.svg", whoami_mobile(c))
         write(m / "system-map.svg", system_map_mobile(c))
         write(m / "flagship-meta.svg", flagship_meta_mobile(c))
