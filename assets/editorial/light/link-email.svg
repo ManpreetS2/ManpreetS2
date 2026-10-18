@@ -1,0 +1,6 @@
+<svg viewBox="0 0 148 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EMAIL">
+  <style>.mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }</style>
+  <rect x="0.5" y="0.5" width="147" height="33" stroke="#B0BACC" fill="none"/>
+  <line x1="0" y1="34" x2="148" y2="34" stroke="#5F4F8F" stroke-width="1.5"/>
+  <text class="mono" x="74.0" y="24" fill="#0F1729" font-size="12" letter-spacing="2.2" text-anchor="middle">EMAIL</text>
+</svg>

@@ -38,8 +38,8 @@
 </style></defs>
   <g class="fade a1 mono">
     <text x="20" y="52" fill="#C5CEE0" font-size="36" font-weight="600">03</text>
-    <text x="78" y="42" fill="#0B8F8A" font-size="13" letter-spacing="3">FLAGSHIP</text>
+    <text x="78" y="42" fill="#0B8F8A" font-size="13" letter-spacing="3">SYSTEM MAP</text>
   </g>
   <line class="draw a2" x1="78" y1="54" x2="300" y2="54" stroke="#B8C2D4"/>
-  <text class="mono fade a2" x="370" y="42" fill="#6E7890" font-size="10" text-anchor="end">~/03-careerpilot</text>
+  <text class="mono fade a2" x="370" y="42" fill="#6E7890" font-size="10" text-anchor="end">~/03-map</text>
 </svg>

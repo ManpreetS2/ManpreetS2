@@ -1,9 +1,25 @@
-<svg viewBox="0 0 1000 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot product screenshot label">
-  <defs><style>
+<svg viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot screenshot frame top">
+  <style>
     .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
-    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-    
-</style></defs>
-  <text class="mono" x="48" y="22" fill="#6E7890" font-size="11" letter-spacing="2.5">PRODUCT SCREENSHOT — DISCOVER WORKSPACE</text>
-  <text class="mono" x="952" y="22" fill="#4E596E" font-size="11" letter-spacing="2" text-anchor="end">LIVE UI</text>
+    .draw { stroke-dasharray:904; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:904; } to { stroke-dashoffset:0; } }
+    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fade { from { opacity:0; } to { opacity:1; } }
+    .a1{animation-delay:.1s} .a2{animation-delay:.25s} .a3{animation-delay:.4s}
+    .a4{animation-delay:.55s} .a5{animation-delay:.7s} .a6{animation-delay:.85s}
+    .r1{animation-delay:.2s} .r2{animation-delay:.35s} .r3{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.3s cubic-bezier(.6,0,.2,1) both; }
+      .rise { animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
+      .fade { animation:fade .65s ease both; }
+      .row { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
+    }
+</style>
+  <!-- Corner ticks align screenshot to the editorial grid -->
+  <path class="fade a1" d="M48 28 V12 H64" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M952 28 V12 H936" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>
+  <line class="draw a1" x1="72" y1="12" x2="928" y2="12" stroke="#B0BACC" stroke-width="1"/>
+  <text class="mono fade a2" x="48" y="36" fill="#5A6578" font-size="11" letter-spacing="2.5">LIVE UI — DISCOVER</text>
+  <text class="mono fade a2" x="952" y="36" fill="#3D4A5F" font-size="11" letter-spacing="2" text-anchor="end">REAL PRODUCT SCREENSHOT</text>
 </svg>

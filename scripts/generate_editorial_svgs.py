@@ -396,56 +396,177 @@ def system_map(c: dict) -> str:
 </svg>'''
 
 
-def flagship_meta(c: dict) -> str:
-    return f'''<svg viewBox="0 0 1000 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot flagship meta">
-  <defs><style>{css(c)}</style></defs>
-  <line class="draw a1" x1="48" y1="28" x2="952" y2="28" stroke="{c['rule']}" stroke-width="1"/>
-  <text class="mono fade a1" x="48" y="18" fill="{c['cyan']}" font-size="12" letter-spacing="3.2">FLAGSHIP · CAREERPILOT</text>
-  <text class="mono fade a1" x="952" y="18" fill="{c['lavender']}" font-size="11" letter-spacing="2" text-anchor="end">LOCAL / SELF-HOSTABLE</text>
-  <text class="sans rise a2" x="48" y="78" fill="{c['ink']}" font-size="36" font-weight="700" letter-spacing="-1">Evidence-driven job search</text>
-  <text class="sans rise a2" x="48" y="118" fill="{c['ink']}" font-size="36" font-weight="700" letter-spacing="-1">workspace</text>
-  <text class="mono fade a3" x="48" y="152" fill="{c['muted']}" font-size="14">Python · FastAPI · React · TypeScript · SQLite · Chrome Extension</text>
-  <text class="mono fade a4" x="48" y="178" fill="{c['dim']}" font-size="12">Grounded profiles · deterministic Fit · human-approved applications</text>
-  <g class="fade a4 mono">
-    <text x="700" y="78" fill="{c['dim']}" font-size="10" letter-spacing="2">STACK TRACE</text>
-    <text x="700" y="102" fill="{c['cyan']}" font-size="12">01  Fit engine</text>
-    <text x="700" y="124" fill="{c['lavender']}" font-size="12">02  Search workflow</text>
-    <text x="700" y="146" fill="{c['coral']}" font-size="12">03  Chrome assist</text>
+def flagship_css(draw_len: int = 1000) -> str:
+    """CareerPilot motion: hero timings + whoami fail-safe resting visibility."""
+    return f"""
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:{draw_len}; stroke-dashoffset:0; }}
+    .rise,.fade,.row {{ opacity:1; }}
+    @keyframes draw {{ from {{ stroke-dashoffset:{draw_len}; }} to {{ stroke-dashoffset:0; }} }}
+    @keyframes rise {{ from {{ opacity:0; transform:translateY(8px); }} to {{ opacity:1; transform:translateY(0); }} }}
+    @keyframes fade {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+    .a1{{animation-delay:.1s}} .a2{{animation-delay:.25s}} .a3{{animation-delay:.4s}}
+    .a4{{animation-delay:.55s}} .a5{{animation-delay:.7s}} .a6{{animation-delay:.85s}}
+    .r1{{animation-delay:.2s}} .r2{{animation-delay:.35s}} .r3{{animation-delay:.5s}}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:draw 1.3s cubic-bezier(.6,0,.2,1) both; }}
+      .rise {{ animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }}
+      .fade {{ animation:fade .65s ease both; }}
+      .row {{ animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }}
+    }}
+"""
+
+
+def flagship_section(mode: str = "dark") -> str:
+    """02 — FLAGSHIP header matching locked WHOAMI section geometry."""
+    h = HERO_COLORS[mode]
+    ghost = "#A8B8CC" if mode == "dark" else "#8A96AB"
+    return f'''<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 02 — FLAGSHIP">
+  <style>
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:760; stroke-dashoffset:0; }}
+    .f {{ opacity:1; }}
+    @keyframes d {{ from {{ stroke-dashoffset:760; }} to {{ stroke-dashoffset:0; }} }}
+    @keyframes f {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s both; }}
+      .f {{ animation:f .8s ease .1s both; }}
+    }}
+  </style>
+  <g class="f mono">
+    <text x="48" y="68" font-size="52" fill="{ghost}">02</text>
+    <text x="148" y="58" font-size="14" fill="{h['cyan']}" letter-spacing="6">FLAGSHIP</text>
+    <text x="952" y="58" font-size="11" fill="{h['muted']}" letter-spacing="2" text-anchor="end">~/02-careerpilot</text>
   </g>
-  <line class="draw a4" x1="48" y1="192" x2="952" y2="192" stroke="{c['rule']}" stroke-width="1"/>
+  <line class="draw" x1="288" y1="53" x2="820" y2="53" stroke="{h['rule']}" stroke-width="1"/>
 </svg>'''
 
 
-def flagship_frame(c: dict) -> str:
-    """Thin editorial frame placed above the real product screenshot."""
-    return f'''<svg viewBox="0 0 1000 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot product screenshot label">
-  <defs><style>{css(c, 400, animate=False)}</style></defs>
-  <text class="mono" x="48" y="22" fill="{c['dim']}" font-size="11" letter-spacing="2.5">PRODUCT SCREENSHOT — DISCOVER WORKSPACE</text>
-  <text class="mono" x="952" y="22" fill="{c['muted']}" font-size="11" letter-spacing="2" text-anchor="end">LIVE UI</text>
+def flagship_meta(c: dict, mode: str = "dark") -> str:
+    """CareerPilot title block — brand-first, 48/952 grid, HERO_COLORS."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 188" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot — evidence-driven job search workspace">
+  <style>{flagship_css(904)}</style>
+
+  <line class="draw a1" x1="48" y1="24" x2="952" y2="24" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a1" x="48" y="16" fill="{h['cyan']}" font-size="11" letter-spacing="3.2">FLAGSHIP · 02 / CAREERPILOT</text>
+  <text class="mono fade a1" x="952" y="16" fill="{h['lavender']}" font-size="11" letter-spacing="2" text-anchor="end">LOCAL / SELF-HOSTABLE</text>
+
+  <text class="mono rise a2" x="48" y="78" fill="{h['ink']}" font-size="44" letter-spacing="-1.5">CareerPilot</text>
+  <text class="mono fade a3" x="48" y="114" fill="{h['subtitle']}" font-size="18">Evidence-driven job search workspace</text>
+  <text class="mono fade a4" x="48" y="148" fill="{h['muted']}" font-size="14">Python · FastAPI · React · TypeScript · SQLite · Chrome Extension</text>
+
+  <line class="draw a5" x1="48" y1="172" x2="952" y2="172" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a5" x="48" y="186" fill="{h['dim']}" font-size="11" letter-spacing="2.5">PRODUCT VIEW  ▸  DISCOVER WORKSPACE</text>
+  <text class="mono fade a5" x="952" y="186" fill="{h['dim']}" font-size="11" letter-spacing="2" text-anchor="end">FIG. 02</text>
 </svg>'''
 
 
-def flagship_points(c: dict) -> str:
+def flagship_frame(c: dict, mode: str = "dark") -> str:
+    """Top rail / corner marks above the real product screenshot (48–952)."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot screenshot frame top">
+  <style>{flagship_css(904)}</style>
+  <!-- Corner ticks align screenshot to the editorial grid -->
+  <path class="fade a1" d="M48 28 V12 H64" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M952 28 V12 H936" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <line class="draw a1" x1="72" y1="12" x2="928" y2="12" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a2" x="48" y="36" fill="{h['dim']}" font-size="11" letter-spacing="2.5">LIVE UI — DISCOVER</text>
+  <text class="mono fade a2" x="952" y="36" fill="{h['muted']}" font-size="11" letter-spacing="2" text-anchor="end">REAL PRODUCT SCREENSHOT</text>
+</svg>'''
+
+
+def flagship_frame_bottom(c: dict, mode: str = "dark") -> str:
+    """Bottom rail under the screenshot — matching width / corners."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot screenshot frame bottom">
+  <style>{flagship_css(904)}</style>
+  <line class="draw a1" x1="72" y1="10" x2="928" y2="10" stroke="{h['rule']}" stroke-width="1"/>
+  <path class="fade a1" d="M48 10 V26 H64" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M952 10 V26 H936" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <text class="mono fade a2" x="48" y="36" fill="{h['dim']}" font-size="11" letter-spacing="2.5">HUMAN CONTROLLED · NEVER AUTO-SUBMIT</text>
+  <text class="mono fade a2" x="952" y="36" fill="{h['coral']}" font-size="11" letter-spacing="2" text-anchor="end">SOURCE VISIBLE</text>
+</svg>'''
+
+
+def flagship_points(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
     rows = [
-        ("01 / FIT", c["cyan"], "Explainable, evidence-based Fit scoring grounded in resume and posting text"),
-        ("02 / WORKFLOW", c["lavender"], "Complete job-search loop: discover → analyze → prepare → track"),
-        ("03 / EXTENSION", c["coral"], "Human-controlled Chrome extension that assists fills and never submits"),
+        ("01 / FIT", h["cyan"], "Explainable job matching grounded in resume evidence"),
+        ("02 / WORKFLOW", h["lavender"], "Discover, analyze, prepare, and track applications"),
+        ("03 / EXTENSION", h["coral"], "Human-controlled browser assistance, never automatic submission"),
     ]
     parts = []
-    y = 36
+    y = 40
     for i, (lab, col, txt) in enumerate(rows):
-        delay = f"r{i+1}"
-        parts.append(f'''<g class="row {delay} mono">
-    <text x="48" y="{y}" fill="{col}" font-size="14" letter-spacing="2.5">{lab}</text>
-    <text x="230" y="{y}" fill="{c['ink']}" font-size="15">{txt}</text>
-    <line x1="48" y1="{y+20}" x2="952" y2="{y+20}" stroke="{c['rule']}" stroke-width="1" opacity=".55"/>
+        parts.append(f'''<g class="row r{i+1} mono">
+    <text x="48" y="{y}" fill="{col}" font-size="13" letter-spacing="2.5">{lab}</text>
+    <text x="220" y="{y}" fill="{h['ink']}" font-size="15">{txt}</text>
+    <line x1="48" y1="{y + 18}" x2="952" y2="{y + 18}" stroke="{h['rule']}" stroke-width="1" opacity=".55"/>
   </g>''')
-        y += 56
-    return f'''<svg viewBox="0 0 1000 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot three engineering highlights">
-  <defs><style>{css(c)}</style></defs>
-  <text class="mono fade a1" x="48" y="18" fill="{c['dim']}" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
+        y += 52
+    return f'''<svg viewBox="0 0 1000 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
+  <style>{flagship_css(904)}</style>
+  <text class="mono fade a1" x="48" y="18" fill="{h['dim']}" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
   {''.join(parts)}
 </svg>'''
+
+
+def flagship_cta(mode: str = "dark") -> str:
+    """Minimal repo CTA label (wrapped in HTML <a> in README)."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 280 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open CareerPilot repository">
+  <style>.mono {{ font-family:{MONO}; }}</style>
+  <rect x="0.5" y="0.5" width="279" height="35" stroke="{h['rule']}" fill="none"/>
+  <line x1="0" y1="35" x2="280" y2="35" stroke="{h['cyan']}" stroke-width="1.5"/>
+  <text class="mono" x="16" y="23" fill="{h['ink']}" font-size="12" letter-spacing="2">OPEN CAREERPILOT  →</text>
+</svg>'''
+
+
+def social_link(label: str, accent: str, mode: str = "dark", mobile: bool = False) -> str:
+    """Minimal monospace link chip — cyan / lavender / coral accents."""
+    h = HERO_COLORS[mode]
+    if mobile:
+        w, fs, ls, pad_y = 118, 11, 1.5, 22
+        vb_h = 32
+    else:
+        w, fs, ls, pad_y = 148, 12, 2.2, 24
+        vb_h = 34
+    return f'''<svg viewBox="0 0 {w} {vb_h}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{label}">
+  <style>.mono {{ font-family:{MONO}; }}</style>
+  <rect x="0.5" y="0.5" width="{w - 1}" height="{vb_h - 1}" stroke="{h['rule']}" fill="none"/>
+  <line x1="0" y1="{vb_h}" x2="{w}" y2="{vb_h}" stroke="{accent}" stroke-width="1.5"/>
+  <text class="mono" x="{w / 2}" y="{pad_y}" fill="{h['ink']}" font-size="{fs}" letter-spacing="{ls}" text-anchor="middle">{label}</text>
+</svg>'''
+
+
+def write_social_and_flagship() -> None:
+    """Regenerate ONLY social links + CareerPilot assets. Hero/WHOAMI locked."""
+    for mode in ("dark", "light"):
+        h = HERO_COLORS[mode]
+        d = OUT[("desktop", mode)]
+        m = OUT[("mobile", mode)]
+        # Social chips
+        write(d / "link-linkedin.svg", social_link("LINKEDIN", h["cyan"], mode))
+        write(d / "link-email.svg", social_link("EMAIL", h["lavender"], mode))
+        write(d / "link-repos.svg", social_link("REPOSITORIES", h["coral"], mode))
+        write(m / "link-linkedin.svg", social_link("LINKEDIN", h["cyan"], mode, mobile=True))
+        write(m / "link-email.svg", social_link("EMAIL", h["lavender"], mode, mobile=True))
+        write(m / "link-repos.svg", social_link("REPOS", h["coral"], mode, mobile=True))
+        # Flagship (palette arg unused; colors from HERO_COLORS)
+        c = PALETTE[mode]
+        write(d / "s02.svg", flagship_section(mode))
+        write(d / "flagship-meta.svg", flagship_meta(c, mode))
+        write(d / "flagship-frame.svg", flagship_frame(c, mode))
+        write(d / "flagship-frame-bottom.svg", flagship_frame_bottom(c, mode))
+        write(d / "flagship-points.svg", flagship_points(c, mode))
+        write(d / "flagship-cta.svg", flagship_cta(mode))
+        write(m / "s02.svg", flagship_section_mobile(mode))
+        write(m / "flagship-meta.svg", flagship_meta_mobile(c, mode))
+        write(m / "flagship-frame.svg", flagship_frame_mobile(c, mode))
+        write(m / "flagship-frame-bottom.svg", flagship_frame_bottom_mobile(c, mode))
+        write(m / "flagship-points.svg", flagship_points_mobile(c, mode))
+        write(m / "flagship-cta.svg", flagship_cta_mobile(mode))
 
 
 def projects_dir(c: dict) -> str:
@@ -663,41 +784,98 @@ def system_map_mobile(c: dict) -> str:
 </svg>'''
 
 
-def flagship_meta_mobile(c: dict) -> str:
-    return f'''<svg viewBox="0 0 390 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot">
-  <defs><style>{css(c)}</style></defs>
-  <text class="mono fade a1" x="20" y="28" fill="{c['cyan']}" font-size="12" letter-spacing="2">FLAGSHIP · CAREERPILOT</text>
-  <text class="sans rise a2" x="20" y="68" fill="{c['ink']}" font-size="22" font-weight="700">Evidence-driven</text>
-  <text class="sans rise a2" x="20" y="96" fill="{c['ink']}" font-size="22" font-weight="700">job search workspace</text>
-  <text class="mono fade a3" x="20" y="128" fill="{c['muted']}" font-size="12">Python · FastAPI · React · SQLite</text>
+def flagship_section_mobile(mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    ghost = "#A8B8CC" if mode == "dark" else "#8A96AB"
+    return f'''<svg viewBox="0 0 390 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 02 — FLAGSHIP">
+  <style>
+    .mono {{ font-family:{MONO}; }}
+    .draw {{ stroke-dasharray:300; stroke-dashoffset:0; }}
+    .f {{ opacity:1; }}
+    @keyframes d {{ from {{ stroke-dashoffset:300; }} to {{ stroke-dashoffset:0; }} }}
+    @keyframes f {{ from {{ opacity:0; }} to {{ opacity:1; }} }}
+    @media (prefers-reduced-motion: no-preference) {{
+      .draw {{ animation:d 1.1s cubic-bezier(.6,0,.2,1) .15s both; }}
+      .f {{ animation:f .7s ease .1s both; }}
+    }}
+  </style>
+  <g class="f mono">
+    <text x="20" y="52" font-size="36" fill="{ghost}">02</text>
+    <text x="78" y="42" font-size="13" fill="{h['cyan']}" letter-spacing="3">FLAGSHIP</text>
+    <text x="370" y="42" font-size="10" fill="{h['muted']}" text-anchor="end">~/02</text>
+  </g>
+  <line class="draw" x1="78" y1="54" x2="300" y2="54" stroke="{h['rule']}" stroke-width="1"/>
 </svg>'''
 
 
-def flagship_frame_mobile(c: dict) -> str:
-    return f'''<svg viewBox="0 0 390 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot label">
-  <defs><style>{css(c, 200, animate=False)}</style></defs>
-  <text class="mono" x="20" y="20" fill="{c['dim']}" font-size="11" letter-spacing="1.5">PRODUCT SCREENSHOT</text>
+def flagship_meta_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 168" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot">
+  <style>{flagship_css(350)}</style>
+  <line class="draw a1" x1="20" y1="20" x2="370" y2="20" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a1" x="20" y="14" fill="{h['cyan']}" font-size="11" letter-spacing="2">FLAGSHIP · 02</text>
+  <text class="mono rise a2" x="20" y="58" fill="{h['ink']}" font-size="28" letter-spacing="-0.5">CareerPilot</text>
+  <text class="mono fade a3" x="20" y="88" fill="{h['subtitle']}" font-size="14">Evidence-driven job search</text>
+  <text class="mono fade a3" x="20" y="108" fill="{h['subtitle']}" font-size="14">workspace</text>
+  <text class="mono fade a4" x="20" y="136" fill="{h['muted']}" font-size="12">Python · FastAPI · React</text>
+  <text class="mono fade a4" x="20" y="156" fill="{h['muted']}" font-size="12">TypeScript · SQLite · Extension</text>
 </svg>'''
 
 
-def flagship_points_mobile(c: dict) -> str:
-    return f'''<svg viewBox="0 0 390 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot highlights">
-  <defs><style>{css(c)}</style></defs>
+def flagship_frame_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot frame top">
+  <style>{flagship_css(350)}</style>
+  <path class="fade a1" d="M20 24 V10 H32" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M370 24 V10 H358" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <line class="draw a1" x1="38" y1="10" x2="352" y2="10" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a2" x="20" y="32" fill="{h['dim']}" font-size="10" letter-spacing="1.5">LIVE UI — DISCOVER</text>
+</svg>'''
+
+
+def flagship_frame_bottom_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot frame bottom">
+  <style>{flagship_css(350)}</style>
+  <line class="draw a1" x1="38" y1="8" x2="352" y2="8" stroke="{h['rule']}" stroke-width="1"/>
+  <path class="fade a1" d="M20 8 V22 H32" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M370 8 V22 H358" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <text class="mono fade a2" x="20" y="32" fill="{h['dim']}" font-size="10" letter-spacing="1.2">HUMAN CONTROLLED</text>
+</svg>'''
+
+
+def flagship_points_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 272" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot highlights">
+  <style>{flagship_css(350)}</style>
+  <text class="mono fade a1" x="20" y="18" fill="{h['dim']}" font-size="11" letter-spacing="2">HIGHLIGHTS</text>
   <g class="row r1 mono">
-    <text x="20" y="28" fill="{c['cyan']}" font-size="13" letter-spacing="2">01 / FIT</text>
-    <text x="20" y="50" fill="{c['ink']}" font-size="13">Explainable, evidence-based Fit</text>
-    <text x="20" y="68" fill="{c['ink']}" font-size="13">scoring from resume + posting text</text>
+    <text x="20" y="48" fill="{h['cyan']}" font-size="12" letter-spacing="2">01 / FIT</text>
+    <text x="20" y="70" fill="{h['ink']}" font-size="13">Explainable job matching</text>
+    <text x="20" y="90" fill="{h['ink']}" font-size="13">grounded in resume evidence</text>
   </g>
-  <line x1="20" y1="84" x2="370" y2="84" stroke="{c['rule']}"/>
+  <line x1="20" y1="106" x2="370" y2="106" stroke="{h['rule']}" opacity=".55"/>
   <g class="row r2 mono">
-    <text x="20" y="110" fill="{c['lavender']}" font-size="13" letter-spacing="2">02 / WORKFLOW</text>
-    <text x="20" y="132" fill="{c['ink']}" font-size="13">Discover → analyze → prepare → track</text>
+    <text x="20" y="132" fill="{h['lavender']}" font-size="12" letter-spacing="2">02 / WORKFLOW</text>
+    <text x="20" y="154" fill="{h['ink']}" font-size="13">Discover, analyze, prepare,</text>
+    <text x="20" y="174" fill="{h['ink']}" font-size="13">and track applications</text>
   </g>
-  <line x1="20" y1="148" x2="370" y2="148" stroke="{c['rule']}"/>
+  <line x1="20" y1="190" x2="370" y2="190" stroke="{h['rule']}" opacity=".55"/>
   <g class="row r3 mono">
-    <text x="20" y="174" fill="{c['coral']}" font-size="13" letter-spacing="2">03 / EXTENSION</text>
-    <text x="20" y="196" fill="{c['ink']}" font-size="13">Assists fills · never auto-submits</text>
+    <text x="20" y="216" fill="{h['coral']}" font-size="12" letter-spacing="2">03 / EXTENSION</text>
+    <text x="20" y="238" fill="{h['ink']}" font-size="13">Human-controlled assistance,</text>
+    <text x="20" y="258" fill="{h['ink']}" font-size="13">never automatic submission</text>
   </g>
+</svg>'''
+
+
+def flagship_cta_mobile(mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 240 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open CareerPilot repository">
+  <style>.mono {{ font-family:{MONO}; }}</style>
+  <rect x="0.5" y="0.5" width="239" height="33" stroke="{h['rule']}" fill="none"/>
+  <line x1="0" y1="33" x2="240" y2="33" stroke="{h['cyan']}" stroke-width="1.5"/>
+  <text class="mono" x="14" y="22" fill="{h['ink']}" font-size="11" letter-spacing="1.5">OPEN CAREERPILOT  →</text>
 </svg>'''
 
 
@@ -761,11 +939,52 @@ def section_mobile(num: str, label: str, hint: str, c: dict) -> str:
 </svg>'''
 
 
+def renumber_system_map_headers() -> None:
+    """SYSTEM MAP becomes 03 after CareerPilot moves to 02 — numeral/hint only."""
+    replacements = [
+        (OUT[("desktop", "dark")] / "s03.svg", "#2A3D5C", "03", "SYSTEM MAP", "~/03-map"),
+        (OUT[("desktop", "light")] / "s03.svg", "#C5CEE0", "03", "SYSTEM MAP", "~/03-map"),
+        (OUT[("mobile", "dark")] / "s03.svg", None, "03", "SYSTEM MAP", "~/03"),
+        (OUT[("mobile", "light")] / "s03.svg", None, "03", "SYSTEM MAP", "~/03"),
+    ]
+    # Start from current SYSTEM MAP header (s02), rewrite as s03 with new numeral.
+    for mode in ("dark", "light"):
+        src = OUT[("desktop", mode)] / "s02.svg"
+        dst = OUT[("desktop", mode)] / "s03.svg"
+        text = src.read_text(encoding="utf-8")
+        text = text.replace("Section 02 — SYSTEM MAP", "Section 03 — SYSTEM MAP")
+        text = text.replace(">02</text>", ">03</text>")
+        text = text.replace("~/02-map", "~/03-map")
+        # Keep original SYSTEM MAP styling; only numeral/path change.
+        # If s02 was already overwritten as FLAGSHIP, fall back to regenerating via section().
+        if "SYSTEM MAP" not in text:
+            c = PALETTE[mode]
+            text = section("03", "SYSTEM MAP", "~/03-map", c)
+        dst.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
+        print(f"wrote {dst.relative_to(ROOT)}")
+
+        msrc = OUT[("mobile", mode)] / "s02.svg"
+        mdst = OUT[("mobile", mode)] / "s03.svg"
+        mtext = msrc.read_text(encoding="utf-8")
+        mtext = mtext.replace("Section 02", "Section 03")
+        mtext = mtext.replace(">02</text>", ">03</text>")
+        mtext = mtext.replace("~/02", "~/03")
+        if "SYSTEM MAP" not in mtext and "SYSTEM" not in mtext:
+            c = PALETTE[mode]
+            mtext = section_mobile("03", "SYSTEM MAP", "~/03", c)
+        else:
+            # Mobile s02 may say SYSTEM MAP in label text
+            mtext = mtext.replace("FLAGSHIP", "SYSTEM MAP") if "FLAGSHIP" in mtext else mtext
+        mdst.write_text(mtext if mtext.endswith("\n") else mtext + "\n", encoding="utf-8")
+        print(f"wrote {mdst.relative_to(ROOT)}")
+
+
 def main() -> None:
+    """Full suite generator. Prefer write_social_and_flagship() for locked passes."""
     sections = [
         ("s01", "01", "WHOAMI", "~/01-whoami"),
-        ("s02", "02", "SYSTEM MAP", "~/02-map"),
-        ("s03", "03", "FLAGSHIP", "~/03-careerpilot"),
+        ("s02", "02", "FLAGSHIP", "~/02-careerpilot"),
+        ("s03", "03", "SYSTEM MAP", "~/03-map"),
         ("s04", "04", "PROJECTS", "~/04-projects"),
         ("s05", "05", "TOOLKIT", "~/05-toolkit"),
     ]
@@ -775,15 +994,19 @@ def main() -> None:
         write(d / "hero.svg", hero_desktop(c, mode))
         write(d / "whoami.svg", whoami(c, mode))
         write(d / "system-map.svg", system_map(c))
-        write(d / "flagship-meta.svg", flagship_meta(c))
-        write(d / "flagship-frame.svg", flagship_frame(c))
-        write(d / "flagship-points.svg", flagship_points(c))
+        write(d / "flagship-meta.svg", flagship_meta(c, mode))
+        write(d / "flagship-frame.svg", flagship_frame(c, mode))
+        write(d / "flagship-frame-bottom.svg", flagship_frame_bottom(c, mode))
+        write(d / "flagship-points.svg", flagship_points(c, mode))
+        write(d / "flagship-cta.svg", flagship_cta(mode))
         write(d / "projects.svg", projects_dir(c))
         write(d / "toolkit.svg", toolkit(c))
         write(d / "footer.svg", footer(c))
         for name, num, label, hint in sections:
             if name == "s01":
                 write(d / "s01.svg", whoami_section(mode))
+            elif name == "s02":
+                write(d / "s02.svg", flagship_section(mode))
             else:
                 write(d / f"{name}.svg", section(num, label, hint, c))
 
@@ -791,18 +1014,29 @@ def main() -> None:
         write(m / "hero.svg", hero_mobile(c, mode))
         write(m / "whoami.svg", whoami_mobile(c, mode))
         write(m / "system-map.svg", system_map_mobile(c))
-        write(m / "flagship-meta.svg", flagship_meta_mobile(c))
-        write(m / "flagship-frame.svg", flagship_frame_mobile(c))
-        write(m / "flagship-points.svg", flagship_points_mobile(c))
+        write(m / "flagship-meta.svg", flagship_meta_mobile(c, mode))
+        write(m / "flagship-frame.svg", flagship_frame_mobile(c, mode))
+        write(m / "flagship-frame-bottom.svg", flagship_frame_bottom_mobile(c, mode))
+        write(m / "flagship-points.svg", flagship_points_mobile(c, mode))
+        write(m / "flagship-cta.svg", flagship_cta_mobile(mode))
         write(m / "projects.svg", projects_mobile(c))
         write(m / "toolkit.svg", toolkit_mobile(c))
         write(m / "footer.svg", footer_mobile(c))
         for name, num, label, hint in sections:
             if name == "s01":
                 write(m / "s01.svg", whoami_section_mobile(mode))
+            elif name == "s02":
+                write(m / "s02.svg", flagship_section_mobile(mode))
             else:
                 write(m / f"{name}.svg", section_mobile(num, label, hint, c))
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--social-flagship":
+        # Copy SYSTEM MAP headers to s03 with new numeral BEFORE overwriting s02.
+        renumber_system_map_headers()
+        write_social_and_flagship()
+    else:
+        main()

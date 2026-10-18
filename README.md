@@ -2,6 +2,7 @@
   Editorial profile README — SVG-driven portfolio (Sharann-inspired structure, original art).
   Light/dark + mobile via <picture>. Animations fail-safe: resting SVG state is always visible.
   No JavaScript. Project links are real Markdown/HTML anchors (SVG-as-img is not clickable inside).
+  LOCKED: hero + WHOAMI (s01/whoami) — do not modify.
 -->
 
 <div align="center">
@@ -13,16 +14,37 @@
   <img src="assets/editorial/light/hero.svg" alt="Manpreet Singh — Software Engineering · AI Systems · Fintech. Open to software engineering and solutions engineering internships. De Anza → SJSU / 2027." width="100%"/>
 </picture>
 
-<p>
-  <a href="https://www.linkedin.com/in/manpreet-singh-1018b3299/">LinkedIn</a>
-  ·
-  <a href="mailto:manpreetsm2@gmail.com">Email</a>
-  ·
-  <a href="https://github.com/ManpreetS2?tab=repositories">Repositories</a>
+<!-- Social links: each label is an HTML <a> wrapping a SVG chip (links inside SVG-as-img do not work on GitHub). -->
+<p align="center">
+  <a href="https://www.linkedin.com/in/manpreet-singh-1018b3299/" style="display:inline-block;text-decoration:none;border:0;margin:0 6px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-linkedin.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-linkedin.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-linkedin.svg"/>
+      <img src="assets/editorial/light/link-linkedin.svg" alt="LinkedIn" height="28" style="vertical-align:middle;"/>
+    </picture>
+  </a>
+  <a href="mailto:manpreetsm2@gmail.com" style="display:inline-block;text-decoration:none;border:0;margin:0 6px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-email.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-email.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-email.svg"/>
+      <img src="assets/editorial/light/link-email.svg" alt="Email" height="28" style="vertical-align:middle;"/>
+    </picture>
+  </a>
+  <a href="https://github.com/ManpreetS2?tab=repositories" style="display:inline-block;text-decoration:none;border:0;margin:0 6px;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/link-repos.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/link-repos.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/link-repos.svg"/>
+      <img src="assets/editorial/light/link-repos.svg" alt="Repositories" height="28" style="vertical-align:middle;"/>
+    </picture>
+  </a>
 </p>
 
 </div>
 
+<!-- 01 — WHOAMI (LOCKED) -->
 <picture>
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s01.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s01.svg"/>
@@ -37,11 +59,71 @@
   <img src="assets/editorial/light/whoami.svg" alt="Building end-to-end software, from backend systems to user-facing products. Projects span career tools, AI experimentation, and financial research. Focus: full-stack engineering, applied AI, quantitative research. Seeking software engineering and solutions engineering internships. Education: Computer Science, De Anza College → SJSU (Spring 2027)." width="100%"/>
 </picture>
 
+<!-- 02 — FLAGSHIP / CareerPilot (main attraction; before system map) -->
 <picture>
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s02.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s02.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s02.svg"/>
-  <img src="assets/editorial/light/s02.svg" alt="02 — SYSTEM MAP" width="100%"/>
+  <img src="assets/editorial/light/s02.svg" alt="02 — FLAGSHIP" width="100%"/>
+</picture>
+
+<a href="https://github.com/ManpreetS2/CareerPilot" style="display:block;text-decoration:none;border:0;color:inherit;">
+  <picture>
+    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-meta.svg"/>
+    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-meta.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-meta.svg"/>
+    <img src="assets/editorial/light/flagship-meta.svg" alt="CareerPilot — Evidence-driven job search workspace. Python · FastAPI · React · TypeScript · SQLite · Chrome Extension." width="100%"/>
+  </picture>
+</a>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-frame.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-frame.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-frame.svg"/>
+  <img src="assets/editorial/light/flagship-frame.svg" alt="" width="100%"/>
+</picture>
+
+<a href="https://github.com/ManpreetS2/CareerPilot" style="display:block;text-decoration:none;border:0;">
+  <img
+    src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/02-discover.webp"
+    alt="CareerPilot Discover workspace — actual product screenshot with example job listings and Fit scores"
+    width="100%"
+  />
+</a>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-frame-bottom.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-frame-bottom.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-frame-bottom.svg"/>
+  <img src="assets/editorial/light/flagship-frame-bottom.svg" alt="" width="100%"/>
+</picture>
+
+<a href="https://github.com/ManpreetS2/CareerPilot" style="display:block;text-decoration:none;border:0;color:inherit;">
+  <picture>
+    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-points.svg"/>
+    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-points.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-points.svg"/>
+    <img src="assets/editorial/light/flagship-points.svg" alt="CareerPilot highlights: explainable Fit matching, discover–analyze–prepare–track workflow, human-controlled Chrome extension that never auto-submits." width="100%"/>
+  </picture>
+</a>
+
+<p align="center">
+  <a href="https://github.com/ManpreetS2/CareerPilot" style="display:inline-block;text-decoration:none;border:0;">
+    <picture>
+      <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-cta.svg"/>
+      <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-cta.svg"/>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-cta.svg"/>
+      <img src="assets/editorial/light/flagship-cta.svg" alt="Open CareerPilot repository" height="32" style="vertical-align:middle;"/>
+    </picture>
+  </a>
+</p>
+
+<!-- 03 — SYSTEM MAP (numeral only updated; body unchanged) -->
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s03.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s03.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s03.svg"/>
+  <img src="assets/editorial/light/s03.svg" alt="03 — SYSTEM MAP" width="100%"/>
 </picture>
 
 <picture>
@@ -51,56 +133,7 @@
   <img src="assets/editorial/light/system-map.svg" alt="System map connecting full-stack products, AI experimentation, reliable integrations, quantitative research, and CareerPilot as the flagship hub" width="100%"/>
 </picture>
 
-<picture>
-  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s03.svg"/>
-  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s03.svg"/>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s03.svg"/>
-  <img src="assets/editorial/light/s03.svg" alt="03 — FLAGSHIP" width="100%"/>
-</picture>
-
-<a href="https://github.com/ManpreetS2/CareerPilot">
-  <picture>
-    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-meta.svg"/>
-    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-meta.svg"/>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-meta.svg"/>
-    <img src="assets/editorial/light/flagship-meta.svg" alt="CareerPilot — evidence-driven job search workspace. Python, FastAPI, React, TypeScript, SQLite, Chrome Extension." width="100%"/>
-  </picture>
-</a>
-
-<picture>
-  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-frame.svg"/>
-  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-frame.svg"/>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-frame.svg"/>
-  <img src="assets/editorial/light/flagship-frame.svg" alt="Product screenshot label" width="100%"/>
-</picture>
-
-<a href="https://github.com/ManpreetS2/CareerPilot">
-  <img
-    src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/02-discover.webp"
-    alt="CareerPilot Discover workspace — actual product screenshot with example job listings and Fit scores"
-    width="100%"
-  />
-</a>
-
-<a href="https://github.com/ManpreetS2/CareerPilot">
-  <picture>
-    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-points.svg"/>
-    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-points.svg"/>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-points.svg"/>
-    <img src="assets/editorial/light/flagship-points.svg" alt="CareerPilot highlights: explainable Fit scoring, complete job-search workflow, human-controlled Chrome extension" width="100%"/>
-  </picture>
-</a>
-
-<p>
-  <a href="https://github.com/ManpreetS2/CareerPilot"><strong>Explore CareerPilot →</strong></a>
-  ·
-  <a href="https://github.com/ManpreetS2/CareerPilot/tree/main/docs/showcase">Architecture &amp; showcase</a>
-  ·
-  <a href="https://github.com/ManpreetS2/CareerPilot/actions/workflows/ci.yml">CI</a>
-</p>
-
-<sub>Local / self-hostable · no public hosted demo · source-visible, not open source</sub>
-
+<!-- 04 — PROJECTS -->
 <picture>
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s04.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s04.svg"/>
@@ -170,6 +203,7 @@
   </sub>
 </p>
 
+<!-- 05 — TOOLKIT -->
 <picture>
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s05.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s05.svg"/>
