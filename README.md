@@ -1,45 +1,77 @@
 <!--
-  Editorial profile README — animated SVG portfolio.
-  Light/dark via <picture>. Animations fail-safe: resting SVG state is always visible.
-  Dense copy uses Markdown for mobile readability; SVGs carry brand, sections, and motion.
+  Editorial profile README — SVG-driven portfolio (Sharann-inspired structure, original art).
+  Light/dark + mobile via <picture>. Animations fail-safe: resting SVG state is always visible.
+  No JavaScript. Project links are real Markdown/HTML anchors (SVG-as-img is not clickable inside).
 -->
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/hero.svg"/>
-    <img src="assets/editorial/light/hero.svg" alt="Manpreet Singh — software engineering, AI systems, and fintech" width="100%"/>
-  </picture>
 
-  <p>
-    <a href="https://www.linkedin.com/in/manpreet-singh-1018b3299/">LinkedIn</a>
-    ·
-    <a href="mailto:manpreetsm2@gmail.com">Email</a>
-    ·
-    <a href="https://github.com/ManpreetS2?tab=repositories">All repositories</a>
-  </p>
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/hero.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/hero.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/hero.svg"/>
+  <img src="assets/editorial/light/hero.svg" alt="Manpreet Singh — software engineering, AI systems, and fintech" width="100%"/>
+</picture>
+
+<p>
+  <a href="https://www.linkedin.com/in/manpreet-singh-1018b3299/">LinkedIn</a>
+  ·
+  <a href="mailto:manpreetsm2@gmail.com">Email</a>
+  ·
+  <a href="https://github.com/ManpreetS2?tab=repositories">Repositories</a>
+</p>
+
 </div>
 
 <picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s01.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s01.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s01.svg"/>
   <img src="assets/editorial/light/s01.svg" alt="01 — WHOAMI" width="100%"/>
 </picture>
 
-**Computer Science @ De Anza College · Incoming San José State University, Spring 2027**
-
-I build practical software, AI-powered tools, and systems designed around reliability — preferring products where claims stay grounded in evidence and humans keep final control.
-
-`FOCUS` · Full-stack systems · Explainable AI tooling · Fintech research · Local-first apps  
-`STATUS` · Open to software engineering, solutions engineering, and technical internships  
-`EDU` · De Anza College → San José State University / Spring 2027
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s02.svg"/>
-  <img src="assets/editorial/light/s02.svg" alt="02 — FEATURED WORK" width="100%"/>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/whoami.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/whoami.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/whoami.svg"/>
+  <img src="assets/editorial/light/whoami.svg" alt="Computer Science at De Anza College, incoming San José State University Spring 2027. Builds practical software, AI tools, and reliable systems. Open to software engineering, solutions engineering, and technical internships." width="100%"/>
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/featured-meta.svg"/>
-  <img src="assets/editorial/light/featured-meta.svg" alt="CareerPilot — evidence-driven job search workspace" width="100%"/>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s02.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s02.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s02.svg"/>
+  <img src="assets/editorial/light/s02.svg" alt="02 — SYSTEM MAP" width="100%"/>
+</picture>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/system-map.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/system-map.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/system-map.svg"/>
+  <img src="assets/editorial/light/system-map.svg" alt="System map connecting full-stack products, AI experimentation, reliable integrations, quantitative research, and CareerPilot as the flagship hub" width="100%"/>
+</picture>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s03.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s03.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s03.svg"/>
+  <img src="assets/editorial/light/s03.svg" alt="03 — FLAGSHIP" width="100%"/>
+</picture>
+
+<a href="https://github.com/ManpreetS2/CareerPilot">
+  <picture>
+    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-meta.svg"/>
+    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-meta.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-meta.svg"/>
+    <img src="assets/editorial/light/flagship-meta.svg" alt="CareerPilot — evidence-driven job search workspace. Python, FastAPI, React, TypeScript, SQLite, Chrome Extension." width="100%"/>
+  </picture>
+</a>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-frame.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-frame.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-frame.svg"/>
+  <img src="assets/editorial/light/flagship-frame.svg" alt="Product screenshot label" width="100%"/>
 </picture>
 
 <a href="https://github.com/ManpreetS2/CareerPilot">
@@ -50,14 +82,14 @@ I build practical software, AI-powered tools, and systems designed around reliab
   />
 </a>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/featured-points.svg"/>
-  <img src="assets/editorial/light/featured-points.svg" alt="CareerPilot highlights — Fit, workflow, extension" width="100%"/>
-</picture>
-
-**01 / FIT** — Explainable, evidence-based Fit scoring grounded in resume and posting text  
-**02 / WORKFLOW** — Complete job-search loop: discover → analyze → prepare → track  
-**03 / EXTENSION** — Human-controlled Chrome extension that assists fills and never submits
+<a href="https://github.com/ManpreetS2/CareerPilot">
+  <picture>
+    <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-points.svg"/>
+    <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-points.svg"/>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-points.svg"/>
+    <img src="assets/editorial/light/flagship-points.svg" alt="CareerPilot highlights: explainable Fit scoring, complete job-search workflow, human-controlled Chrome extension" width="100%"/>
+  </picture>
+</a>
 
 <p>
   <a href="https://github.com/ManpreetS2/CareerPilot"><strong>Explore CareerPilot →</strong></a>
@@ -67,89 +99,96 @@ I build practical software, AI-powered tools, and systems designed around reliab
   <a href="https://github.com/ManpreetS2/CareerPilot/actions/workflows/ci.yml">CI</a>
 </p>
 
-<sub>Local/self-hostable · no public hosted demo · source-visible, not open source</sub>
+<sub>Local / self-hostable · no public hosted demo · source-visible, not open source</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s03.svg"/>
-  <img src="assets/editorial/light/s03.svg" alt="03 — SELECTED PROJECTS" width="100%"/>
-</picture>
-
-<a href="https://github.com/ManpreetS2/IntegrationLab">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-dark.png"/>
-    <img src="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-light.png" alt="IntegrationLab local console — actual product screenshot" width="100%"/>
-  </picture>
-</a>
-
-`01 / INTEGRATIONLAB` · FastAPI · PostgreSQL · React · Docker
-
-### [IntegrationLab](https://github.com/ManpreetS2/IntegrationLab)
-
-Self-hosted console for diagnosing API and webhook failures with stored evidence, signed webhook processing, and retry handling.
-
----
-
-<a href="https://github.com/ManpreetS2/R.E.A.C.T">
-  <img src="assets/projects/react-research.webp" alt="R.E.A.C.T. concept illustration (generated artwork, not experimental results)" width="100%"/>
-</a>
-
-`02 / R.E.A.C.T.` · Python · LunarLander · Research prototype
-
-### [R.E.A.C.T.](https://github.com/ManpreetS2/R.E.A.C.T)
-
-Research prototype testing whether numerical reward feedback changes language-model controller revisions in a physics simulator.
-
----
-
-<a href="https://github.com/ManpreetS2/EquityTrace">
-  <img src="assets/projects/equitytrace-research.webp" alt="EquityTrace concept illustration (generated artwork, not a product screenshot)" width="100%"/>
-</a>
-
-`03 / EQUITYTRACE` · Python · SEC XBRL · DuckDB
-
-### [EquityTrace](https://github.com/ManpreetS2/EquityTrace)
-
-Point-in-time stock research from SEC filings, auditable financial factors, and transparent historical portfolio backtesting.
-
----
-
-<a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">
-  <img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization concept illustration (generated artwork, not gameplay footage)" width="100%"/>
-</a>
-
-`04 / MINECRAFT AI CIVILIZATION` · TypeScript · Mineflayer · SQLite · In development
-
-### [Minecraft AI Civilization](https://github.com/ManpreetS2/Minecraft-Ai-Civilization)
-
-Multi-agent simulation with persistent memory, planning, and actions inside a shared Minecraft world — in active development.
-
----
-
-### More things I've built
-
-- **[StrikeCaller](https://github.com/ManpreetS2/StrikeCaller)** — Spoken boxing and Muay Thai training app. [Live demo ↗](https://manpreets2.github.io/StrikeCaller/)
-- **[PagePulse](https://github.com/ManpreetS2/PagePulse)** — Webpage monitoring that distinguishes meaningful factual changes from page noise.
-- **[Java Banking System](https://github.com/ManpreetS2/JavaBankingSystem)** — JavaFX desktop banking simulation with atomic transfers and a downloadable macOS release.
-- **[System Down Simulator](https://github.com/ManpreetS2/System-Down-Simulator)** — Browser game about managing software outages. [Play ↗](https://manpreets2.github.io/System-Down-Simulator/)
-
-<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s04.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s04.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s04.svg"/>
-  <img src="assets/editorial/light/s04.svg" alt="04 — TOOLKIT" width="100%"/>
+  <img src="assets/editorial/light/s04.svg" alt="04 — PROJECTS" width="100%"/>
 </picture>
 
 <picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/projects.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/projects.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/projects.svg"/>
+  <img src="assets/editorial/light/projects.svg" alt="Selected projects directory: IntegrationLab, R.E.A.C.T., EquityTrace, Minecraft AI Civilization" width="100%"/>
+</picture>
+
+<p>
+  <a href="https://github.com/ManpreetS2/IntegrationLab"><strong>01 IntegrationLab</strong></a>
+  ·
+  <a href="https://github.com/ManpreetS2/R.E.A.C.T"><strong>02 R.E.A.C.T.</strong></a>
+  ·
+  <a href="https://github.com/ManpreetS2/EquityTrace"><strong>03 EquityTrace</strong></a>
+  ·
+  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization"><strong>04 Minecraft AI Civilization</strong></a>
+</p>
+
+<details>
+<summary>Project visuals (product screenshot + concept art)</summary>
+
+<p>
+  <a href="https://github.com/ManpreetS2/IntegrationLab">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-dark.png"/>
+      <img src="https://raw.githubusercontent.com/ManpreetS2/IntegrationLab/main/docs/assets/final/overview-light.png" alt="IntegrationLab local console — actual product screenshot" width="100%"/>
+    </picture>
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/ManpreetS2/R.E.A.C.T">
+    <img src="assets/projects/react-research.webp" alt="R.E.A.C.T. concept illustration (generated artwork, not experimental results)" width="100%"/>
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/ManpreetS2/EquityTrace">
+    <img src="assets/projects/equitytrace-research.webp" alt="EquityTrace concept illustration (generated artwork, not a product screenshot)" width="100%"/>
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/ManpreetS2/Minecraft-Ai-Civilization">
+    <img src="assets/projects/minecraft-agents.webp" alt="Minecraft AI Civilization concept illustration (generated artwork, not gameplay footage)" width="100%"/>
+  </a>
+</p>
+
+</details>
+
+<p>
+  <sub>
+    Also:
+    <a href="https://github.com/ManpreetS2/StrikeCaller">StrikeCaller</a>
+    ·
+    <a href="https://github.com/ManpreetS2/PagePulse">PagePulse</a>
+    ·
+    <a href="https://github.com/ManpreetS2/JavaBankingSystem">Java Banking System</a>
+    ·
+    <a href="https://github.com/ManpreetS2/System-Down-Simulator">System Down Simulator</a>
+  </sub>
+</p>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/s05.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/s05.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/s05.svg"/>
+  <img src="assets/editorial/light/s05.svg" alt="05 — TOOLKIT" width="100%"/>
+</picture>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/toolkit.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/toolkit.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/toolkit.svg"/>
-  <img src="assets/editorial/light/toolkit.svg" alt="Toolkit accent" width="100%"/>
+  <img src="assets/editorial/light/toolkit.svg" alt="Toolkit: Languages Python TypeScript Java JavaScript SQL; Frameworks FastAPI React Node.js JavaFX; Data PostgreSQL SQLite DuckDB SQLAlchemy; Tooling Git Docker GitHub Actions pytest Vitest Playwright JUnit" width="100%"/>
 </picture>
 
-**Languages** — Python · TypeScript · Java · JavaScript · SQL  
-**Frameworks** — FastAPI · React · Node.js · JavaFX  
-**Data** — PostgreSQL · SQLite · DuckDB · SQLAlchemy  
-**Tooling** — Git · Docker · GitHub Actions · pytest · Vitest · Playwright · JUnit
-
 <picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/footer.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/footer.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/footer.svg"/>
-  <img src="assets/editorial/light/footer.svg" alt="Building systems you can trace — open to opportunities" width="100%"/>
+  <img src="assets/editorial/light/footer.svg" alt="Status — available. Building traceable systems, open to internships. Manpreet Singh." width="100%"/>
 </picture>
 
 <div align="center">

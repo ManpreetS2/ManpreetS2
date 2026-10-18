@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1000 660" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System map of Manpreet Singh's engineering work">
+  <defs>
+    <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    
+    .draw { stroke-dasharray:600; stroke-dashoffset:0; }
+    .rise,.fade,.pop,.row { opacity:1; }
+    .flow { stroke-dasharray:3 9; opacity:.35; }
+    .pulse { opacity:1; }
+    .caret { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:600; } to { stroke-dashoffset:0; } }
+    @keyframes rise { from { opacity:0; } to { opacity:1; } }
+    @keyframes fade { from { opacity:0; } to { opacity:1; } }
+    @keyframes pop { from { opacity:0; } to { opacity:1; } }
+    @keyframes march { to { stroke-dashoffset:-12; } }
+    @keyframes pulse { 0%,100% { opacity:.55; } 50% { opacity:1; } }
+    @keyframes blink { 0%,49% { opacity:1; } 50%,100% { opacity:0; } }
+    .a1{animation-delay:.08s}.a2{animation-delay:.2s}.a3{animation-delay:.35s}
+    .a4{animation-delay:.5s}.a5{animation-delay:.65s}.a6{animation-delay:.8s}
+    .w1{animation-delay:.15s}.w2{animation-delay:.28s}.w3{animation-delay:.4s}
+    .w4{animation-delay:.52s}.w5{animation-delay:.64s}.w6{animation-delay:.76s}
+    .p0{animation-delay:.1s}.p1{animation-delay:.45s}.p2{animation-delay:.55s}
+    .p3{animation-delay:.65s}.p4{animation-delay:.75s}.p5{animation-delay:.85s}
+    .p6{animation-delay:.95s}.p7{animation-delay:1.05s}.p8{animation-delay:1.15s}
+    .r1{animation-delay:.05s}.r2{animation-delay:.12s}.r3{animation-delay:.19s}
+    .r4{animation-delay:.26s}.r5{animation-delay:.33s}
+    @media (prefers-reduced-motion:no-preference) {
+      .draw { animation:draw 1.2s cubic-bezier(.6,0,.2,1) both; }
+      .rise { animation:rise .65s cubic-bezier(.2,.7,.2,1) both; }
+      .fade { animation:fade .55s ease both; }
+      .pop { animation:pop .65s cubic-bezier(.2,.7,.2,1) both; }
+      .row { animation:rise .5s cubic-bezier(.2,.7,.2,1) both; }
+      .flow { animation:march 1.4s linear infinite; }
+      .pulse { animation:pulse 2.6s ease-in-out infinite; }
+      .caret { animation:blink 1.05s steps(1,end) infinite; }
+    }
+
+</style>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="660">
+      <rect width="1000" height="660" fill="white"/>
+      <rect x="395" y="248" width="210" height="64" fill="black"/>
+      <rect x="110" y="110" width="180" height="56" fill="black"/>
+      <rect x="48" y="186" width="150" height="44" fill="black"/>
+      <rect x="210" y="186" width="150" height="44" fill="black"/>
+      <rect x="710" y="110" width="180" height="56" fill="black"/>
+      <rect x="690" y="186" width="240" height="44" fill="black"/>
+      <rect x="110" y="380" width="180" height="56" fill="black"/>
+      <rect x="100" y="452" width="210" height="44" fill="black"/>
+      <rect x="710" y="380" width="180" height="56" fill="black"/>
+      <rect x="720" y="452" width="190" height="44" fill="black"/>
+      <rect x="370" y="500" width="260" height="56" fill="black"/>
+    </mask>
+  </defs>
+  <line x1="48" y1="36" x2="952" y2="36" stroke="#3A4F6C"/>
+  <text class="mono fade a1" x="48" y="24" fill="#8A96AB" font-size="11" letter-spacing="3.2">SYSTEM MAP — HOW THE WORK CONNECTS</text>
+  <text class="mono fade a1" x="952" y="24" fill="#8A96AB" font-size="11" letter-spacing="3.2" text-anchor="end">FIG. 01</text>
+
+  <g mask="url(#cut)">
+    <line class="draw w1" x1="420" y1="248" x2="245" y2="166" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w2" x1="580" y1="248" x2="755" y2="166" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w3" x1="420" y1="312" x2="245" y2="380" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w4" x1="580" y1="312" x2="755" y2="380" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w5" x1="500" y1="312" x2="500" y2="500" stroke="#3DDBD9" stroke-width="1.3"/>
+    <line class="draw w6" x1="200" y1="166" x2="123" y2="186" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w6" x1="200" y1="166" x2="285" y2="186" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w6" x1="800" y1="166" x2="810" y2="186" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w6" x1="200" y1="436" x2="205" y2="452" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="draw w6" x1="800" y1="436" x2="815" y2="452" stroke="#3A4F6C" stroke-width="1"/>
+    <line class="flow" x1="420" y1="248" x2="245" y2="166" stroke="#3DDBD9"/>
+    <line class="flow" x1="580" y1="248" x2="755" y2="166" stroke="#B8A9E8"/>
+    <line class="flow" x1="420" y1="312" x2="245" y2="380" stroke="#E08A7A"/>
+    <line class="flow" x1="580" y1="312" x2="755" y2="380" stroke="#3DDBD9"/>
+    <line class="flow" x1="500" y1="312" x2="500" y2="500" stroke="#B8A9E8"/>
+  </g>
+
+  <text class="mono pop p1" x="200" y="92" fill="#3DDBD9" font-size="10" letter-spacing="2.5" text-anchor="middle">FULL-STACK PRODUCTS</text>
+  <text class="mono pop p2" x="800" y="92" fill="#B8A9E8" font-size="10" letter-spacing="2.5" text-anchor="middle">AI EXPERIMENTATION</text>
+  <text class="mono pop p3" x="200" y="548" fill="#E08A7A" font-size="10" letter-spacing="2.5" text-anchor="middle">RELIABLE INTEGRATIONS</text>
+  <text class="mono pop p4" x="800" y="548" fill="#3DDBD9" font-size="10" letter-spacing="2.5" text-anchor="middle">QUANTITATIVE RESEARCH</text>
+  <text class="mono pop p5" x="500" y="590" fill="#B8A9E8" font-size="10" letter-spacing="2.5" text-anchor="middle">FLAGSHIP HUB · CAREERPILOT</text>
+
+  <g class="pop p0">
+    <rect x="395" y="248" width="210" height="64" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="500" y="276" fill="#E8EEF8" font-size="13" letter-spacing="2" text-anchor="middle">MANPREET.SYS</text>
+    <text class="mono" x="500" y="296" fill="#8A96AB" font-size="9" letter-spacing=".5" text-anchor="middle">evidence → systems → control</text>
+  </g>
+
+  <g class="pop p1">
+    <rect x="110" y="110" width="180" height="56" rx="2" fill="#121E33" stroke="#3DDBD9" stroke-opacity=".55"/>
+    <text class="mono" x="200" y="134" fill="#E8EEF8" font-size="12" text-anchor="middle">CareerPilot</text>
+    <text class="mono" x="200" y="152" fill="#8A96AB" font-size="9" text-anchor="middle">job search · Fit · extension</text>
+  </g>
+  <g class="pop p1">
+    <rect x="48" y="186" width="150" height="44" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="123" y="206" fill="#E8EEF8" font-size="11" text-anchor="middle">StrikeCaller</text>
+    <text class="mono" x="123" y="222" fill="#6A768C" font-size="9" text-anchor="middle">spoken coaching</text>
+  </g>
+  <g class="pop p1">
+    <rect x="210" y="186" width="150" height="44" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="285" y="206" fill="#E8EEF8" font-size="11" text-anchor="middle">PagePulse</text>
+    <text class="mono" x="285" y="222" fill="#6A768C" font-size="9" text-anchor="middle">change evidence</text>
+  </g>
+
+  <g class="pop p2">
+    <rect x="710" y="110" width="180" height="56" rx="2" fill="#121E33" stroke="#B8A9E8" stroke-opacity=".6"/>
+    <text class="mono" x="800" y="134" fill="#E8EEF8" font-size="12" text-anchor="middle">R.E.A.C.T.</text>
+    <text class="mono" x="800" y="152" fill="#8A96AB" font-size="9" text-anchor="middle">reward · controllers</text>
+  </g>
+  <g class="pop p2">
+    <rect x="690" y="186" width="240" height="44" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="810" y="206" fill="#E8EEF8" font-size="11" text-anchor="middle">Minecraft AI Civilization</text>
+    <text class="mono" x="810" y="222" fill="#6A768C" font-size="9" text-anchor="middle">multi-agent simulation</text>
+  </g>
+
+  <g class="pop p3">
+    <rect x="110" y="380" width="180" height="56" rx="2" fill="#121E33" stroke="#E08A7A" stroke-opacity=".55"/>
+    <text class="mono" x="200" y="404" fill="#E8EEF8" font-size="12" text-anchor="middle">IntegrationLab</text>
+    <text class="mono" x="200" y="422" fill="#8A96AB" font-size="9" text-anchor="middle">webhooks · evidence store</text>
+  </g>
+  <g class="pop p3">
+    <rect x="100" y="452" width="210" height="44" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="205" y="472" fill="#E8EEF8" font-size="11" text-anchor="middle">System Down Simulator</text>
+    <text class="mono" x="205" y="488" fill="#6A768C" font-size="9" text-anchor="middle">incident response game</text>
+  </g>
+
+  <g class="pop p4">
+    <rect x="710" y="380" width="180" height="56" rx="2" fill="#121E33" stroke="#3DDBD9" stroke-opacity=".5"/>
+    <text class="mono" x="800" y="404" fill="#E8EEF8" font-size="12" text-anchor="middle">EquityTrace</text>
+    <text class="mono" x="800" y="422" fill="#8A96AB" font-size="9" text-anchor="middle">SEC filings · factors</text>
+  </g>
+  <g class="pop p4">
+    <rect x="720" y="452" width="190" height="44" rx="2" fill="#121E33" stroke="#3A4F6C"/>
+    <text class="mono" x="815" y="472" fill="#E8EEF8" font-size="11" text-anchor="middle">Java Banking System</text>
+    <text class="mono" x="815" y="488" fill="#6A768C" font-size="9" text-anchor="middle">atomic transfers</text>
+  </g>
+
+  <g class="pop p5">
+    <rect x="370" y="500" width="260" height="56" rx="2" fill="#1A2740" stroke="#B8A9E8"/>
+    <text class="mono" x="500" y="524" fill="#B8A9E8" font-size="12" letter-spacing="1" text-anchor="middle">CareerPilot hub</text>
+    <text class="mono" x="500" y="542" fill="#8A96AB" font-size="9" text-anchor="middle">products ↔ evidence ↔ human control</text>
+  </g>
+
+  <line x1="48" y1="620" x2="952" y2="620" stroke="#3A4F6C"/>
+  <text class="mono" x="48" y="644" fill="#6A768C" font-size="10" letter-spacing="1.5">WIRES — SHARED IDEAS · EVIDENCE PATTERNS · CONTROL LOOPS</text>
+  <text class="mono" x="952" y="644" fill="#6A768C" font-size="10" letter-spacing="2" text-anchor="end">ORIGINAL DIAGRAM</text>
+</svg>

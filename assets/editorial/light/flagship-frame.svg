@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1000 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot product screenshot label">
+  <defs><style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    
+</style></defs>
+  <text class="mono" x="48" y="22" fill="#6E7890" font-size="11" letter-spacing="2.5">PRODUCT SCREENSHOT — DISCOVER WORKSPACE</text>
+  <text class="mono" x="952" y="22" fill="#4E596E" font-size="11" letter-spacing="2" text-anchor="end">LIVE UI</text>
+</svg>

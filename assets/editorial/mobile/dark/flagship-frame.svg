@@ -1,0 +1,8 @@
+<svg viewBox="0 0 390 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot label">
+  <defs><style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .sans { font-family:ui-sans-serif,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    
+</style></defs>
+  <text class="mono" x="20" y="20" fill="#6A768C" font-size="11" letter-spacing="1.5">PRODUCT SCREENSHOT</text>
+</svg>
