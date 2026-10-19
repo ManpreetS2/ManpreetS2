@@ -456,7 +456,7 @@ def flagship_detail_caps(c: dict, mode: str = "dark") -> str:
     h = HERO_COLORS[mode]
     return f'''<svg viewBox="0 0 1000 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail captions">
   <style>{flagship_css(904)}</style>
-  <text class="mono fade a1" x="48" y="20" fill="{h['ink']}" font-size="13">Rule-backed Fit with job ↔ resume evidence</text>
+  <text class="mono fade a1" x="48" y="20" fill="{h['ink']}" font-size="13">Rule-backed Fit with job / resume evidence</text>
   <text class="mono fade a1" x="48" y="38" fill="{h['dim']}" font-size="11" letter-spacing="1.2">required_skills · satisfied · scoring effect</text>
   <text class="mono fade a2" x="524" y="20" fill="{h['ink']}" font-size="13">Source-traced drafts before approval</text>
   <text class="mono fade a2" x="524" y="38" fill="{h['dim']}" font-size="11" letter-spacing="1.2">cover letter · recruiter note · claim map</text>
@@ -968,7 +968,7 @@ def flagship_detail_caps_mobile(c: dict, mode: str = "dark") -> str:
     return f'''<svg viewBox="0 0 390 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail captions">
   <style>{flagship_css(350)}</style>
   <text class="mono fade a1" x="20" y="18" fill="{h['cyan']}" font-size="11" letter-spacing="1.5">01 / MATCH EVIDENCE</text>
-  <text class="mono fade a1" x="20" y="36" fill="{h['ink']}" font-size="12">Rule-backed Fit · job ↔ resume</text>
+  <text class="mono fade a1" x="20" y="36" fill="{h['ink']}" font-size="12">Rule-backed Fit · job / resume</text>
   <text class="mono fade a2" x="20" y="58" fill="{h['lavender']}" font-size="11" letter-spacing="1.5">02 / PREPARE</text>
   <text class="mono fade a2" x="20" y="76" fill="{h['ink']}" font-size="12">Source-traced drafts · approval</text>
 </svg>'''

@@ -12,7 +12,7 @@
       .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
     }
 </style>
-  <text class="mono fade a1" x="48" y="20" fill="#0F1729" font-size="13">Rule-backed Fit with job ↔ resume evidence</text>
+  <text class="mono fade a1" x="48" y="20" fill="#0F1729" font-size="13">Rule-backed Fit with job / resume evidence</text>
   <text class="mono fade a1" x="48" y="38" fill="#5A6578" font-size="11" letter-spacing="1.2">required_skills · satisfied · scoring effect</text>
   <text class="mono fade a2" x="524" y="20" fill="#0F1729" font-size="13">Source-traced drafts before approval</text>
   <text class="mono fade a2" x="524" y="38" fill="#5A6578" font-size="11" letter-spacing="1.2">cover letter · recruiter note · claim map</text>
