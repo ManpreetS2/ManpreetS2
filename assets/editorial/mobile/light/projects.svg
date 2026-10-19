@@ -1,0 +1,68 @@
+<svg viewBox="0 0 390 828" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:350; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:350; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <g class="row r1 mono"><text x="20" y="30" fill="#0F1729" font-size="14">01 / INTEGRATIONLAB</text><text x="370" y="30" fill="#5A6578" font-size="10" text-anchor="end">PRODUCT</text><text x="20" y="52" fill="#3D4A5F" font-size="12">API/webhook failure console with</text><text x="20" y="70" fill="#3D4A5F" font-size="12">recorded evidence and retries.</text><text x="20" y="92" fill="#0B8F8A" font-size="12">FASTAPI · POSTGRES · REACT</text><rect x="20" y="100" width="148" height="78" fill="none" stroke="#B0BACC" stroke-width="1"/>
+    <line x1="20" y1="178" x2="168" y2="178" stroke="#0B8F8A" stroke-width="1.5"/>
+    <path d="M36 122 H66" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>
+    <path d="M60 118 L68 122 L60 126" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>
+    <circle cx="82" cy="122" r="9" fill="none" stroke="#0B8F8A" stroke-width="1.25"/>
+    <path d="M77 122 L80 125 L87 118" stroke="#0B8F8A" stroke-width="1.25" fill="none"/>
+    <text class="mono" x="82" y="140" fill="#5A6578" font-size="7" text-anchor="middle">signed</text>
+    <line x1="102" y1="122" x2="152" y2="122" stroke="#B0BACC" stroke-width="1"/>
+    <circle cx="110" cy="122" r="2" fill="#0B8F8A"/>
+    <circle cx="128" cy="122" r="2" fill="#0B8F8A" opacity=".65"/>
+    <circle cx="146" cy="122" r="2" fill="none" stroke="#0B8F8A"/>
+    <path d="M110 148 H146 Q154 148 154 156 Q154 164 146 164 H118" stroke="#0B8F8A" stroke-width="1.15" fill="none"/>
+    <path d="M122 160 L116 164 L122 168" stroke="#0B8F8A" stroke-width="1.15" fill="none"/>
+    <text class="mono" x="40" y="162" fill="#5A6578" font-size="7">retry</text><line x1="20" y1="190" x2="370" y2="190" stroke="#B0BACC"/></g><g class="row r2 mono"><text x="20" y="224" fill="#0F1729" font-size="14">02 / R.E.A.C.T.</text><text x="370" y="224" fill="#5A6578" font-size="10" text-anchor="end">ILLUSTRATIVE</text><text x="20" y="246" fill="#3D4A5F" font-size="12">Compare LM controller revisions</text><text x="20" y="264" fill="#3D4A5F" font-size="12">with/without reward feedback.</text><text x="20" y="286" fill="#5F4F8F" font-size="12">PYTHON · RESEARCH</text><rect x="20" y="294" width="148" height="78" fill="none" stroke="#B0BACC" stroke-width="1"/>
+    <line x1="20" y1="372" x2="168" y2="372" stroke="#5F4F8F" stroke-width="1.5"/>
+    <path d="M38 352 Q94 362 150 350" stroke="#B0BACC" stroke-width="1" fill="none"/>
+    <path d="M48 344 Q78 312 128 322" stroke="#5F4F8F" stroke-width="1.35" fill="none"/>
+    <circle cx="48" cy="344" r="2.5" fill="#5F4F8F"/>
+    <path d="M122 316 L134 316 L138 324 L118 324 Z" fill="none" stroke="#5F4F8F" stroke-width="1.15"/>
+    <line x1="124" y1="324" x2="120" y2="332" stroke="#5F4F8F" stroke-width="1"/>
+    <line x1="132" y1="324" x2="136" y2="332" stroke="#5F4F8F" stroke-width="1"/>
+    <path d="M94 328 Q74 336 68 348" stroke="#5F4F8F" stroke-width="1" fill="none" stroke-dasharray="2 3"/>
+    <text class="mono" x="76" y="326" fill="#5F4F8F" font-size="8">+1.0</text>
+    <text class="mono" x="94" y="366" fill="#5A6578" font-size="7" text-anchor="middle">reward → revise</text><line x1="20" y1="384" x2="370" y2="384" stroke="#B0BACC"/></g><g class="row r3 mono"><text x="20" y="418" fill="#0F1729" font-size="14">03 / EQUITYTRACE</text><text x="370" y="418" fill="#5A6578" font-size="10" text-anchor="end">ILLUSTRATIVE</text><text x="20" y="440" fill="#3D4A5F" font-size="12">SEC filings, transparent factors,</text><text x="20" y="458" fill="#3D4A5F" font-size="12">reproducible backtesting.</text><text x="20" y="480" fill="#0B8F8A" font-size="12">PYTHON · XBRL · DUCKDB</text><rect x="20" y="488" width="148" height="78" fill="none" stroke="#B0BACC" stroke-width="1"/>
+    <line x1="20" y1="566" x2="168" y2="566" stroke="#0B8F8A" stroke-width="1.5"/>
+    <rect x="34" y="502" width="34" height="44" fill="none" stroke="#0B8F8A" stroke-width="1.15"/>
+    <line x1="40" y1="512" x2="60" y2="512" stroke="#0B8F8A" stroke-width="1"/>
+    <line x1="40" y1="520" x2="58" y2="520" stroke="#B0BACC" stroke-width="1"/>
+    <line x1="40" y1="528" x2="56" y2="528" stroke="#B0BACC" stroke-width="1"/>
+    <text class="mono" x="51" y="554" fill="#5A6578" font-size="7" text-anchor="middle">SEC</text>
+    <path d="M74 524 H92" stroke="#0B8F8A" stroke-width="1.2" fill="none"/>
+    <path d="M86 520 L94 524 L86 528" stroke="#0B8F8A" stroke-width="1.2" fill="none"/>
+    <line x1="102" y1="546" x2="156" y2="546" stroke="#B0BACC"/>
+    <polyline fill="none" stroke="#0B8F8A" stroke-width="1.35" points="104,536 116,528 128,532 140,516 154,520"/>
+    <line x1="140" y1="506" x2="140" y2="546" stroke="#0B8F8A" stroke-width="1" stroke-dasharray="2 2"/>
+    <circle cx="140" cy="516" r="3" fill="none" stroke="#0B8F8A" stroke-width="1.25"/>
+    <text class="mono" x="140" y="502" fill="#5A6578" font-size="7" text-anchor="middle">PIT</text><line x1="20" y1="578" x2="370" y2="578" stroke="#B0BACC"/></g><g class="row r4 mono"><text x="20" y="612" fill="#0F1729" font-size="14">04 / MINECRAFT AI CIV.</text><text x="370" y="612" fill="#5A6578" font-size="10" text-anchor="end">IN DEV</text><text x="20" y="634" fill="#3D4A5F" font-size="12">Multi-agent identities, memory,</text><text x="20" y="652" fill="#3D4A5F" font-size="12">planning — still in development.</text><text x="20" y="674" fill="#B85040" font-size="12">TYPESCRIPT · MINEFLAYER</text><rect x="20" y="682" width="148" height="78" fill="none" stroke="#B0BACC" stroke-width="1"/>
+    <line x1="20" y1="760" x2="168" y2="760" stroke="#B85040" stroke-width="1.5"/>
+    <rect x="54" y="708" width="12" height="10" fill="none" stroke="#B85040" stroke-width="1.1"/>
+    <rect x="52" y="718" width="16" height="14" fill="none" stroke="#B85040" stroke-width="1.1"/>
+    <rect x="57" y="711" width="2.5" height="2.5" fill="#B85040"/>
+    <rect x="61" y="711" width="2.5" height="2.5" fill="#B85040"/>
+    <rect x="122" y="708" width="12" height="10" fill="none" stroke="#B85040" stroke-width="1.1"/>
+    <rect x="120" y="718" width="16" height="14" fill="none" stroke="#B85040" stroke-width="1.1"/>
+    <rect x="125" y="711" width="2.5" height="2.5" fill="#B85040"/>
+    <rect x="129" y="711" width="2.5" height="2.5" fill="#B85040"/>
+    <path d="M70 710 H118" stroke="#B85040" stroke-width="1.1" fill="none"/>
+    <circle cx="94" cy="710" r="3.5" fill="none" stroke="#B85040" stroke-width="1.1"/>
+    <text class="mono" x="94" y="713" fill="#B85040" font-size="6" text-anchor="middle">m</text>
+    <path d="M70 730 Q94 740 118 730" stroke="#B85040" stroke-width="1" fill="none" stroke-dasharray="2 2"/>
+    <text class="mono" x="94" y="754" fill="#5A6578" font-size="7" text-anchor="middle">memory · talk</text><line x1="20" y1="772" x2="370" y2="772" stroke="#B0BACC"/></g>
+  <text class="mono" x="20" y="802" fill="#5A6578" font-size="12">ALSO · StrikeCaller · PagePulse</text>
+  <text class="mono" x="20" y="820" fill="#5A6578" font-size="12">Java Banking · System Down Simulator</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 390 168" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:350; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:350; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <line class="draw a1" x1="20" y1="20" x2="370" y2="20" stroke="#5A7190" stroke-width="1"/>
+  <text class="mono fade a1" x="20" y="14" fill="#3DDBD9" font-size="11" letter-spacing="2">FLAGSHIP · 02</text>
+  <text class="mono rise a2" x="20" y="58" fill="#F4F7FC" font-size="28" letter-spacing="-0.5">CareerPilot</text>
+  <text class="mono fade a3" x="20" y="88" fill="#EDF1F8" font-size="14">Evidence-driven job search</text>
+  <text class="mono fade a3" x="20" y="108" fill="#EDF1F8" font-size="14">workspace</text>
+  <text class="mono fade a4" x="20" y="136" fill="#C5CEDC" font-size="12">Python · FastAPI · React</text>
+  <text class="mono fade a4" x="20" y="156" fill="#C5CEDC" font-size="12">TypeScript · SQLite · Extension</text>
+</svg>

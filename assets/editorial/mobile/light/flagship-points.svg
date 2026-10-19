@@ -1,0 +1,34 @@
+<svg viewBox="0 0 390 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot highlights">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:350; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:350; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <text class="mono fade a1" x="20" y="28" fill="#3D4A5F" font-size="11" letter-spacing="2">HIGHLIGHTS</text>
+  <g class="row r1 mono">
+    <text x="20" y="64" fill="#0B8F8A" font-size="12" letter-spacing="2">01 / FIT</text>
+    <text x="20" y="90" fill="#0F1729" font-size="13">Explainable job matching grounded</text>
+    <text x="20" y="112" fill="#0F1729" font-size="13">in actual resume and posting evidence.</text>
+  </g>
+  <line x1="20" y1="132" x2="370" y2="132" stroke="#B0BACC" opacity=".55"/>
+  <g class="row r2 mono">
+    <text x="20" y="164" fill="#5F4F8F" font-size="12" letter-spacing="2">02 / WORKFLOW</text>
+    <text x="20" y="190" fill="#0F1729" font-size="13">Discover, analyze, prepare, and track</text>
+    <text x="20" y="212" fill="#0F1729" font-size="13">applications in one workspace.</text>
+  </g>
+  <line x1="20" y1="232" x2="370" y2="232" stroke="#B0BACC" opacity=".55"/>
+  <g class="row r3 mono">
+    <text x="20" y="264" fill="#B85040" font-size="12" letter-spacing="2">03 / EXTENSION</text>
+    <text x="20" y="290" fill="#0F1729" font-size="13">Human-controlled Chrome assistance</text>
+    <text x="20" y="312" fill="#0F1729" font-size="13">for supported job applications.</text>
+    <text x="20" y="334" fill="#0F1729" font-size="13">Never automatic submission.</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 1000 236" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="About Manpreet Singh — builds end-to-end software; CS at De Anza, incoming SJSU Spring 2027">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .rise { opacity:1; }
+    @keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+    .a1{animation-delay:.1s} .a2{animation-delay:.2s} .a3{animation-delay:.35s}
+    .a4{animation-delay:.5s} .a5{animation-delay:.65s} .a6{animation-delay:.8s}
+    @media (prefers-reduced-motion: no-preference) {
+      .rise { animation:rise .7s cubic-bezier(.2,.7,.2,1) both; }
+    }
+</style>
+
+  <text class="mono rise a1" x="48" y="32" font-size="16" fill="#F4F7FC">Building end-to-end software, from backend systems to user-facing products.</text>
+  <text class="mono rise a2" x="48" y="60" font-size="16" fill="#F4F7FC">My projects span career tools, AI experimentation, and financial research.</text>
+  <text class="mono rise a3" x="48" y="88" font-size="15" fill="#EDF1F8">I care about clear interfaces, reliable systems, and results I can explain.</text>
+
+  <line class="rise a4" x1="48" y1="116" x2="952" y2="116" stroke="#5A7190" stroke-width="1" opacity=".5"/>
+
+  <text class="mono rise a4" x="48" y="148" font-size="11" fill="#C5CEDC" letter-spacing="2.5">FOCUS</text>
+  <text class="mono rise a4" x="154" y="148" font-size="15" fill="#F4F7FC">Full-stack engineering · Applied AI · Quantitative research</text>
+
+  <text class="mono rise a5" x="48" y="182" font-size="11" fill="#C5CEDC" letter-spacing="2.5">STATUS</text>
+  <text class="mono rise a5" x="154" y="182" font-size="15" fill="#3DDBD9">Seeking software engineering and solutions engineering internships</text>
+
+  <text class="mono rise a6" x="48" y="216" font-size="11" fill="#C5CEDC" letter-spacing="2.5">EDUCATION</text>
+  <text class="mono rise a6" x="154" y="216" font-size="15" fill="#F4F7FC">Computer Science · De Anza College → SJSU (Spring 2027)</text>
+</svg>

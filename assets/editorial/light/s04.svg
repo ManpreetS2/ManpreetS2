@@ -1,0 +1,17 @@
+<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 04 — SYSTEM MAP">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:760; stroke-dashoffset:0; }
+    .f { opacity:1; }
+    @keyframes d { from { stroke-dashoffset:760; } to { stroke-dashoffset:0; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s forwards; }
+    }
+  </style>
+  <g class="f mono">
+    <text x="48" y="68" font-size="52" fill="#8A96AB">04</text>
+    <text x="148" y="58" font-size="14" fill="#0B8F8A" letter-spacing="6">SYSTEM MAP</text>
+    <text x="952" y="58" font-size="11" fill="#3D4A5F" letter-spacing="2" text-anchor="end">~/04-map</text>
+  </g>
+  <line class="draw" x1="288" y1="53" x2="820" y2="53" stroke="#B0BACC" stroke-width="1"/>
+</svg>

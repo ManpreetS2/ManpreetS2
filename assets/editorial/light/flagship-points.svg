@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1000 342" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:904; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:904; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <text class="mono fade a1" x="48" y="20" fill="#3D4A5F" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
+  <g class="row r1 mono">
+    <text x="48" y="40" fill="#0B8F8A" font-size="12" letter-spacing="2.5">01 / FIT</text><text x="48" y="66" fill="#0F1729" font-size="15">Explainable job matching grounded in actual resume and job-posting evidence.</text>
+    <line x1="48" y1="100" x2="952" y2="100" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+  </g><g class="row r2 mono">
+    <text x="48" y="128" fill="#5F4F8F" font-size="12" letter-spacing="2.5">02 / WORKFLOW</text><text x="48" y="154" fill="#0F1729" font-size="15">Discover, analyze, prepare, and track applications in one workspace.</text>
+    <line x1="48" y1="188" x2="952" y2="188" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+  </g><g class="row r3 mono">
+    <text x="48" y="216" fill="#B85040" font-size="12" letter-spacing="2.5">03 / EXTENSION</text><text x="48" y="242" fill="#0F1729" font-size="15">Human-controlled Chrome assistance for supported job applications.</text><text x="48" y="268" fill="#0F1729" font-size="15">Never automatic submission.</text>
+    <line x1="48" y1="302" x2="952" y2="302" stroke="#B0BACC" stroke-width="1" opacity=".55"/>
+  </g>
+</svg>

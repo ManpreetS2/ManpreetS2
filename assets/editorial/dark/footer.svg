@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1000 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Manpreet Singh — open to software engineering internships">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:904; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:904; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <line class="draw a1" x1="48" y1="20" x2="952" y2="20" stroke="#5A7190" stroke-width="1"/>
+  <circle cx="60" cy="56" r="4" fill="#3DDBD9"/>
+  <text class="mono fade a2" x="82" y="52" fill="#F4F7FC" font-size="14" letter-spacing="2.5">MANPREET SINGH</text>
+  <text class="mono fade a2" x="82" y="74" fill="#C5CEDC" font-size="13">Open to software engineering and solutions engineering internships</text>
+  <text class="mono fade a3" x="952" y="62" fill="#C5CEDC" font-size="12" letter-spacing="1.5" text-anchor="end">BAY AREA · DE ANZA → SJSU / 2027</text>
+  <line class="draw a4" x1="48" y1="96" x2="952" y2="96" stroke="#5A7190" stroke-width="1"/>
+</svg>

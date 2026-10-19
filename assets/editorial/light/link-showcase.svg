@@ -1,0 +1,6 @@
+<svg viewBox="0 0 170 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ARCHITECTURE">
+  <style>.mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }</style>
+  <rect x="0.5" y="0.5" width="169" height="33" stroke="#B0BACC" fill="none"/>
+  <line x1="0" y1="33" x2="170" y2="33" stroke="#5F4F8F" stroke-width="1.5"/>
+  <text class="mono" x="85.0" y="22" fill="#0F1729" font-size="11" letter-spacing="1.8" text-anchor="middle">ARCHITECTURE</text>
+</svg>

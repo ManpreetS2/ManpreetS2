@@ -1,0 +1,19 @@
+<svg viewBox="0 0 1000 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 01 — WHOAMI">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:760; stroke-dashoffset:0; }
+    .f { opacity:1; }
+    @keyframes d { from { stroke-dashoffset:760; } to { stroke-dashoffset:0; } }
+    @keyframes f { from { opacity:0; } to { opacity:1; } }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:d 1.3s cubic-bezier(.6,0,.2,1) .2s both; }
+      .f { animation:f .8s ease .1s both; }
+    }
+  </style>
+  <g class="f mono">
+    <text x="48" y="68" font-size="52" fill="#A8B8CC">01</text>
+    <text x="128" y="58" font-size="14" fill="#3DDBD9" letter-spacing="6">WHOAMI</text>
+    <text x="952" y="58" font-size="11" fill="#C5CEDC" letter-spacing="2" text-anchor="end">~/01-whoami</text>
+  </g>
+  <line class="draw" x1="248" y1="53" x2="831" y2="53" stroke="#5A7190" stroke-width="1"/>
+</svg>
