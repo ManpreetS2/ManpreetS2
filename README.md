@@ -104,20 +104,16 @@
   <img src="assets/editorial/light/flagship-detail-rail.svg" alt="CareerPilot engineering detail — two real product views" width="100%"/>
 </picture>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/CareerPilot">
-    <img src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/04-match-evidence.webp" alt="CareerPilot Match Evidence — rule-backed Fit panel comparing job and resume evidence (real product screenshot)" width="100%">
-  </a>
-</td>
-<td width="50%" valign="top">
-  <a href="https://github.com/ManpreetS2/CareerPilot">
-    <img src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/05-prepare.webp" alt="CareerPilot Prepare — source-traced application drafts with approval controls (real product screenshot)" width="100%">
-  </a>
-</td>
-</tr>
-</table>
+<a href="https://github.com/ManpreetS2/CareerPilot" style="display:block;text-decoration:none;border:0;">
+  <picture>
+    <source media="(max-width: 500px)" srcset="assets/editorial/flagship-detail-stack.webp"/>
+    <img
+      src="assets/editorial/flagship-detail-side.webp"
+      alt="CareerPilot engineering detail — Match Evidence (rule-backed Fit) beside Prepare (source-traced drafts); real product screenshots"
+      width="100%"
+    />
+  </picture>
+</a>
 
 <picture>
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-detail-caps.svg"/>
