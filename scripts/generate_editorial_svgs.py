@@ -426,16 +426,40 @@ def flagship_frame(c: dict, mode: str = "dark") -> str:
 
 
 def flagship_frame_bottom(c: dict, mode: str = "dark") -> str:
-    """Bottom rail under the screenshot — top pad so text doesn't kiss the image."""
+    """Bottom rail under the Discover screenshot — bridges into the detail strip."""
     h = HERO_COLORS[mode]
-    return f'''<svg viewBox="0 0 1000 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot screenshot frame bottom">
+    return f'''<svg viewBox="0 0 1000 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot screenshot frame bottom">
   <style>{flagship_css(904)}</style>
-  <!-- Extra empty air under screenshot before rails (matches WHOAMI row breathing room) -->
-  <line class="draw a1" x1="72" y1="40" x2="928" y2="40" stroke="{h['rule']}" stroke-width="1"/>
-  <path class="fade a1" d="M48 40 V56 H64" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
-  <path class="fade a1" d="M952 40 V56 H936" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
-  <text class="mono fade a2" x="48" y="76" fill="{h['muted']}" font-size="11" letter-spacing="2.5">HUMAN CONTROLLED · NEVER AUTO-SUBMIT</text>
-  <text class="mono fade a2" x="952" y="76" fill="{h['coral']}" font-size="11" letter-spacing="2" text-anchor="end">SOURCE VISIBLE</text>
+  <line class="draw a1" x1="72" y1="28" x2="928" y2="28" stroke="{h['rule']}" stroke-width="1"/>
+  <path class="fade a1" d="M48 28 V44 H64" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M952 28 V44 H936" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <text class="mono fade a2" x="48" y="60" fill="{h['muted']}" font-size="11" letter-spacing="2.5">DISCOVER SURFACE</text>
+  <text class="mono fade a2" x="952" y="60" fill="{h['dim']}" font-size="11" letter-spacing="2" text-anchor="end">REAL PRODUCT · LOCAL</text>
+</svg>'''
+
+
+def flagship_detail_rail(c: dict, mode: str = "dark") -> str:
+    """Compact header above the two engineering-detail screenshots."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering detail views">
+  <style>{flagship_css(904)}</style>
+  <text class="mono fade a1" x="48" y="22" fill="{h['muted']}" font-size="11" letter-spacing="3">ENGINEERING DETAIL · TWO REAL VIEWS</text>
+  <text class="mono fade a1" x="952" y="22" fill="{h['dim']}" font-size="11" letter-spacing="2" text-anchor="end">NOT MOCKS</text>
+  <line class="draw a1" x1="48" y1="36" x2="952" y2="36" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a2" x="48" y="52" fill="{h['cyan']}" font-size="11" letter-spacing="2">01 / MATCH EVIDENCE</text>
+  <text class="mono fade a2" x="520" y="52" fill="{h['lavender']}" font-size="11" letter-spacing="2">02 / PREPARE</text>
+</svg>'''
+
+
+def flagship_detail_caps(c: dict, mode: str = "dark") -> str:
+    """Short captions under the two detail screenshots (48–476 | 524–952)."""
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 1000 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail captions">
+  <style>{flagship_css(904)}</style>
+  <text class="mono fade a1" x="48" y="20" fill="{h['ink']}" font-size="13">Rule-backed Fit with job ↔ resume evidence</text>
+  <text class="mono fade a1" x="48" y="38" fill="{h['dim']}" font-size="11" letter-spacing="1.2">required_skills · satisfied · scoring effect</text>
+  <text class="mono fade a2" x="524" y="20" fill="{h['ink']}" font-size="13">Source-traced drafts before approval</text>
+  <text class="mono fade a2" x="524" y="38" fill="{h['dim']}" font-size="11" letter-spacing="1.2">cover letter · recruiter note · claim map</text>
 </svg>'''
 
 
@@ -455,7 +479,7 @@ def flagship_points(c: dict, mode: str = "dark") -> str:
         ]),
     ]
     parts = []
-    y = 48  # air under frame-bottom (frame already carries the screenshot gap)
+    y = 40  # compact top pad — detail strip already separates screenshots from highlights
     for i, (lab, col, lines) in enumerate(rows):
         texts = [f'<text x="48" y="{y}" fill="{col}" font-size="12" letter-spacing="2.5">{lab}</text>']
         y += 26
@@ -466,10 +490,10 @@ def flagship_points(c: dict, mode: str = "dark") -> str:
     {''.join(texts)}
     <line x1="48" y1="{y + 8}" x2="952" y2="{y + 8}" stroke="{h['rule']}" stroke-width="1" opacity=".55"/>
   </g>''')
-        y += 40
-    return f'''<svg viewBox="0 0 1000 {y + 16}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
+        y += 36
+    return f'''<svg viewBox="0 0 1000 {y + 12}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot engineering highlights">
   <style>{flagship_css(904)}</style>
-  <text class="mono fade a1" x="48" y="22" fill="{h['muted']}" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
+  <text class="mono fade a1" x="48" y="20" fill="{h['muted']}" font-size="11" letter-spacing="3">THREE ENGINEERING HIGHLIGHTS</text>
   {''.join(parts)}
 </svg>'''
 
@@ -529,6 +553,8 @@ def write_unlocked() -> None:
         write(d / "flagship-meta.svg", flagship_meta(c, mode))
         write(d / "flagship-frame.svg", flagship_frame(c, mode))
         write(d / "flagship-frame-bottom.svg", flagship_frame_bottom(c, mode))
+        write(d / "flagship-detail-rail.svg", flagship_detail_rail(c, mode))
+        write(d / "flagship-detail-caps.svg", flagship_detail_caps(c, mode))
         write(d / "flagship-points.svg", flagship_points(c, mode))
         write(d / "flagship-cta.svg", flagship_cta(mode))
         write(d / "link-showcase.svg", flagship_link_chip("ARCHITECTURE", h["lavender"], mode, 170))
@@ -541,6 +567,8 @@ def write_unlocked() -> None:
         write(m / "flagship-meta.svg", flagship_meta_mobile(c, mode))
         write(m / "flagship-frame.svg", flagship_frame_mobile(c, mode))
         write(m / "flagship-frame-bottom.svg", flagship_frame_bottom_mobile(c, mode))
+        write(m / "flagship-detail-rail.svg", flagship_detail_rail_mobile(c, mode))
+        write(m / "flagship-detail-caps.svg", flagship_detail_caps_mobile(c, mode))
         write(m / "flagship-points.svg", flagship_points_mobile(c, mode))
         write(m / "flagship-cta.svg", flagship_cta_mobile(mode))
         write(m / "link-showcase.svg", flagship_link_chip("ARCHITECTURE", h["lavender"], mode, 140))
@@ -569,52 +597,85 @@ def write_unlocked() -> None:
 
 
 def _project_motif(kind: str, x: float, y: float, accent: str, rule: str, ink: str, dim: str) -> str:
-    """Small editorial glyph in the right column — not a card, not dominating art."""
-    # Frame
+    """Miniature editorial composition — recognizable at README scale, fine-line only."""
     out = [
-        f'<rect x="{x}" y="{y}" width="148" height="72" fill="none" stroke="{rule}" stroke-width="1"/>',
-        f'<line x1="{x}" y1="{y + 72}" x2="{x + 148}" y2="{y + 72}" stroke="{accent}" stroke-width="1.5"/>',
+        f'<rect x="{x}" y="{y}" width="148" height="78" fill="none" stroke="{rule}" stroke-width="1"/>',
+        f'<line x1="{x}" y1="{y + 78}" x2="{x + 148}" y2="{y + 78}" stroke="{accent}" stroke-width="1.5"/>',
     ]
     if kind == "console":
-        # Evidence console: chrome + three log rows
+        # Signed webhook → event trace → recovery loop
         out += [
-            f'<rect x="{x + 14}" y="{y + 12}" width="120" height="48" fill="none" stroke="{accent}" stroke-width="1"/>',
-            f'<line x1="{x + 14}" y1="{y + 24}" x2="{x + 134}" y2="{y + 24}" stroke="{accent}" stroke-width="1" opacity=".55"/>',
-            f'<circle cx="{x + 24}" cy="{y + 18}" r="2" fill="{accent}"/>',
-            f'<circle cx="{x + 34}" cy="{y + 18}" r="2" fill="{dim}" opacity=".55"/>',
-            f'<circle cx="{x + 44}" cy="{y + 18}" r="2" fill="{dim}" opacity=".55"/>',
-            f'<text class="mono" x="{x + 22}" y="{y + 38}" fill="{accent}" font-size="8">▸ 200 · signed</text>',
-            f'<text class="mono" x="{x + 22}" y="{y + 52}" fill="{dim}" font-size="8">retry · evidence</text>',
+            # inbound webhook
+            f'<path d="M{x+16} {y+22} H{x+46}" stroke="{accent}" stroke-width="1.25" fill="none"/>',
+            f'<path d="M{x+40} {y+18} L{x+48} {y+22} L{x+40} {y+26}" stroke="{accent}" stroke-width="1.25" fill="none"/>',
+            # signed seal
+            f'<circle cx="{x + 62}" cy="{y + 22}" r="9" fill="none" stroke="{accent}" stroke-width="1.25"/>',
+            f'<path d="M{x+57} {y+22} L{x+60} {y+25} L{x+67} {y+18}" stroke="{accent}" stroke-width="1.25" fill="none"/>',
+            f'<text class="mono" x="{x + 62}" y="{y + 40}" fill="{dim}" font-size="7" text-anchor="middle">signed</text>',
+            # event trace ticks
+            f'<line x1="{x + 82}" y1="{y + 22}" x2="{x + 132}" y2="{y + 22}" stroke="{rule}" stroke-width="1"/>',
+            f'<circle cx="{x + 90}" cy="{y + 22}" r="2" fill="{accent}"/>',
+            f'<circle cx="{x + 108}" cy="{y + 22}" r="2" fill="{accent}" opacity=".65"/>',
+            f'<circle cx="{x + 126}" cy="{y + 22}" r="2" fill="none" stroke="{accent}"/>',
+            # recovery loop
+            f'<path d="M{x+90} {y+48} H{x+126} Q{x+134} {y+48} {x+134} {y+56} Q{x+134} {y+64} {x+126} {y+64} H{x+98}" stroke="{accent}" stroke-width="1.15" fill="none"/>',
+            f'<path d="M{x+102} {y+60} L{x+96} {y+64} L{x+102} {y+68}" stroke="{accent}" stroke-width="1.15" fill="none"/>',
+            f'<text class="mono" x="{x + 20}" y="{y + 62}" fill="{dim}" font-size="7">retry</text>',
         ]
     elif kind == "research":
-        # A/B comparison bars with baseline
+        # Spacecraft trajectory + numerical reward feedback loop
         out += [
-            f'<line x1="{x + 22}" y1="{y + 58}" x2="{x + 126}" y2="{y + 58}" stroke="{rule}"/>',
-            f'<rect x="{x + 32}" y="{y + 28}" width="16" height="30" fill="{accent}" opacity=".35"/>',
-            f'<rect x="{x + 58}" y="{y + 36}" width="16" height="22" fill="{accent}" opacity=".65"/>',
-            f'<rect x="{x + 84}" y="{y + 20}" width="16" height="38" fill="{accent}"/>',
-            f'<text class="mono" x="{x + 40}" y="{y + 16}" fill="{dim}" font-size="8">A</text>',
-            f'<text class="mono" x="{x + 92}" y="{y + 16}" fill="{dim}" font-size="8">B</text>',
-            f'<text class="mono" x="{x + 74}" y="{y + 68}" fill="{dim}" font-size="7" text-anchor="middle">reward Δ</text>',
+            # lunar surface hint
+            f'<path d="M{x+18} {y+58} Q{x+74} {y+68} {x+130} {y+56}" stroke="{rule}" stroke-width="1" fill="none"/>',
+            # trajectory
+            f'<path d="M{x+28} {y+50} Q{x+58} {y+18} {x+108} {y+28}" stroke="{accent}" stroke-width="1.35" fill="none"/>',
+            f'<circle cx="{x + 28}" cy="{y + 50}" r="2.5" fill="{accent}"/>',
+            # lander glyph
+            f'<path d="M{x+102} {y+22} L{x+114} {y+22} L{x+118} {y+30} L{x+98} {y+30} Z" fill="none" stroke="{accent}" stroke-width="1.15"/>',
+            f'<line x1="{x + 104}" y1="{y + 30}" x2="{x + 100}" y2="{y + 38}" stroke="{accent}" stroke-width="1"/>',
+            f'<line x1="{x + 112}" y1="{y + 30}" x2="{x + 116}" y2="{y + 38}" stroke="{accent}" stroke-width="1"/>',
+            # reward feedback loop
+            f'<path d="M{x+74} {y+34} Q{x+54} {y+42} {x+48} {y+54}" stroke="{accent}" stroke-width="1" fill="none" stroke-dasharray="2 3"/>',
+            f'<text class="mono" x="{x + 56}" y="{y + 32}" fill="{accent}" font-size="8">+1.0</text>',
+            f'<text class="mono" x="{x + 74}" y="{y + 72}" fill="{dim}" font-size="7" text-anchor="middle">reward → revise</text>',
         ]
     elif kind == "chart":
-        # Point-in-time sparkline with marked observation
+        # SEC filing document → point-in-time factors
         out += [
-            f'<polyline fill="none" stroke="{accent}" stroke-width="1.5" points="{x+18},{y+50} {x+40},{y+42} {x+62},{y+46} {x+84},{y+30} {x+106},{y+34} {x+124},{y+22}"/>',
-            f'<circle cx="{x + 84}" cy="{y + 30}" r="3" fill="none" stroke="{accent}" stroke-width="1.25"/>',
-            f'<line x1="{x + 18}" y1="{y + 56}" x2="{x + 130}" y2="{y + 56}" stroke="{rule}"/>',
-            f'<line x1="{x + 84}" y1="{y + 56}" x2="{x + 84}" y2="{y + 52}" stroke="{rule}"/>',
-            f'<text class="mono" x="{x + 74}" y="{y + 16}" fill="{dim}" font-size="8" text-anchor="middle">SEC → factors</text>',
+            # filing doc
+            f'<rect x="{x + 14}" y="{y + 14}" width="34" height="44" fill="none" stroke="{accent}" stroke-width="1.15"/>',
+            f'<line x1="{x + 20}" y1="{y + 24}" x2="{x + 40}" y2="{y + 24}" stroke="{accent}" stroke-width="1"/>',
+            f'<line x1="{x + 20}" y1="{y + 32}" x2="{x + 38}" y2="{y + 32}" stroke="{rule}" stroke-width="1"/>',
+            f'<line x1="{x + 20}" y1="{y + 40}" x2="{x + 36}" y2="{y + 40}" stroke="{rule}" stroke-width="1"/>',
+            f'<text class="mono" x="{x + 31}" y="{y + 66}" fill="{dim}" font-size="7" text-anchor="middle">SEC</text>',
+            # arrow
+            f'<path d="M{x+54} {y+36} H{x+72}" stroke="{accent}" stroke-width="1.2" fill="none"/>',
+            f'<path d="M{x+66} {y+32} L{x+74} {y+36} L{x+66} {y+40}" stroke="{accent}" stroke-width="1.2" fill="none"/>',
+            # factor ticks / PIT marker
+            f'<line x1="{x + 82}" y1="{y + 58}" x2="{x + 136}" y2="{y + 58}" stroke="{rule}"/>',
+            f'<polyline fill="none" stroke="{accent}" stroke-width="1.35" points="{x+84},{y+48} {x+96},{y+40} {x+108},{y+44} {x+120},{y+28} {x+134},{y+32}"/>',
+            f'<line x1="{x + 120}" y1="{y + 18}" x2="{x + 120}" y2="{y + 58}" stroke="{accent}" stroke-width="1" stroke-dasharray="2 2"/>',
+            f'<circle cx="{x + 120}" cy="{y + 28}" r="3" fill="none" stroke="{accent}" stroke-width="1.25"/>',
+            f'<text class="mono" x="{x + 120}" y="{y + 14}" fill="{dim}" font-size="7" text-anchor="middle">PIT</text>',
         ]
-    else:  # agents — linked nodes (not a lone cube)
+    else:  # agents — voxel figures linked by memory/comms
+        def voxel(cx: float, cy: float) -> list[str]:
+            # tiny isometric-ish head+body
+            return [
+                f'<rect x="{cx - 6}" y="{cy - 14}" width="12" height="10" fill="none" stroke="{accent}" stroke-width="1.1"/>',
+                f'<rect x="{cx - 8}" y="{cy - 4}" width="16" height="14" fill="none" stroke="{accent}" stroke-width="1.1"/>',
+                f'<rect x="{cx - 3}" y="{cy - 11}" width="2.5" height="2.5" fill="{accent}"/>',
+                f'<rect x="{cx + 1}" y="{cy - 11}" width="2.5" height="2.5" fill="{accent}"/>',
+            ]
+        out += voxel(x + 40, y + 40)
+        out += voxel(x + 108, y + 40)
+        # memory / communication link
         out += [
-            f'<circle cx="{x + 48}" cy="{y + 36}" r="11" fill="none" stroke="{accent}" stroke-width="1.25"/>',
-            f'<circle cx="{x + 100}" cy="{y + 36}" r="11" fill="none" stroke="{accent}" stroke-width="1.25"/>',
-            f'<line x1="{x + 59}" y1="{y + 36}" x2="{x + 89}" y2="{y + 36}" stroke="{accent}" stroke-width="1"/>',
-            f'<circle cx="{x + 74}" cy="{y + 36}" r="2.5" fill="{accent}"/>',
-            f'<text class="mono" x="{x + 48}" y="{y + 40}" fill="{accent}" font-size="8" text-anchor="middle">A</text>',
-            f'<text class="mono" x="{x + 100}" y="{y + 40}" fill="{accent}" font-size="8" text-anchor="middle">B</text>',
-            f'<text class="mono" x="{x + 74}" y="{y + 62}" fill="{dim}" font-size="8" text-anchor="middle">memory · plan</text>',
+            f'<path d="M{x+50} {y+28} H{x+98}" stroke="{accent}" stroke-width="1.1" fill="none"/>',
+            f'<circle cx="{x + 74}" cy="{y + 28}" r="3.5" fill="none" stroke="{accent}" stroke-width="1.1"/>',
+            f'<text class="mono" x="{x + 74}" y="{y + 31}" fill="{accent}" font-size="6" text-anchor="middle">m</text>',
+            f'<path d="M{x+50} {y+48} Q{x+74} {y+58} {x+98} {y+48}" stroke="{accent}" stroke-width="1" fill="none" stroke-dasharray="2 2"/>',
+            f'<text class="mono" x="{x + 74}" y="{y + 72}" fill="{dim}" font-size="7" text-anchor="middle">memory · talk</text>',
         ]
     return "\n    ".join(out)
 
@@ -674,14 +735,14 @@ def projects_dir(c: dict, mode: str = "dark") -> str:
     for i, (title, lines, meta, note, accent, motif) in enumerate(items):
         motif_y = y + 18
         block = [f'<text x="48" y="{y + 22}" fill="{h["ink"]}" font-size="16" letter-spacing=".5">{title}</text>']
-        block.append(f'<text x="780" y="{y + 14}" fill="{h["dim"]}" font-size="9" letter-spacing="1.2" text-anchor="end">{note}</text>')
+        block.append(f'<text x="780" y="{y + 14}" fill="{h["dim"]}" font-size="11" letter-spacing="1.2" text-anchor="end">{note}</text>')
         yy = y + 48
         for line in lines:
             block.append(f'<text x="48" y="{yy}" fill="{h["muted"]}" font-size="14">{line}</text>')
             yy += 22
         block.append(f'<text x="48" y="{yy + 6}" fill="{accent}" font-size="12" letter-spacing=".3">{meta}</text>')
         block.append(_project_motif(motif, 804, motif_y, accent, h["rule"], h["ink"], h["dim"]))
-        yy = max(yy + 28, motif_y + 84)
+        yy = max(yy + 28, motif_y + 90)
         block.append(f'<line x1="48" y1="{yy}" x2="952" y2="{yy}" stroke="{h["rule"]}" stroke-width="1"/>')
         parts.append(f'<g class="row r{i+1} mono">{"".join(block)}</g>')
         y = yy + 20
@@ -882,12 +943,34 @@ def flagship_frame_mobile(c: dict, mode: str = "dark") -> str:
 
 def flagship_frame_bottom_mobile(c: dict, mode: str = "dark") -> str:
     h = HERO_COLORS[mode]
-    return f'''<svg viewBox="0 0 390 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot frame bottom">
+    return f'''<svg viewBox="0 0 390 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Screenshot frame bottom">
   <style>{flagship_css(350)}</style>
-  <line class="draw a1" x1="38" y1="34" x2="352" y2="34" stroke="{h['rule']}" stroke-width="1"/>
-  <path class="fade a1" d="M20 34 V48 H32" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
-  <path class="fade a1" d="M370 34 V48 H358" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
-  <text class="mono fade a2" x="20" y="64" fill="{h['muted']}" font-size="10" letter-spacing="1.2">HUMAN CONTROLLED</text>
+  <line class="draw a1" x1="38" y1="24" x2="352" y2="24" stroke="{h['rule']}" stroke-width="1"/>
+  <path class="fade a1" d="M20 24 V38 H32" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <path class="fade a1" d="M370 24 V38 H358" stroke="{h['cyan']}" stroke-width="1.25" fill="none"/>
+  <text class="mono fade a2" x="20" y="50" fill="{h['muted']}" font-size="11" letter-spacing="1.2">DISCOVER SURFACE</text>
+</svg>'''
+
+
+def flagship_detail_rail_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 70" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail views">
+  <style>{flagship_css(350)}</style>
+  <text class="mono fade a1" x="20" y="20" fill="{h['muted']}" font-size="11" letter-spacing="2">ENGINEERING DETAIL</text>
+  <text class="mono fade a1" x="20" y="38" fill="{h['dim']}" font-size="11">Two real product views · not mocks</text>
+  <line class="draw a1" x1="20" y1="50" x2="370" y2="50" stroke="{h['rule']}" stroke-width="1"/>
+  <text class="mono fade a2" x="20" y="66" fill="{h['cyan']}" font-size="11" letter-spacing="1.5">01 EVIDENCE · 02 PREPARE</text>
+</svg>'''
+
+
+def flagship_detail_caps_mobile(c: dict, mode: str = "dark") -> str:
+    h = HERO_COLORS[mode]
+    return f'''<svg viewBox="0 0 390 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail captions">
+  <style>{flagship_css(350)}</style>
+  <text class="mono fade a1" x="20" y="18" fill="{h['cyan']}" font-size="11" letter-spacing="1.5">01 / MATCH EVIDENCE</text>
+  <text class="mono fade a1" x="20" y="36" fill="{h['ink']}" font-size="12">Rule-backed Fit · job ↔ resume</text>
+  <text class="mono fade a2" x="20" y="58" fill="{h['lavender']}" font-size="11" letter-spacing="1.5">02 / PREPARE</text>
+  <text class="mono fade a2" x="20" y="76" fill="{h['ink']}" font-size="12">Source-traced drafts · approval</text>
 </svg>'''
 
 
@@ -973,34 +1056,20 @@ def projects_mobile(c: dict, mode: str = "dark") -> str:
         for line in lines:
             block.append(f'<text x="20" y="{yy}" fill="{h["muted"]}" font-size="12">{line}</text>')
             yy += 18
-        block.append(f'<text x="20" y="{yy + 4}" fill="{accent}" font-size="11">{m}</text>')
-        # Compact motif under meta (readable at ~390px)
-        my = yy + 14
-        block.append(f'<rect x="20" y="{my}" width="120" height="32" fill="none" stroke="{h["rule"]}"/>')
-        block.append(f'<line x1="20" y1="{my + 32}" x2="140" y2="{my + 32}" stroke="{accent}" stroke-width="1.5"/>')
-        if motif == "console":
-            block.append(f'<text x="28" y="{my + 20}" fill="{accent}" font-size="10">▸ audit · retry</text>')
-        elif motif == "research":
-            block.append(f'<rect x="30" y="{my + 10}" width="10" height="14" fill="{accent}" opacity=".4"/>')
-            block.append(f'<rect x="46" y="{my + 8}" width="10" height="16" fill="{accent}" opacity=".7"/>')
-            block.append(f'<rect x="62" y="{my + 6}" width="10" height="18" fill="{accent}"/>')
-            block.append(f'<text x="80" y="{my + 20}" fill="{h["dim"]}" font-size="9">A/B</text>')
-        elif motif == "chart":
-            block.append(f'<polyline fill="none" stroke="{accent}" stroke-width="1.25" points="28,{my+22} 48,{my+16} 68,{my+18} 88,{my+10} 108,{my+12}"/>')
-            block.append(f'<circle cx="88" cy="{my + 10}" r="2.5" fill="none" stroke="{accent}"/>')
-        else:
-            block.append(f'<circle cx="42" cy="{my + 16}" r="7" fill="none" stroke="{accent}"/>')
-            block.append(f'<circle cx="78" cy="{my + 16}" r="7" fill="none" stroke="{accent}"/>')
-            block.append(f'<line x1="49" y1="{my + 16}" x2="71" y2="{my + 16}" stroke="{accent}"/>')
-        yy = my + 44
+        block.append(f'<text x="20" y="{yy + 4}" fill="{accent}" font-size="12">{m}</text>')
+        # Compact but recognizable motif (scaled desktop language)
+        my = yy + 12
+        block.append(_project_motif(motif, 20, my, accent, h["rule"], h["ink"], h["dim"]))
+        # Scale desktop 148×78 motif into mobile by viewBox-relative placement already at x=20
+        yy = my + 90
         block.append(f'<line x1="20" y1="{yy}" x2="370" y2="{yy}" stroke="{h["rule"]}"/>')
         parts.append(f'<g class="row r{i+1} mono">{"".join(block)}</g>')
-        y = yy + 14
-    return f'''<svg viewBox="0 0 390 {y + 36}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects">
+        y = yy + 16
+    return f'''<svg viewBox="0 0 390 {y + 40}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects">
   <style>{flagship_css(350)}</style>
   {''.join(parts)}
-  <text class="mono" x="20" y="{y + 14}" fill="{h['dim']}" font-size="11">ALSO · StrikeCaller · PagePulse</text>
-  <text class="mono" x="20" y="{y + 30}" fill="{h['dim']}" font-size="11">Java Banking · System Down Simulator</text>
+  <text class="mono" x="20" y="{y + 14}" fill="{h['dim']}" font-size="12">ALSO · StrikeCaller · PagePulse</text>
+  <text class="mono" x="20" y="{y + 32}" fill="{h['dim']}" font-size="12">Java Banking · System Down Simulator</text>
 </svg>'''
 
 

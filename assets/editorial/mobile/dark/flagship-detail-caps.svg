@@ -1,0 +1,19 @@
+<svg viewBox="0 0 390 78" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CareerPilot detail captions">
+  <style>
+    .mono { font-family:ui-monospace,"SFMono-Regular","SF Mono",Menlo,Consolas,"Liberation Mono",monospace; }
+    .draw { stroke-dasharray:350; stroke-dashoffset:0; }
+    .rise,.fade,.row { opacity:1; }
+    @keyframes draw { from { stroke-dashoffset:350; } to { stroke-dashoffset:0; } }
+    .a1{animation-delay:.08s} .a2{animation-delay:.16s} .a3{animation-delay:.24s}
+    .a4{animation-delay:.32s} .a5{animation-delay:.4s} .a6{animation-delay:.48s}
+    .r1{animation-delay:.1s} .r2{animation-delay:.2s} .r3{animation-delay:.3s}
+    .r4{animation-delay:.4s} .r5{animation-delay:.5s}
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { animation:draw 1.1s cubic-bezier(.6,0,.2,1) forwards; }
+    }
+</style>
+  <text class="mono fade a1" x="20" y="18" fill="#3DDBD9" font-size="11" letter-spacing="1.5">01 / MATCH EVIDENCE</text>
+  <text class="mono fade a1" x="20" y="36" fill="#F4F7FC" font-size="12">Rule-backed Fit · job ↔ resume</text>
+  <text class="mono fade a2" x="20" y="58" fill="#B8A9E8" font-size="11" letter-spacing="1.5">02 / PREPARE</text>
+  <text class="mono fade a2" x="20" y="76" fill="#F4F7FC" font-size="12">Source-traced drafts · approval</text>
+</svg>

@@ -97,6 +97,35 @@
   <img src="assets/editorial/light/flagship-frame-bottom.svg" alt="" width="100%"/>
 </picture>
 
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-detail-rail.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-detail-rail.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-detail-rail.svg"/>
+  <img src="assets/editorial/light/flagship-detail-rail.svg" alt="CareerPilot engineering detail — two real product views" width="100%"/>
+</picture>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+  <a href="https://github.com/ManpreetS2/CareerPilot">
+    <img src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/04-match-evidence.webp" alt="CareerPilot Match Evidence — rule-backed Fit panel comparing job and resume evidence (real product screenshot)" width="100%">
+  </a>
+</td>
+<td width="50%" valign="top">
+  <a href="https://github.com/ManpreetS2/CareerPilot">
+    <img src="https://raw.githubusercontent.com/ManpreetS2/CareerPilot/main/docs/showcase/screenshots/05-prepare.webp" alt="CareerPilot Prepare — source-traced application drafts with approval controls (real product screenshot)" width="100%">
+  </a>
+</td>
+</tr>
+</table>
+
+<picture>
+  <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-detail-caps.svg"/>
+  <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/flagship-detail-caps.svg"/>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/flagship-detail-caps.svg"/>
+  <img src="assets/editorial/light/flagship-detail-caps.svg" alt="01 Match Evidence: rule-backed Fit. 02 Prepare: source-traced drafts." width="100%"/>
+</picture>
+
 <a href="https://github.com/ManpreetS2/CareerPilot" style="display:block;text-decoration:none;border:0;color:inherit;">
   <picture>
     <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/flagship-points.svg"/>
