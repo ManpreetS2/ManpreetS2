@@ -307,11 +307,11 @@ def system_map(c: dict, mode: str = "dark") -> str:
   <text class="mono fade a1" x="952" y="28" fill="{h['muted']}" font-size="11" letter-spacing="2" text-anchor="end">FIG. 03</text>
   <line class="draw a1" x1="48" y1="40" x2="952" y2="40" stroke="{h['rule']}" stroke-width="1"/>
 
-  <!-- Speaks: evidence · reliability · human control -->
-  <line class="draw a2" x1="500" y1="130" x2="180" y2="200" stroke="{h['rule']}" stroke-width="1.25"/>
-  <line class="draw a2" x1="500" y1="130" x2="820" y2="200" stroke="{h['rule']}" stroke-width="1.25"/>
-  <line class="draw a3" x1="500" y1="190" x2="180" y2="300" stroke="{h['rule']}" stroke-width="1.25"/>
-  <line class="draw a3" x1="500" y1="190" x2="820" y2="300" stroke="{h['rule']}" stroke-width="1.25"/>
+  <!-- Hub spokes: CareerPilot bottom edge → satellite tops (true edge-to-edge) -->
+  <line class="draw a2" x1="420" y1="190" x2="180" y2="210" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a2" x1="580" y1="190" x2="820" y2="210" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a3" x1="420" y1="190" x2="180" y2="310" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a3" x1="580" y1="190" x2="820" y2="310" stroke="{h['rule']}" stroke-width="1.25"/>
 
   <g class="rise a2">
     <rect x="340" y="100" width="320" height="90" rx="2" fill="{soft}" stroke="{h['cyan']}" stroke-width="1.5"/>
@@ -338,7 +338,7 @@ def system_map(c: dict, mode: str = "dark") -> str:
   <g class="rise a4">
     <rect x="688" y="310" width="264" height="72" rx="2" fill="{node}" stroke="{h['cyan']}" stroke-width="1.25"/>
     <text class="mono" x="820" y="340" fill="{h['cyan']}" font-size="11" letter-spacing="2" text-anchor="middle">QUANT RESEARCH</text>
-    <text class="mono" x="820" y="364" fill="{h['ink']}" font-size="13" text-anchor="middle">EquityTrace · Banking</text>
+    <text class="mono" x="820" y="364" fill="{h['ink']}" font-size="13" text-anchor="middle">EquityTrace</text>
   </g>
 
   <text class="mono fade a5" x="48" y="408" fill="{h['muted']}" font-size="12" letter-spacing="1.5">SHARED THREAD — inspectable data paths · careful interfaces · human final control</text>
@@ -576,32 +576,45 @@ def _project_motif(kind: str, x: float, y: float, accent: str, rule: str, ink: s
         f'<line x1="{x}" y1="{y + 72}" x2="{x + 148}" y2="{y + 72}" stroke="{accent}" stroke-width="1.5"/>',
     ]
     if kind == "console":
-        # Terminal / evidence console
+        # Evidence console: chrome + three log rows
         out += [
-            f'<rect x="{x + 14}" y="{y + 14}" width="120" height="44" fill="none" stroke="{accent}" stroke-width="1"/>',
-            f'<text class="mono" x="{x + 22}" y="{y + 32}" fill="{accent}" font-size="9">▸ audit</text>',
-            f'<text class="mono" x="{x + 22}" y="{y + 46}" fill="{dim}" font-size="9">retry · store</text>',
+            f'<rect x="{x + 14}" y="{y + 12}" width="120" height="48" fill="none" stroke="{accent}" stroke-width="1"/>',
+            f'<line x1="{x + 14}" y1="{y + 24}" x2="{x + 134}" y2="{y + 24}" stroke="{accent}" stroke-width="1" opacity=".55"/>',
+            f'<circle cx="{x + 24}" cy="{y + 18}" r="2" fill="{accent}"/>',
+            f'<circle cx="{x + 34}" cy="{y + 18}" r="2" fill="{dim}" opacity=".55"/>',
+            f'<circle cx="{x + 44}" cy="{y + 18}" r="2" fill="{dim}" opacity=".55"/>',
+            f'<text class="mono" x="{x + 22}" y="{y + 38}" fill="{accent}" font-size="8">▸ 200 · signed</text>',
+            f'<text class="mono" x="{x + 22}" y="{y + 52}" fill="{dim}" font-size="8">retry · evidence</text>',
         ]
     elif kind == "research":
-        # Two comparison bars
+        # A/B comparison bars with baseline
         out += [
-            f'<rect x="{x + 28}" y="{y + 22}" width="18" height="36" fill="{accent}" opacity=".35"/>',
-            f'<rect x="{x + 56}" y="{y + 34}" width="18" height="24" fill="{accent}" opacity=".7"/>',
-            f'<rect x="{x + 84}" y="{y + 18}" width="18" height="40" fill="{accent}"/>',
-            f'<text class="mono" x="{x + 74}" y="{y + 14}" fill="{dim}" font-size="8" text-anchor="middle">A / B</text>',
+            f'<line x1="{x + 22}" y1="{y + 58}" x2="{x + 126}" y2="{y + 58}" stroke="{rule}"/>',
+            f'<rect x="{x + 32}" y="{y + 28}" width="16" height="30" fill="{accent}" opacity=".35"/>',
+            f'<rect x="{x + 58}" y="{y + 36}" width="16" height="22" fill="{accent}" opacity=".65"/>',
+            f'<rect x="{x + 84}" y="{y + 20}" width="16" height="38" fill="{accent}"/>',
+            f'<text class="mono" x="{x + 40}" y="{y + 16}" fill="{dim}" font-size="8">A</text>',
+            f'<text class="mono" x="{x + 92}" y="{y + 16}" fill="{dim}" font-size="8">B</text>',
+            f'<text class="mono" x="{x + 74}" y="{y + 68}" fill="{dim}" font-size="7" text-anchor="middle">reward Δ</text>',
         ]
     elif kind == "chart":
-        # Point-in-time sparkline + axis
+        # Point-in-time sparkline with marked observation
         out += [
-            f'<polyline fill="none" stroke="{accent}" stroke-width="1.5" points="{x+18},{y+50} {x+40},{y+40} {x+62},{y+44} {x+84},{y+28} {x+106},{y+32} {x+128},{y+20}"/>',
+            f'<polyline fill="none" stroke="{accent}" stroke-width="1.5" points="{x+18},{y+50} {x+40},{y+42} {x+62},{y+46} {x+84},{y+30} {x+106},{y+34} {x+124},{y+22}"/>',
+            f'<circle cx="{x + 84}" cy="{y + 30}" r="3" fill="none" stroke="{accent}" stroke-width="1.25"/>',
             f'<line x1="{x + 18}" y1="{y + 56}" x2="{x + 130}" y2="{y + 56}" stroke="{rule}"/>',
+            f'<line x1="{x + 84}" y1="{y + 56}" x2="{x + 84}" y2="{y + 52}" stroke="{rule}"/>',
             f'<text class="mono" x="{x + 74}" y="{y + 16}" fill="{dim}" font-size="8" text-anchor="middle">SEC → factors</text>',
         ]
-    else:  # agents / cube
+    else:  # agents — linked nodes (not a lone cube)
         out += [
-            f'<path d="M{x+74} {y+16} L{x+110} {y+34} L{x+74} {y+52} L{x+38} {y+34} Z" fill="none" stroke="{accent}" stroke-width="1.25"/>',
-            f'<path d="M{x+74} {y+34} L{x+110} {y+34} M{x+74} {y+34} L{x+38} {y+34} M{x+74} {y+34} L{x+74} {y+52}" stroke="{accent}" stroke-width="1" opacity=".7"/>',
-            f'<text class="mono" x="{x + 74}" y="{y + 66}" fill="{dim}" font-size="8" text-anchor="middle">agents</text>',
+            f'<circle cx="{x + 48}" cy="{y + 36}" r="11" fill="none" stroke="{accent}" stroke-width="1.25"/>',
+            f'<circle cx="{x + 100}" cy="{y + 36}" r="11" fill="none" stroke="{accent}" stroke-width="1.25"/>',
+            f'<line x1="{x + 59}" y1="{y + 36}" x2="{x + 89}" y2="{y + 36}" stroke="{accent}" stroke-width="1"/>',
+            f'<circle cx="{x + 74}" cy="{y + 36}" r="2.5" fill="{accent}"/>',
+            f'<text class="mono" x="{x + 48}" y="{y + 40}" fill="{accent}" font-size="8" text-anchor="middle">A</text>',
+            f'<text class="mono" x="{x + 100}" y="{y + 40}" fill="{accent}" font-size="8" text-anchor="middle">B</text>',
+            f'<text class="mono" x="{x + 74}" y="{y + 62}" fill="{dim}" font-size="8" text-anchor="middle">memory · plan</text>',
         ]
     return "\n    ".join(out)
 
@@ -914,7 +927,7 @@ def system_map_mobile(c: dict, mode: str = "dark") -> str:
         node, soft = "#1A2A44", "#243652"
     else:
         node, soft = "#EEF2F8", "#E4EAF5"
-    return f'''<svg viewBox="0 0 390 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System map mobile">
+    return f'''<svg viewBox="0 0 390 390" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System map mobile">
   <style>{flagship_css(350)}</style>
   <text class="mono fade a1" x="20" y="24" fill="{h['muted']}" font-size="11" letter-spacing="2">HOW WORK CONNECTS</text>
   <g class="rise a2">
@@ -922,6 +935,11 @@ def system_map_mobile(c: dict, mode: str = "dark") -> str:
     <text class="mono" x="195" y="68" fill="{h['cyan']}" font-size="11" letter-spacing="2" text-anchor="middle">FLAGSHIP</text>
     <text class="mono" x="195" y="94" fill="{h['ink']}" font-size="18" text-anchor="middle">CareerPilot</text>
   </g>
+  <!-- Vertical spine connecting stacked nodes -->
+  <line class="draw a2" x1="36" y1="110" x2="36" y2="128" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a3" x1="36" y1="176" x2="36" y2="188" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a3" x1="36" y1="236" x2="36" y2="248" stroke="{h['rule']}" stroke-width="1.25"/>
+  <line class="draw a4" x1="36" y1="296" x2="36" y2="308" stroke="{h['rule']}" stroke-width="1.25"/>
   <g class="rise a3"><rect x="20" y="128" width="350" height="48" rx="2" fill="{node}" stroke="{h['cyan']}" stroke-width="1.25"/>
     <text class="mono" x="36" y="148" fill="{h['cyan']}" font-size="11">PRODUCTS</text>
     <text class="mono" x="36" y="166" fill="{h['ink']}" font-size="12">StrikeCaller · PagePulse</text></g>
@@ -933,7 +951,8 @@ def system_map_mobile(c: dict, mode: str = "dark") -> str:
     <text class="mono" x="36" y="286" fill="{h['ink']}" font-size="12">IntegrationLab · reliability</text></g>
   <g class="rise a4"><rect x="20" y="308" width="350" height="48" rx="2" fill="{node}" stroke="{h['cyan']}" stroke-width="1.25"/>
     <text class="mono" x="36" y="328" fill="{h['cyan']}" font-size="11">QUANT RESEARCH</text>
-    <text class="mono" x="36" y="346" fill="{h['ink']}" font-size="12">EquityTrace · Banking</text></g>
+    <text class="mono" x="36" y="346" fill="{h['ink']}" font-size="12">EquityTrace</text></g>
+  <text class="mono fade a5" x="20" y="378" fill="{h['dim']}" font-size="10" letter-spacing="1">inspectable paths · human control</text>
 </svg>'''
 
 
@@ -955,19 +974,33 @@ def projects_mobile(c: dict, mode: str = "dark") -> str:
             block.append(f'<text x="20" y="{yy}" fill="{h["muted"]}" font-size="12">{line}</text>')
             yy += 18
         block.append(f'<text x="20" y="{yy + 4}" fill="{accent}" font-size="11">{m}</text>')
-        # Compact motif under meta
+        # Compact motif under meta (readable at ~390px)
         my = yy + 14
-        block.append(f'<rect x="20" y="{my}" width="100" height="28" fill="none" stroke="{h["rule"]}"/>')
-        block.append(f'<line x1="20" y1="{my + 28}" x2="120" y2="{my + 28}" stroke="{accent}" stroke-width="1.5"/>')
-        block.append(f'<text x="28" y="{my + 18}" fill="{accent}" font-size="10">{motif}</text>')
-        yy = my + 40
+        block.append(f'<rect x="20" y="{my}" width="120" height="32" fill="none" stroke="{h["rule"]}"/>')
+        block.append(f'<line x1="20" y1="{my + 32}" x2="140" y2="{my + 32}" stroke="{accent}" stroke-width="1.5"/>')
+        if motif == "console":
+            block.append(f'<text x="28" y="{my + 20}" fill="{accent}" font-size="10">▸ audit · retry</text>')
+        elif motif == "research":
+            block.append(f'<rect x="30" y="{my + 10}" width="10" height="14" fill="{accent}" opacity=".4"/>')
+            block.append(f'<rect x="46" y="{my + 8}" width="10" height="16" fill="{accent}" opacity=".7"/>')
+            block.append(f'<rect x="62" y="{my + 6}" width="10" height="18" fill="{accent}"/>')
+            block.append(f'<text x="80" y="{my + 20}" fill="{h["dim"]}" font-size="9">A/B</text>')
+        elif motif == "chart":
+            block.append(f'<polyline fill="none" stroke="{accent}" stroke-width="1.25" points="28,{my+22} 48,{my+16} 68,{my+18} 88,{my+10} 108,{my+12}"/>')
+            block.append(f'<circle cx="88" cy="{my + 10}" r="2.5" fill="none" stroke="{accent}"/>')
+        else:
+            block.append(f'<circle cx="42" cy="{my + 16}" r="7" fill="none" stroke="{accent}"/>')
+            block.append(f'<circle cx="78" cy="{my + 16}" r="7" fill="none" stroke="{accent}"/>')
+            block.append(f'<line x1="49" y1="{my + 16}" x2="71" y2="{my + 16}" stroke="{accent}"/>')
+        yy = my + 44
         block.append(f'<line x1="20" y1="{yy}" x2="370" y2="{yy}" stroke="{h["rule"]}"/>')
         parts.append(f'<g class="row r{i+1} mono">{"".join(block)}</g>')
         y = yy + 14
-    return f'''<svg viewBox="0 0 390 {y + 30}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects">
+    return f'''<svg viewBox="0 0 390 {y + 36}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Selected projects">
   <style>{flagship_css(350)}</style>
   {''.join(parts)}
-  <text class="mono" x="20" y="{y + 18}" fill="{h['dim']}" font-size="11">ALSO · StrikeCaller · PagePulse · Banking · System Down</text>
+  <text class="mono" x="20" y="{y + 14}" fill="{h['dim']}" font-size="11">ALSO · StrikeCaller · PagePulse</text>
+  <text class="mono" x="20" y="{y + 30}" fill="{h['dim']}" font-size="11">Java Banking · System Down Simulator</text>
 </svg>'''
 
 

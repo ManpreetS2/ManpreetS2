@@ -14,21 +14,34 @@
 </style>
   <g class="row r1 mono"><text x="48" y="38" fill="#F4F7FC" font-size="16" letter-spacing=".5">01 / INTEGRATIONLAB</text><text x="780" y="30" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">PRODUCT</text><text x="48" y="64" fill="#C5CEDC" font-size="14">Self-hosted console for understanding API and webhook failures</text><text x="48" y="86" fill="#C5CEDC" font-size="14">through recorded evidence, retry handling, and auditable observations.</text><text x="48" y="114" fill="#3DDBD9" font-size="12" letter-spacing=".3">FASTAPI · POSTGRESQL · REACT · DOCKER</text><rect x="804" y="34" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
     <line x1="804" y1="106" x2="952" y2="106" stroke="#3DDBD9" stroke-width="1.5"/>
-    <rect x="818" y="48" width="120" height="44" fill="none" stroke="#3DDBD9" stroke-width="1"/>
-    <text class="mono" x="826" y="66" fill="#3DDBD9" font-size="9">▸ audit</text>
-    <text class="mono" x="826" y="80" fill="#A8B4C6" font-size="9">retry · store</text><line x1="48" y1="136" x2="952" y2="136" stroke="#5A7190" stroke-width="1"/></g><g class="row r2 mono"><text x="48" y="178" fill="#F4F7FC" font-size="16" letter-spacing=".5">02 / R.E.A.C.T.</text><text x="780" y="170" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">ILLUSTRATIVE</text><text x="48" y="204" fill="#C5CEDC" font-size="14">Research infrastructure for comparing language-model controller</text><text x="48" y="226" fill="#C5CEDC" font-size="14">revisions with and without numerical reward feedback.</text><text x="48" y="254" fill="#B8A9E8" font-size="12" letter-spacing=".3">PYTHON · SIMULATION · RESEARCH PROTOTYPE</text><rect x="804" y="174" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
+    <rect x="818" y="46" width="120" height="48" fill="none" stroke="#3DDBD9" stroke-width="1"/>
+    <line x1="818" y1="58" x2="938" y2="58" stroke="#3DDBD9" stroke-width="1" opacity=".55"/>
+    <circle cx="828" cy="52" r="2" fill="#3DDBD9"/>
+    <circle cx="838" cy="52" r="2" fill="#A8B4C6" opacity=".55"/>
+    <circle cx="848" cy="52" r="2" fill="#A8B4C6" opacity=".55"/>
+    <text class="mono" x="826" y="72" fill="#3DDBD9" font-size="8">▸ 200 · signed</text>
+    <text class="mono" x="826" y="86" fill="#A8B4C6" font-size="8">retry · evidence</text><line x1="48" y1="136" x2="952" y2="136" stroke="#5A7190" stroke-width="1"/></g><g class="row r2 mono"><text x="48" y="178" fill="#F4F7FC" font-size="16" letter-spacing=".5">02 / R.E.A.C.T.</text><text x="780" y="170" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">ILLUSTRATIVE</text><text x="48" y="204" fill="#C5CEDC" font-size="14">Research infrastructure for comparing language-model controller</text><text x="48" y="226" fill="#C5CEDC" font-size="14">revisions with and without numerical reward feedback.</text><text x="48" y="254" fill="#B8A9E8" font-size="12" letter-spacing=".3">PYTHON · SIMULATION · RESEARCH PROTOTYPE</text><rect x="804" y="174" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
     <line x1="804" y1="246" x2="952" y2="246" stroke="#B8A9E8" stroke-width="1.5"/>
-    <rect x="832" y="196" width="18" height="36" fill="#B8A9E8" opacity=".35"/>
-    <rect x="860" y="208" width="18" height="24" fill="#B8A9E8" opacity=".7"/>
-    <rect x="888" y="192" width="18" height="40" fill="#B8A9E8"/>
-    <text class="mono" x="878" y="188" fill="#A8B4C6" font-size="8" text-anchor="middle">A / B</text><line x1="48" y1="276" x2="952" y2="276" stroke="#5A7190" stroke-width="1"/></g><g class="row r3 mono"><text x="48" y="318" fill="#F4F7FC" font-size="16" letter-spacing=".5">03 / EQUITYTRACE</text><text x="780" y="310" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">ILLUSTRATIVE</text><text x="48" y="344" fill="#C5CEDC" font-size="14">Point-in-time financial research based on SEC filings,</text><text x="48" y="366" fill="#C5CEDC" font-size="14">transparent factors, and reproducible backtesting.</text><text x="48" y="394" fill="#3DDBD9" font-size="12" letter-spacing=".3">PYTHON · SEC XBRL · DUCKDB</text><rect x="804" y="314" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
+    <line x1="826" y1="232" x2="930" y2="232" stroke="#5A7190"/>
+    <rect x="836" y="202" width="16" height="30" fill="#B8A9E8" opacity=".35"/>
+    <rect x="862" y="210" width="16" height="22" fill="#B8A9E8" opacity=".65"/>
+    <rect x="888" y="194" width="16" height="38" fill="#B8A9E8"/>
+    <text class="mono" x="844" y="190" fill="#A8B4C6" font-size="8">A</text>
+    <text class="mono" x="896" y="190" fill="#A8B4C6" font-size="8">B</text>
+    <text class="mono" x="878" y="242" fill="#A8B4C6" font-size="7" text-anchor="middle">reward Δ</text><line x1="48" y1="276" x2="952" y2="276" stroke="#5A7190" stroke-width="1"/></g><g class="row r3 mono"><text x="48" y="318" fill="#F4F7FC" font-size="16" letter-spacing=".5">03 / EQUITYTRACE</text><text x="780" y="310" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">ILLUSTRATIVE</text><text x="48" y="344" fill="#C5CEDC" font-size="14">Point-in-time financial research based on SEC filings,</text><text x="48" y="366" fill="#C5CEDC" font-size="14">transparent factors, and reproducible backtesting.</text><text x="48" y="394" fill="#3DDBD9" font-size="12" letter-spacing=".3">PYTHON · SEC XBRL · DUCKDB</text><rect x="804" y="314" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
     <line x1="804" y1="386" x2="952" y2="386" stroke="#3DDBD9" stroke-width="1.5"/>
-    <polyline fill="none" stroke="#3DDBD9" stroke-width="1.5" points="822,364 844,354 866,358 888,342 910,346 932,334"/>
+    <polyline fill="none" stroke="#3DDBD9" stroke-width="1.5" points="822,364 844,356 866,360 888,344 910,348 928,336"/>
+    <circle cx="888" cy="344" r="3" fill="none" stroke="#3DDBD9" stroke-width="1.25"/>
     <line x1="822" y1="370" x2="934" y2="370" stroke="#5A7190"/>
+    <line x1="888" y1="370" x2="888" y2="366" stroke="#5A7190"/>
     <text class="mono" x="878" y="330" fill="#A8B4C6" font-size="8" text-anchor="middle">SEC → factors</text><line x1="48" y1="416" x2="952" y2="416" stroke="#5A7190" stroke-width="1"/></g><g class="row r4 mono"><text x="48" y="458" fill="#F4F7FC" font-size="16" letter-spacing=".5">04 / MINECRAFT AI CIVILIZATION</text><text x="780" y="450" fill="#A8B4C6" font-size="9" letter-spacing="1.2" text-anchor="end">IN DEVELOPMENT</text><text x="48" y="484" fill="#C5CEDC" font-size="14">Multi-agent research prototype exploring persistent identities,</text><text x="48" y="506" fill="#C5CEDC" font-size="14">memories, planning, and real actions in a shared Minecraft world.</text><text x="48" y="528" fill="#C5CEDC" font-size="14">Complete autonomous multi-agent simulation still under development.</text><text x="48" y="556" fill="#E08A7A" font-size="12" letter-spacing=".3">TYPESCRIPT · MINEFLAYER · SQLITE</text><rect x="804" y="454" width="148" height="72" fill="none" stroke="#5A7190" stroke-width="1"/>
     <line x1="804" y1="526" x2="952" y2="526" stroke="#E08A7A" stroke-width="1.5"/>
-    <path d="M878 470 L914 488 L878 506 L842 488 Z" fill="none" stroke="#E08A7A" stroke-width="1.25"/>
-    <path d="M878 488 L914 488 M878 488 L842 488 M878 488 L878 506" stroke="#E08A7A" stroke-width="1" opacity=".7"/>
-    <text class="mono" x="878" y="520" fill="#A8B4C6" font-size="8" text-anchor="middle">agents</text><line x1="48" y1="578" x2="952" y2="578" stroke="#5A7190" stroke-width="1"/></g>
+    <circle cx="852" cy="490" r="11" fill="none" stroke="#E08A7A" stroke-width="1.25"/>
+    <circle cx="904" cy="490" r="11" fill="none" stroke="#E08A7A" stroke-width="1.25"/>
+    <line x1="863" y1="490" x2="893" y2="490" stroke="#E08A7A" stroke-width="1"/>
+    <circle cx="878" cy="490" r="2.5" fill="#E08A7A"/>
+    <text class="mono" x="852" y="494" fill="#E08A7A" font-size="8" text-anchor="middle">A</text>
+    <text class="mono" x="904" y="494" fill="#E08A7A" font-size="8" text-anchor="middle">B</text>
+    <text class="mono" x="878" y="516" fill="#A8B4C6" font-size="8" text-anchor="middle">memory · plan</text><line x1="48" y1="578" x2="952" y2="578" stroke="#5A7190" stroke-width="1"/></g>
   <text class="mono fade a5" x="48" y="622" fill="#A8B4C6" font-size="12" letter-spacing="1.2">ALSO — StrikeCaller · PagePulse · Java Banking System · System Down Simulator</text>
 </svg>

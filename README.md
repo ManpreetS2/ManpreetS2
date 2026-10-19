@@ -195,7 +195,7 @@
   <source media="(max-width: 500px) and (prefers-color-scheme: dark)" srcset="assets/editorial/mobile/dark/system-map.svg"/>
   <source media="(max-width: 500px)" srcset="assets/editorial/mobile/light/system-map.svg"/>
   <source media="(prefers-color-scheme: dark)" srcset="assets/editorial/dark/system-map.svg"/>
-  <img src="assets/editorial/light/system-map.svg" alt="System map with CareerPilot at the center, connecting products, AI experimentation, integrations, and quantitative research" width="100%"/>
+  <img src="assets/editorial/light/system-map.svg" alt="System map with CareerPilot at the center, connecting products, AI experimentation, integrations, and EquityTrace quantitative research" width="100%"/>
 </picture>
 
 <!-- 05 — TOOLKIT -->
